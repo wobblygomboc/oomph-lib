@@ -3,7 +3,7 @@
 //LIC// multi-physics finite-element library, available 
 //LIC// at http://www.oomph-lib.org.
 //LIC// 
-//LIC// Copyright (C) 2006-2021 Matthias Heil and Andrew Hazel
+//LIC// Copyright (C) 2006-2022 Matthias Heil and Andrew Hazel
 //LIC// 
 //LIC// This library is free software; you can redistribute it and/or
 //LIC// modify it under the terms of the GNU Lesser General Public
@@ -506,7 +506,7 @@ int main()
  //in every distributioin of oomph-lib
  problem.eigen_solver_pt() = new LAPACK_QZ;
  //Solve the eigenproblem
- problem.solve_eigenproblem(4,eigenvalues,eigenvectors);  
+ problem.solve_eigenproblem_legacy(4,eigenvalues,eigenvectors);  
 
  //Find the eigenvalue with greatest real part
  unsigned ev_crit_index=0;  double ev_crit_value=0.0;

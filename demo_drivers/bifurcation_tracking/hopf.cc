@@ -3,7 +3,7 @@
 //LIC// multi-physics finite-element library, available 
 //LIC// at http://www.oomph-lib.org.
 //LIC// 
-//LIC// Copyright (C) 2006-2021 Matthias Heil and Andrew Hazel
+//LIC// Copyright (C) 2006-2022 Matthias Heil and Andrew Hazel
 //LIC// 
 //LIC// This library is free software; you can redistribute it and/or
 //LIC// modify it under the terms of the GNU Lesser General Public
@@ -273,7 +273,7 @@ void PredPreyProblem<ELEMENT>::solve()
          << mesh_pt()->element_pt(0)->internal_data_pt(0)->value(2) 
          << std::endl;
    
-   solve_eigenproblem(3,eigenvalues,eigenvectors);
+   solve_eigenproblem_legacy(3,eigenvalues,eigenvectors);
    
    for(unsigned e=0;e<eigenvalues.size();e++)
     {

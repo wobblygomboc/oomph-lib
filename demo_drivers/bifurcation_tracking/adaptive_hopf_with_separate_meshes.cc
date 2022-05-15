@@ -3,7 +3,7 @@
 //LIC// multi-physics finite-element library, available 
 //LIC// at http://www.oomph-lib.org.
 //LIC// 
-//LIC// Copyright (C) 2006-2021 Matthias Heil and Andrew Hazel
+//LIC// Copyright (C) 2006-2022 Matthias Heil and Andrew Hazel
 //LIC// 
 //LIC// This library is free software; you can redistribute it and/or
 //LIC// modify it under the terms of the GNU Lesser General Public
@@ -1867,7 +1867,7 @@ int main()
   {
    Vector<std::complex<double> > eigenvalues;
    //Now solve the eigenproblem
-   problem.solve_eigenproblem(6,eigenvalues,eigenvectors);
+   problem.solve_eigenproblem_legacy(6,eigenvalues,eigenvectors);
    frequency = eigenvalues[0].imag();
   }
 
