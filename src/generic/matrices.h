@@ -3,7 +3,7 @@
 // LIC// multi-physics finite-element library, available
 // LIC// at http://www.oomph-lib.org.
 // LIC//
-// LIC// Copyright (C) 2006-2022 Matthias Heil and Andrew Hazel
+// LIC// Copyright (C) 2006-2021 Matthias Heil and Andrew Hazel
 // LIC//
 // LIC// This library is free software; you can redistribute it and/or
 // LIC// modify it under the terms of the GNU Lesser General Public
@@ -359,6 +359,15 @@ namespace oomph
     virtual void multiply_transpose(const DoubleVector& x,
                                     DoubleVector& soln) const = 0;
 
+    // compute the infinity-norm
+    virtual double inf_norm() const
+    {
+      throw OomphLibError(
+        "Inf-norm function hasn't been implemented for this DoubleMatrix",
+        OOMPH_CURRENT_FUNCTION,
+        OOMPH_EXCEPTION_LOCATION);
+    }
+    
     /// For every row, find the maximum absolute value of the
     /// entries in this row. Set all values that are less than alpha times
     /// this maximum to zero and return the resulting matrix in
