@@ -367,7 +367,7 @@ namespace oomph
         OOMPH_CURRENT_FUNCTION,
         OOMPH_EXCEPTION_LOCATION);
     }
-    
+
     /// For every row, find the maximum absolute value of the
     /// entries in this row. Set all values that are less than alpha times
     /// this maximum to zero and return the resulting matrix in
