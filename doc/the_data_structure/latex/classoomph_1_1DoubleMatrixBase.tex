@@ -51,7 +51,9 @@ virtual double \mbox{\hyperlink{classoomph_1_1DoubleMatrixBase_a69a001b704e1d672
 virtual void \mbox{\hyperlink{classoomph_1_1DoubleMatrixBase_a78204eab557e0dc99618e41a28a5c092}{multiply}} (const \mbox{\hyperlink{classoomph_1_1DoubleVector}{Double\+Vector}} \&x, \mbox{\hyperlink{classoomph_1_1DoubleVector}{Double\+Vector}} \&soln) const =0
 \begin{DoxyCompactList}\small\item\em Multiply the matrix by the vector x\+: soln=Ax. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classoomph_1_1DoubleMatrixBase_a843d44405b70da1d96b43218a21e6ffc}{multiply\+\_\+transpose}} (const \mbox{\hyperlink{classoomph_1_1DoubleVector}{Double\+Vector}} \&x, \mbox{\hyperlink{classoomph_1_1DoubleVector}{Double\+Vector}} \&soln) const =0
-\begin{DoxyCompactList}\small\item\em Multiply the transposed matrix by the vector x\+: soln=A$^\wedge$T x. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Multiply the transposed matrix by the vector x\+: soln=A$^\wedge$T x. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classoomph_1_1DoubleMatrixBase_a08783e33bf20e245864de8adb0b38870}{inf\+\_\+norm}} () const
+\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -110,6 +112,24 @@ Definition at line \mbox{\hyperlink{matrices_8h_source_l00286}{286}} of file \mb
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classoomph_1_1DoubleMatrixBase_a08783e33bf20e245864de8adb0b38870}\label{classoomph_1_1DoubleMatrixBase_a08783e33bf20e245864de8adb0b38870}} 
+\index{oomph::DoubleMatrixBase@{oomph::DoubleMatrixBase}!inf\_norm@{inf\_norm}}
+\index{inf\_norm@{inf\_norm}!oomph::DoubleMatrixBase@{oomph::DoubleMatrixBase}}
+\doxysubsubsection{\texorpdfstring{inf\_norm()}{inf\_norm()}}
+{\footnotesize\ttfamily virtual double oomph\+::\+Double\+Matrix\+Base\+::inf\+\_\+norm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classoomph_1_1CRDoubleMatrix_a6cd938ba5f026f1508239cef05b16cb4}{oomph\+::\+CRDouble\+Matrix}}.
+
+
+
+Definition at line \mbox{\hyperlink{matrices_8h_source_l00363}{363}} of file \mbox{\hyperlink{matrices_8h_source}{matrices.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l00868}{oomph\+::\+Super\+LUSolver\+::compute\+\_\+condition\+\_\+number()}}.
+
 \mbox{\Hypertarget{classoomph_1_1DoubleMatrixBase_aa2ef063bc84bee59fec7a933093ac8f7}\label{classoomph_1_1DoubleMatrixBase_aa2ef063bc84bee59fec7a933093ac8f7}} 
 \index{oomph::DoubleMatrixBase@{oomph::DoubleMatrixBase}!linear\_solver\_pt@{linear\_solver\_pt}}
 \index{linear\_solver\_pt@{linear\_solver\_pt}!oomph::DoubleMatrixBase@{oomph::DoubleMatrixBase}}
@@ -216,7 +236,7 @@ Implemented in \mbox{\hyperlink{classoomph_1_1CRDoubleMatrix_a4ed5597d8a34dd14f9
 
 
 
-Referenced by \mbox{\hyperlink{sum__of__matrices_8h_source_l00415}{oomph\+::\+Sum\+Of\+Matrices\+::add\+\_\+matrix()}}, \mbox{\hyperlink{mumps__solver_8cc_source_l00180}{oomph\+::\+Mumps\+Solver\+::factorise()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01865}{oomph\+::\+Super\+LUSolver\+::factorise\+\_\+distributed()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02161}{oomph\+::\+Super\+LUSolver\+::factorise\+\_\+serial()}}, \mbox{\hyperlink{sum__of__matrices_8h_source_l00515}{oomph\+::\+Sum\+Of\+Matrices\+::ncol()}}, \mbox{\hyperlink{hypre__solver_8cc_source_l01714}{oomph\+::\+Hypre\+Preconditioner\+::setup()}}, \mbox{\hyperlink{trilinos__preconditioners_8cc_source_l00053}{oomph\+::\+Trilinos\+Preconditioner\+Base\+::setup()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00419}{oomph\+::\+Dense\+LU\+::solve()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01074}{oomph\+::\+Super\+LUSolver\+::solve()}}, \mbox{\hyperlink{mumps__solver_8cc_source_l00724}{oomph\+::\+Mumps\+Solver\+::solve()}}, \mbox{\hyperlink{hypre__solver_8cc_source_l01436}{oomph\+::\+Hypre\+Solver\+::solve()}}, \mbox{\hyperlink{trilinos__solver_8cc_source_l00135}{oomph\+::\+Trilinos\+Aztec\+OOSolver\+::solve()}}, \mbox{\hyperlink{iterative__linear__solver_8cc_source_l00605}{oomph\+::\+CG$<$ MATRIX $>$\+::solve\+\_\+helper()}}, \mbox{\hyperlink{iterative__linear__solver_8cc_source_l00171}{oomph\+::\+Bi\+CGStab$<$ MATRIX $>$\+::solve\+\_\+helper()}}, and \mbox{\hyperlink{linear__solver_8cc_source_l01554}{oomph\+::\+Super\+LUSolver\+::solve\+\_\+transpose()}}.
+Referenced by \mbox{\hyperlink{sum__of__matrices_8h_source_l00415}{oomph\+::\+Sum\+Of\+Matrices\+::add\+\_\+matrix()}}, \mbox{\hyperlink{mumps__solver_8cc_source_l00180}{oomph\+::\+Mumps\+Solver\+::factorise()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01938}{oomph\+::\+Super\+LUSolver\+::factorise\+\_\+distributed()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02234}{oomph\+::\+Super\+LUSolver\+::factorise\+\_\+serial()}}, \mbox{\hyperlink{sum__of__matrices_8h_source_l00515}{oomph\+::\+Sum\+Of\+Matrices\+::ncol()}}, \mbox{\hyperlink{hypre__solver_8cc_source_l01714}{oomph\+::\+Hypre\+Preconditioner\+::setup()}}, \mbox{\hyperlink{trilinos__preconditioners_8cc_source_l00053}{oomph\+::\+Trilinos\+Preconditioner\+Base\+::setup()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00419}{oomph\+::\+Dense\+LU\+::solve()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01147}{oomph\+::\+Super\+LUSolver\+::solve()}}, \mbox{\hyperlink{mumps__solver_8cc_source_l00724}{oomph\+::\+Mumps\+Solver\+::solve()}}, \mbox{\hyperlink{hypre__solver_8cc_source_l01436}{oomph\+::\+Hypre\+Solver\+::solve()}}, \mbox{\hyperlink{trilinos__solver_8cc_source_l00135}{oomph\+::\+Trilinos\+Aztec\+OOSolver\+::solve()}}, \mbox{\hyperlink{iterative__linear__solver_8cc_source_l00605}{oomph\+::\+CG$<$ MATRIX $>$\+::solve\+\_\+helper()}}, \mbox{\hyperlink{iterative__linear__solver_8cc_source_l00171}{oomph\+::\+Bi\+CGStab$<$ MATRIX $>$\+::solve\+\_\+helper()}}, and \mbox{\hyperlink{linear__solver_8cc_source_l01627}{oomph\+::\+Super\+LUSolver\+::solve\+\_\+transpose()}}.
 
 \mbox{\Hypertarget{classoomph_1_1DoubleMatrixBase_acdcd6e1ea2bf2380f1a2fa32c7829cb5}\label{classoomph_1_1DoubleMatrixBase_acdcd6e1ea2bf2380f1a2fa32c7829cb5}} 
 \index{oomph::DoubleMatrixBase@{oomph::DoubleMatrixBase}!nrow@{nrow}}
@@ -234,7 +254,7 @@ Implemented in \mbox{\hyperlink{classoomph_1_1CRDoubleMatrix_abd8d231b0549540144
 
 
 
-Referenced by \mbox{\hyperlink{sum__of__matrices_8h_source_l00415}{oomph\+::\+Sum\+Of\+Matrices\+::add\+\_\+matrix()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00131}{oomph\+::\+Dense\+LU\+::factorise()}}, \mbox{\hyperlink{mumps__solver_8cc_source_l00180}{oomph\+::\+Mumps\+Solver\+::factorise()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01865}{oomph\+::\+Super\+LUSolver\+::factorise\+\_\+distributed()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02161}{oomph\+::\+Super\+LUSolver\+::factorise\+\_\+serial()}}, \mbox{\hyperlink{sum__of__matrices_8h_source_l00501}{oomph\+::\+Sum\+Of\+Matrices\+::nrow()}}, \mbox{\hyperlink{general__purpose__preconditioners_8cc_source_l00043}{oomph\+::\+Matrix\+Based\+Diag\+Preconditioner\+::setup()}}, \mbox{\hyperlink{hypre__solver_8cc_source_l01714}{oomph\+::\+Hypre\+Preconditioner\+::setup()}}, \mbox{\hyperlink{preconditioner_8h_source_l00267}{oomph\+::\+Identity\+Preconditioner\+::setup()}}, \mbox{\hyperlink{trilinos__preconditioners_8cc_source_l00053}{oomph\+::\+Trilinos\+Preconditioner\+Base\+::setup()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00419}{oomph\+::\+Dense\+LU\+::solve()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01074}{oomph\+::\+Super\+LUSolver\+::solve()}}, \mbox{\hyperlink{mumps__solver_8cc_source_l00724}{oomph\+::\+Mumps\+Solver\+::solve()}}, \mbox{\hyperlink{hypre__solver_8cc_source_l01436}{oomph\+::\+Hypre\+Solver\+::solve()}}, \mbox{\hyperlink{trilinos__solver_8cc_source_l00135}{oomph\+::\+Trilinos\+Aztec\+OOSolver\+::solve()}}, \mbox{\hyperlink{iterative__linear__solver_8cc_source_l00605}{oomph\+::\+CG$<$ MATRIX $>$\+::solve\+\_\+helper()}}, \mbox{\hyperlink{iterative__linear__solver_8cc_source_l00171}{oomph\+::\+Bi\+CGStab$<$ MATRIX $>$\+::solve\+\_\+helper()}}, \mbox{\hyperlink{iterative__linear__solver_8cc_source_l02862}{oomph\+::\+Augmented\+Problem\+GMRES\+::solve\+\_\+helper()}}, and \mbox{\hyperlink{linear__solver_8cc_source_l01554}{oomph\+::\+Super\+LUSolver\+::solve\+\_\+transpose()}}.
+Referenced by \mbox{\hyperlink{sum__of__matrices_8h_source_l00415}{oomph\+::\+Sum\+Of\+Matrices\+::add\+\_\+matrix()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00131}{oomph\+::\+Dense\+LU\+::factorise()}}, \mbox{\hyperlink{mumps__solver_8cc_source_l00180}{oomph\+::\+Mumps\+Solver\+::factorise()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01938}{oomph\+::\+Super\+LUSolver\+::factorise\+\_\+distributed()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02234}{oomph\+::\+Super\+LUSolver\+::factorise\+\_\+serial()}}, \mbox{\hyperlink{sum__of__matrices_8h_source_l00501}{oomph\+::\+Sum\+Of\+Matrices\+::nrow()}}, \mbox{\hyperlink{general__purpose__preconditioners_8cc_source_l00043}{oomph\+::\+Matrix\+Based\+Diag\+Preconditioner\+::setup()}}, \mbox{\hyperlink{hypre__solver_8cc_source_l01714}{oomph\+::\+Hypre\+Preconditioner\+::setup()}}, \mbox{\hyperlink{preconditioner_8h_source_l00267}{oomph\+::\+Identity\+Preconditioner\+::setup()}}, \mbox{\hyperlink{trilinos__preconditioners_8cc_source_l00053}{oomph\+::\+Trilinos\+Preconditioner\+Base\+::setup()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00419}{oomph\+::\+Dense\+LU\+::solve()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01147}{oomph\+::\+Super\+LUSolver\+::solve()}}, \mbox{\hyperlink{mumps__solver_8cc_source_l00724}{oomph\+::\+Mumps\+Solver\+::solve()}}, \mbox{\hyperlink{hypre__solver_8cc_source_l01436}{oomph\+::\+Hypre\+Solver\+::solve()}}, \mbox{\hyperlink{trilinos__solver_8cc_source_l00135}{oomph\+::\+Trilinos\+Aztec\+OOSolver\+::solve()}}, \mbox{\hyperlink{iterative__linear__solver_8cc_source_l00605}{oomph\+::\+CG$<$ MATRIX $>$\+::solve\+\_\+helper()}}, \mbox{\hyperlink{iterative__linear__solver_8cc_source_l00171}{oomph\+::\+Bi\+CGStab$<$ MATRIX $>$\+::solve\+\_\+helper()}}, \mbox{\hyperlink{iterative__linear__solver_8cc_source_l02862}{oomph\+::\+Augmented\+Problem\+GMRES\+::solve\+\_\+helper()}}, and \mbox{\hyperlink{linear__solver_8cc_source_l01627}{oomph\+::\+Super\+LUSolver\+::solve\+\_\+transpose()}}.
 
 \mbox{\Hypertarget{classoomph_1_1DoubleMatrixBase_a20b85f0286f80464f42f0846fede2d77}\label{classoomph_1_1DoubleMatrixBase_a20b85f0286f80464f42f0846fede2d77}} 
 \index{oomph::DoubleMatrixBase@{oomph::DoubleMatrixBase}!operator()@{operator()}}

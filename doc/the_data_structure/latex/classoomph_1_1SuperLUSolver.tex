@@ -72,6 +72,10 @@ void \mbox{\hyperlink{classoomph_1_1SuperLUSolver_ad0d31829d3afe5f7a315d1b37693e
 \begin{DoxyCompactList}\small\item\em Use the compressed row format in superlu serial. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classoomph_1_1SuperLUSolver_abd96a292e666e7553651add727265529}{use\+\_\+compressed\+\_\+column\+\_\+for\+\_\+superlu\+\_\+serial}} ()
 \begin{DoxyCompactList}\small\item\em Use the compressed column format in superlu serial. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classoomph_1_1SuperLUSolver_a291e24ec27c24167db36c4f7935a8892}{compute\+\_\+condition\+\_\+number}} (const double \&inf\+\_\+norm)
+\begin{DoxyCompactList}\small\item\em Wrapper to Super\+LU\textquotesingle{}s dgscon() which computes the (reciprocal of the) condition number of a matrix. This version assumes we\textquotesingle{}re computing the condition number of a matrix which has already been factorised and who\textquotesingle{}s LU factors are in this object\textquotesingle{}s internal storage; it therefore only requires the infinity-\/norm to be passed in. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classoomph_1_1SuperLUSolver_ab4cf09b9e57ddd6aee6262fd45d36058}{compute\+\_\+condition\+\_\+number}} (\mbox{\hyperlink{classoomph_1_1DoubleMatrixBase}{Double\+Matrix\+Base}} $\ast$const \&matrix\+\_\+pt)
+\begin{DoxyCompactList}\small\item\em Wrapper to Super\+LU\textquotesingle{}s dgscon() which computes the (reciprocal of the) condition number of a matrix. This version assumes we haven\textquotesingle{}t yet factorised the matrix and so first performs the LU decomposition (the factors of which are then stored internally), then computes the matrix norm which is passed to the matrix-\/less overload of this function. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classoomph_1_1SuperLUSolver_a9b8487741998c97db3f41493ca427c1d}{enable\+\_\+delete\+\_\+matrix\+\_\+data\+\_\+in\+\_\+superlu\+\_\+dist}} ()
 \begin{DoxyCompactList}\small\item\em Set Delete\+\_\+matrix\+\_\+data flag. Super\+LU\+\_\+dist needs its own copy of the input matrix, therefore a copy must be made if any matrix used with this solver is to be preserved. If the input matrix can be deleted the flag can be set to true to reduce the amount of memory required, and the matrix data will be wiped using its \mbox{\hyperlink{classoomph_1_1SuperLUSolver_aec78b96a8f831a89f9b8fb48b1ce0c68}{clean\+\_\+up\+\_\+memory()}} function. Default value is false. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classoomph_1_1SuperLUSolver_a887c4a5fd19034f7a74d91d453d4f425}{disable\+\_\+delete\+\_\+matrix\+\_\+data\+\_\+in\+\_\+superlu\+\_\+dist}} ()
@@ -217,7 +221,7 @@ Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00500}{500}} of fi
 
 
 
-References \mbox{\hyperlink{linear__solver_8h_source_l00494}{Default}}, \mbox{\hyperlink{linear__solver_8h_source_l00841}{Dist\+\_\+allow\+\_\+row\+\_\+and\+\_\+col\+\_\+permutations}}, \mbox{\hyperlink{linear__solver_8h_source_l00849}{Dist\+\_\+delete\+\_\+matrix\+\_\+data}}, \mbox{\hyperlink{linear__solver_8h_source_l00823}{Dist\+\_\+distributed\+\_\+solve\+\_\+data\+\_\+allocated}}, \mbox{\hyperlink{linear__solver_8h_source_l00820}{Dist\+\_\+global\+\_\+solve\+\_\+data\+\_\+allocated}}, \mbox{\hyperlink{linear__solver_8h_source_l00856}{Dist\+\_\+index\+\_\+pt}}, \mbox{\hyperlink{linear__solver_8h_source_l00826}{Dist\+\_\+solver\+\_\+data\+\_\+pt}}, \mbox{\hyperlink{linear__solver_8h_source_l00860}{Dist\+\_\+start\+\_\+pt}}, \mbox{\hyperlink{linear__solver_8h_source_l00817}{Dist\+\_\+use\+\_\+global\+\_\+solver}}, \mbox{\hyperlink{linear__solver_8h_source_l00852}{Dist\+\_\+value\+\_\+pt}}, \mbox{\hyperlink{linear__solver_8h_source_l00770}{Doc\+\_\+stats}}, \mbox{\hyperlink{linear__solver_8h_source_l00794}{Serial\+\_\+compressed\+\_\+row\+\_\+flag}}, \mbox{\hyperlink{linear__solver_8h_source_l00788}{Serial\+\_\+n\+\_\+dof}}, \mbox{\hyperlink{linear__solver_8h_source_l00791}{Serial\+\_\+sign\+\_\+of\+\_\+determinant\+\_\+of\+\_\+matrix}}, \mbox{\hyperlink{linear__solver_8h_source_l00773}{Solver\+\_\+type}}, \mbox{\hyperlink{linear__solver_8h_source_l00767}{Suppress\+\_\+solve}}, and \mbox{\hyperlink{linear__solver_8h_source_l00776}{Using\+\_\+dist}}.
+References \mbox{\hyperlink{linear__solver_8h_source_l00494}{Default}}, \mbox{\hyperlink{linear__solver_8h_source_l00856}{Dist\+\_\+allow\+\_\+row\+\_\+and\+\_\+col\+\_\+permutations}}, \mbox{\hyperlink{linear__solver_8h_source_l00864}{Dist\+\_\+delete\+\_\+matrix\+\_\+data}}, \mbox{\hyperlink{linear__solver_8h_source_l00838}{Dist\+\_\+distributed\+\_\+solve\+\_\+data\+\_\+allocated}}, \mbox{\hyperlink{linear__solver_8h_source_l00835}{Dist\+\_\+global\+\_\+solve\+\_\+data\+\_\+allocated}}, \mbox{\hyperlink{linear__solver_8h_source_l00871}{Dist\+\_\+index\+\_\+pt}}, \mbox{\hyperlink{linear__solver_8h_source_l00841}{Dist\+\_\+solver\+\_\+data\+\_\+pt}}, \mbox{\hyperlink{linear__solver_8h_source_l00875}{Dist\+\_\+start\+\_\+pt}}, \mbox{\hyperlink{linear__solver_8h_source_l00832}{Dist\+\_\+use\+\_\+global\+\_\+solver}}, \mbox{\hyperlink{linear__solver_8h_source_l00867}{Dist\+\_\+value\+\_\+pt}}, \mbox{\hyperlink{linear__solver_8h_source_l00785}{Doc\+\_\+stats}}, \mbox{\hyperlink{linear__solver_8h_source_l00809}{Serial\+\_\+compressed\+\_\+row\+\_\+flag}}, \mbox{\hyperlink{linear__solver_8h_source_l00803}{Serial\+\_\+n\+\_\+dof}}, \mbox{\hyperlink{linear__solver_8h_source_l00806}{Serial\+\_\+sign\+\_\+of\+\_\+determinant\+\_\+of\+\_\+matrix}}, \mbox{\hyperlink{linear__solver_8h_source_l00788}{Solver\+\_\+type}}, \mbox{\hyperlink{linear__solver_8h_source_l00782}{Suppress\+\_\+solve}}, and \mbox{\hyperlink{linear__solver_8h_source_l00791}{Using\+\_\+dist}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_a02f1c0c32ca6d9c0e1b6faa4504ec06f}\label{classoomph_1_1SuperLUSolver_a02f1c0c32ca6d9c0e1b6faa4504ec06f}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!SuperLUSolver@{SuperLUSolver}}
@@ -245,7 +249,7 @@ Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00534}{534}} of fi
 
 
 
-References \mbox{\hyperlink{linear__solver_8cc_source_l02683}{clean\+\_\+up\+\_\+memory()}}.
+References \mbox{\hyperlink{linear__solver_8cc_source_l02756}{clean\+\_\+up\+\_\+memory()}}.
 
 
 
@@ -262,15 +266,15 @@ Do the backsubstitution for Super\+LU solver Note\+: returns the global result \
 
 Do the backsubstitution for \mbox{\hyperlink{classoomph_1_1SuperLUSolver}{Super\+LUSolver}}. Note -\/ this method performs no paranoid checks -\/ these are all performed in solve(...) and resolve(...) 
 
-Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l02292}{2292}} of file \mbox{\hyperlink{linear__solver_8cc_source}{linear\+\_\+solver.\+cc}}.
+Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l02365}{2365}} of file \mbox{\hyperlink{linear__solver_8cc_source}{linear\+\_\+solver.\+cc}}.
 
 
 
-References \mbox{\hyperlink{linear__solver_8cc_source_l02340}{backsub\+\_\+distributed()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02503}{backsub\+\_\+serial()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00776}{Using\+\_\+dist}}.
+References \mbox{\hyperlink{linear__solver_8cc_source_l02413}{backsub\+\_\+distributed()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02576}{backsub\+\_\+serial()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00791}{Using\+\_\+dist}}.
 
 
 
-Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l01769}{resolve()}}, and \mbox{\hyperlink{linear__solver_8cc_source_l01074}{solve()}}.
+Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l01842}{resolve()}}, and \mbox{\hyperlink{linear__solver_8cc_source_l01147}{solve()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_a6f57fd508b25b730841de735bbea2b17}\label{classoomph_1_1SuperLUSolver_a6f57fd508b25b730841de735bbea2b17}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!backsub\_distributed@{backsub\_distributed}}
@@ -284,15 +288,15 @@ backsub method for Super\+LU Dist
 
 Do the backsubstitution for Super\+LU solver. Note -\/ this method performs no paranoid checks -\/ these are all performed in solve(...) and resolve(...) 
 
-Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l02340}{2340}} of file \mbox{\hyperlink{linear__solver_8cc_source}{linear\+\_\+solver.\+cc}}.
+Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l02413}{2413}} of file \mbox{\hyperlink{linear__solver_8cc_source}{linear\+\_\+solver.\+cc}}.
 
 
 
-References \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00342}{oomph\+::\+Linear\+Algebra\+Distribution\+::built()}}, \mbox{\hyperlink{linear__solver_8h_source_l00823}{Dist\+\_\+distributed\+\_\+solve\+\_\+data\+\_\+allocated}}, \mbox{\hyperlink{linear__solver_8h_source_l00820}{Dist\+\_\+global\+\_\+solve\+\_\+data\+\_\+allocated}}, \mbox{\hyperlink{linear__solver_8h_source_l00835}{Dist\+\_\+info}}, \mbox{\hyperlink{linear__solver_8h_source_l00832}{Dist\+\_\+npcol}}, \mbox{\hyperlink{linear__solver_8h_source_l00829}{Dist\+\_\+nprow}}, \mbox{\hyperlink{linear__solver_8h_source_l00826}{Dist\+\_\+solver\+\_\+data\+\_\+pt}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00500}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::distribution\+\_\+built()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00457}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::distribution\+\_\+pt()}}, \mbox{\hyperlink{oomph__utilities_8cc_source_l01212}{oomph\+::\+Leak\+Check\+Names\+::doc()}}, \mbox{\hyperlink{linear__solver_8h_source_l00770}{Doc\+\_\+stats}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00186}{oomph\+::\+Linear\+Algebra\+Distribution\+::nrow()}}, \mbox{\hyperlink{namespaceoomph_afda4e6a29a247cb24203d0c93047a05e}{oomph\+::superlu\+\_\+dist\+\_\+distributed\+\_\+matrix()}}, \mbox{\hyperlink{namespaceoomph_a69210c78770d5e7a589b23ca3b821ec1}{oomph\+::superlu\+\_\+dist\+\_\+global\+\_\+matrix()}}, \mbox{\hyperlink{linear__solver_8h_source_l00811}{Suppress\+\_\+incorrect\+\_\+rhs\+\_\+distribution\+\_\+warning\+\_\+in\+\_\+resolve}}, and \mbox{\hyperlink{double__vector_8h_source_l00254}{oomph\+::\+Double\+Vector\+::values\+\_\+pt()}}.
+References \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00342}{oomph\+::\+Linear\+Algebra\+Distribution\+::built()}}, \mbox{\hyperlink{linear__solver_8h_source_l00838}{Dist\+\_\+distributed\+\_\+solve\+\_\+data\+\_\+allocated}}, \mbox{\hyperlink{linear__solver_8h_source_l00835}{Dist\+\_\+global\+\_\+solve\+\_\+data\+\_\+allocated}}, \mbox{\hyperlink{linear__solver_8h_source_l00850}{Dist\+\_\+info}}, \mbox{\hyperlink{linear__solver_8h_source_l00847}{Dist\+\_\+npcol}}, \mbox{\hyperlink{linear__solver_8h_source_l00844}{Dist\+\_\+nprow}}, \mbox{\hyperlink{linear__solver_8h_source_l00841}{Dist\+\_\+solver\+\_\+data\+\_\+pt}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00500}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::distribution\+\_\+built()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00457}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::distribution\+\_\+pt()}}, \mbox{\hyperlink{oomph__utilities_8cc_source_l01212}{oomph\+::\+Leak\+Check\+Names\+::doc()}}, \mbox{\hyperlink{linear__solver_8h_source_l00785}{Doc\+\_\+stats}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00186}{oomph\+::\+Linear\+Algebra\+Distribution\+::nrow()}}, \mbox{\hyperlink{namespaceoomph_afda4e6a29a247cb24203d0c93047a05e}{oomph\+::superlu\+\_\+dist\+\_\+distributed\+\_\+matrix()}}, \mbox{\hyperlink{namespaceoomph_a69210c78770d5e7a589b23ca3b821ec1}{oomph\+::superlu\+\_\+dist\+\_\+global\+\_\+matrix()}}, \mbox{\hyperlink{linear__solver_8h_source_l00826}{Suppress\+\_\+incorrect\+\_\+rhs\+\_\+distribution\+\_\+warning\+\_\+in\+\_\+resolve}}, and \mbox{\hyperlink{double__vector_8h_source_l00254}{oomph\+::\+Double\+Vector\+::values\+\_\+pt()}}.
 
 
 
-Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02292}{backsub()}}.
+Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02365}{backsub()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_a3cf319015c149958fd68cfb631e6b2e9}\label{classoomph_1_1SuperLUSolver_a3cf319015c149958fd68cfb631e6b2e9}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!backsub\_serial@{backsub\_serial}}
@@ -306,15 +310,15 @@ backsub method for Super\+LU (serial)
 
 Do the backsubstitution for Super\+LU. 
 
-Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l02503}{2503}} of file \mbox{\hyperlink{linear__solver_8cc_source}{linear\+\_\+solver.\+cc}}.
+Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l02576}{2576}} of file \mbox{\hyperlink{linear__solver_8cc_source}{linear\+\_\+solver.\+cc}}.
 
 
 
-References \mbox{\hyperlink{double__vector_8h_source_l00154}{oomph\+::\+Double\+Vector\+::built()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00329}{oomph\+::\+Linear\+Algebra\+Distribution\+::distributed()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00457}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::distribution\+\_\+pt()}}, \mbox{\hyperlink{oomph__utilities_8cc_source_l01212}{oomph\+::\+Leak\+Check\+Names\+::doc()}}, \mbox{\hyperlink{linear__solver_8h_source_l00770}{Doc\+\_\+stats}}, \mbox{\hyperlink{cfortran_8h_source_l00603}{i}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00463}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::nrow()}}, \mbox{\hyperlink{linear__solver_8h_source_l00794}{Serial\+\_\+compressed\+\_\+row\+\_\+flag}}, \mbox{\hyperlink{linear__solver_8h_source_l00782}{Serial\+\_\+f\+\_\+factors}}, \mbox{\hyperlink{linear__solver_8h_source_l00785}{Serial\+\_\+info}}, \mbox{\hyperlink{linear__solver_8h_source_l00788}{Serial\+\_\+n\+\_\+dof}}, \mbox{\hyperlink{namespaceoomph_ad3cf4046d72d2de41baaa7505068d9ab}{oomph\+::superlu()}}, and \mbox{\hyperlink{double__vector_8h_source_l00254}{oomph\+::\+Double\+Vector\+::values\+\_\+pt()}}.
+References \mbox{\hyperlink{double__vector_8h_source_l00154}{oomph\+::\+Double\+Vector\+::built()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00329}{oomph\+::\+Linear\+Algebra\+Distribution\+::distributed()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00457}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::distribution\+\_\+pt()}}, \mbox{\hyperlink{oomph__utilities_8cc_source_l01212}{oomph\+::\+Leak\+Check\+Names\+::doc()}}, \mbox{\hyperlink{linear__solver_8h_source_l00785}{Doc\+\_\+stats}}, \mbox{\hyperlink{cfortran_8h_source_l00603}{i}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00463}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::nrow()}}, \mbox{\hyperlink{linear__solver_8h_source_l00809}{Serial\+\_\+compressed\+\_\+row\+\_\+flag}}, \mbox{\hyperlink{linear__solver_8h_source_l00797}{Serial\+\_\+f\+\_\+factors}}, \mbox{\hyperlink{linear__solver_8h_source_l00800}{Serial\+\_\+info}}, \mbox{\hyperlink{linear__solver_8h_source_l00803}{Serial\+\_\+n\+\_\+dof}}, \mbox{\hyperlink{namespaceoomph_ad3cf4046d72d2de41baaa7505068d9ab}{oomph\+::superlu()}}, and \mbox{\hyperlink{double__vector_8h_source_l00254}{oomph\+::\+Double\+Vector\+::values\+\_\+pt()}}.
 
 
 
-Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02292}{backsub()}}.
+Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02365}{backsub()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_afa0a6cb2320c56f2e08fdbef87a96eb6}\label{classoomph_1_1SuperLUSolver_afa0a6cb2320c56f2e08fdbef87a96eb6}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!backsub\_transpose@{backsub\_transpose}}
@@ -328,15 +332,15 @@ Do the back-\/substitution for transposed system of the Super\+LU solver Note\+:
 
 Do the backsubstitution of the transposed system for \mbox{\hyperlink{classoomph_1_1SuperLUSolver}{Super\+LUSolver}}. Note -\/ this method performs no paranoid checks -\/ these are all performed in solve(...) and resolve(...) 
 
-Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l02312}{2312}} of file \mbox{\hyperlink{linear__solver_8cc_source}{linear\+\_\+solver.\+cc}}.
+Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l02385}{2385}} of file \mbox{\hyperlink{linear__solver_8cc_source}{linear\+\_\+solver.\+cc}}.
 
 
 
-References \mbox{\hyperlink{linear__solver_8cc_source_l02483}{backsub\+\_\+transpose\+\_\+distributed()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02593}{backsub\+\_\+transpose\+\_\+serial()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00776}{Using\+\_\+dist}}.
+References \mbox{\hyperlink{linear__solver_8cc_source_l02556}{backsub\+\_\+transpose\+\_\+distributed()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02666}{backsub\+\_\+transpose\+\_\+serial()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00791}{Using\+\_\+dist}}.
 
 
 
-Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l01793}{resolve\+\_\+transpose()}}, and \mbox{\hyperlink{linear__solver_8cc_source_l01554}{solve\+\_\+transpose()}}.
+Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l01866}{resolve\+\_\+transpose()}}, and \mbox{\hyperlink{linear__solver_8cc_source_l01627}{solve\+\_\+transpose()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_a446f170e0bb740c61f155e9688d76a32}\label{classoomph_1_1SuperLUSolver_a446f170e0bb740c61f155e9688d76a32}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!backsub\_transpose\_distributed@{backsub\_transpose\_distributed}}
@@ -350,11 +354,11 @@ backsub method for Super\+LU Dist
 
 Do the backsubstitution for Super\+LU solver. Note -\/ this method performs no paranoid checks -\/ these are all performed in solve(...) and resolve(...) 
 
-Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l02483}{2483}} of file \mbox{\hyperlink{linear__solver_8cc_source}{linear\+\_\+solver.\+cc}}.
+Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l02556}{2556}} of file \mbox{\hyperlink{linear__solver_8cc_source}{linear\+\_\+solver.\+cc}}.
 
 
 
-Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02312}{backsub\+\_\+transpose()}}.
+Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02385}{backsub\+\_\+transpose()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_acd4a9a9e06c68de09942d146e7f337bb}\label{classoomph_1_1SuperLUSolver_acd4a9a9e06c68de09942d146e7f337bb}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!backsub\_transpose\_serial@{backsub\_transpose\_serial}}
@@ -368,15 +372,15 @@ backsub method for Super\+LU (serial)
 
 Do the backsubstitution for Super\+LU. 
 
-Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l02593}{2593}} of file \mbox{\hyperlink{linear__solver_8cc_source}{linear\+\_\+solver.\+cc}}.
+Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l02666}{2666}} of file \mbox{\hyperlink{linear__solver_8cc_source}{linear\+\_\+solver.\+cc}}.
 
 
 
-References \mbox{\hyperlink{double__vector_8h_source_l00154}{oomph\+::\+Double\+Vector\+::built()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00329}{oomph\+::\+Linear\+Algebra\+Distribution\+::distributed()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00457}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::distribution\+\_\+pt()}}, \mbox{\hyperlink{oomph__utilities_8cc_source_l01212}{oomph\+::\+Leak\+Check\+Names\+::doc()}}, \mbox{\hyperlink{linear__solver_8h_source_l00770}{Doc\+\_\+stats}}, \mbox{\hyperlink{cfortran_8h_source_l00603}{i}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00463}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::nrow()}}, \mbox{\hyperlink{linear__solver_8h_source_l00794}{Serial\+\_\+compressed\+\_\+row\+\_\+flag}}, \mbox{\hyperlink{linear__solver_8h_source_l00782}{Serial\+\_\+f\+\_\+factors}}, \mbox{\hyperlink{linear__solver_8h_source_l00785}{Serial\+\_\+info}}, \mbox{\hyperlink{linear__solver_8h_source_l00788}{Serial\+\_\+n\+\_\+dof}}, \mbox{\hyperlink{namespaceoomph_ad3cf4046d72d2de41baaa7505068d9ab}{oomph\+::superlu()}}, and \mbox{\hyperlink{double__vector_8h_source_l00254}{oomph\+::\+Double\+Vector\+::values\+\_\+pt()}}.
+References \mbox{\hyperlink{double__vector_8h_source_l00154}{oomph\+::\+Double\+Vector\+::built()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00329}{oomph\+::\+Linear\+Algebra\+Distribution\+::distributed()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00457}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::distribution\+\_\+pt()}}, \mbox{\hyperlink{oomph__utilities_8cc_source_l01212}{oomph\+::\+Leak\+Check\+Names\+::doc()}}, \mbox{\hyperlink{linear__solver_8h_source_l00785}{Doc\+\_\+stats}}, \mbox{\hyperlink{cfortran_8h_source_l00603}{i}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00463}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::nrow()}}, \mbox{\hyperlink{linear__solver_8h_source_l00809}{Serial\+\_\+compressed\+\_\+row\+\_\+flag}}, \mbox{\hyperlink{linear__solver_8h_source_l00797}{Serial\+\_\+f\+\_\+factors}}, \mbox{\hyperlink{linear__solver_8h_source_l00800}{Serial\+\_\+info}}, \mbox{\hyperlink{linear__solver_8h_source_l00803}{Serial\+\_\+n\+\_\+dof}}, \mbox{\hyperlink{namespaceoomph_ad3cf4046d72d2de41baaa7505068d9ab}{oomph\+::superlu()}}, and \mbox{\hyperlink{double__vector_8h_source_l00254}{oomph\+::\+Double\+Vector\+::values\+\_\+pt()}}.
 
 
 
-Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02312}{backsub\+\_\+transpose()}}.
+Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02385}{backsub\+\_\+transpose()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_aec78b96a8f831a89f9b8fb48b1ce0c68}\label{classoomph_1_1SuperLUSolver_aec78b96a8f831a89f9b8fb48b1ce0c68}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!clean\_up\_memory@{clean\_up\_memory}}
@@ -394,15 +398,55 @@ Reimplemented from \mbox{\hyperlink{classoomph_1_1LinearSolver_a9d66f3262e80ca06
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l02683}{2683}} of file \mbox{\hyperlink{linear__solver_8cc_source}{linear\+\_\+solver.\+cc}}.
+Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l02756}{2756}} of file \mbox{\hyperlink{linear__solver_8cc_source}{linear\+\_\+solver.\+cc}}.
 
 
 
-References \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00522}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::clear\+\_\+distribution()}}, \mbox{\hyperlink{linear__solver_8h_source_l00823}{Dist\+\_\+distributed\+\_\+solve\+\_\+data\+\_\+allocated}}, \mbox{\hyperlink{linear__solver_8h_source_l00820}{Dist\+\_\+global\+\_\+solve\+\_\+data\+\_\+allocated}}, \mbox{\hyperlink{linear__solver_8h_source_l00856}{Dist\+\_\+index\+\_\+pt}}, \mbox{\hyperlink{linear__solver_8h_source_l00835}{Dist\+\_\+info}}, \mbox{\hyperlink{linear__solver_8h_source_l00832}{Dist\+\_\+npcol}}, \mbox{\hyperlink{linear__solver_8h_source_l00829}{Dist\+\_\+nprow}}, \mbox{\hyperlink{linear__solver_8h_source_l00826}{Dist\+\_\+solver\+\_\+data\+\_\+pt}}, \mbox{\hyperlink{linear__solver_8h_source_l00860}{Dist\+\_\+start\+\_\+pt}}, \mbox{\hyperlink{linear__solver_8h_source_l00852}{Dist\+\_\+value\+\_\+pt}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00457}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::distribution\+\_\+pt()}}, \mbox{\hyperlink{oomph__utilities_8cc_source_l01212}{oomph\+::\+Leak\+Check\+Names\+::doc()}}, \mbox{\hyperlink{linear__solver_8h_source_l00770}{Doc\+\_\+stats}}, \mbox{\hyperlink{cfortran_8h_source_l00603}{i}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00186}{oomph\+::\+Linear\+Algebra\+Distribution\+::nrow()}}, \mbox{\hyperlink{linear__solver_8h_source_l00794}{Serial\+\_\+compressed\+\_\+row\+\_\+flag}}, \mbox{\hyperlink{linear__solver_8h_source_l00782}{Serial\+\_\+f\+\_\+factors}}, \mbox{\hyperlink{linear__solver_8h_source_l00785}{Serial\+\_\+info}}, \mbox{\hyperlink{linear__solver_8h_source_l00788}{Serial\+\_\+n\+\_\+dof}}, \mbox{\hyperlink{namespaceoomph_ad3cf4046d72d2de41baaa7505068d9ab}{oomph\+::superlu()}}, \mbox{\hyperlink{namespaceoomph_afda4e6a29a247cb24203d0c93047a05e}{oomph\+::superlu\+\_\+dist\+\_\+distributed\+\_\+matrix()}}, and \mbox{\hyperlink{namespaceoomph_a69210c78770d5e7a589b23ca3b821ec1}{oomph\+::superlu\+\_\+dist\+\_\+global\+\_\+matrix()}}.
+References \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00522}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::clear\+\_\+distribution()}}, \mbox{\hyperlink{linear__solver_8h_source_l00838}{Dist\+\_\+distributed\+\_\+solve\+\_\+data\+\_\+allocated}}, \mbox{\hyperlink{linear__solver_8h_source_l00835}{Dist\+\_\+global\+\_\+solve\+\_\+data\+\_\+allocated}}, \mbox{\hyperlink{linear__solver_8h_source_l00871}{Dist\+\_\+index\+\_\+pt}}, \mbox{\hyperlink{linear__solver_8h_source_l00850}{Dist\+\_\+info}}, \mbox{\hyperlink{linear__solver_8h_source_l00847}{Dist\+\_\+npcol}}, \mbox{\hyperlink{linear__solver_8h_source_l00844}{Dist\+\_\+nprow}}, \mbox{\hyperlink{linear__solver_8h_source_l00841}{Dist\+\_\+solver\+\_\+data\+\_\+pt}}, \mbox{\hyperlink{linear__solver_8h_source_l00875}{Dist\+\_\+start\+\_\+pt}}, \mbox{\hyperlink{linear__solver_8h_source_l00867}{Dist\+\_\+value\+\_\+pt}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00457}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::distribution\+\_\+pt()}}, \mbox{\hyperlink{oomph__utilities_8cc_source_l01212}{oomph\+::\+Leak\+Check\+Names\+::doc()}}, \mbox{\hyperlink{linear__solver_8h_source_l00785}{Doc\+\_\+stats}}, \mbox{\hyperlink{cfortran_8h_source_l00603}{i}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00186}{oomph\+::\+Linear\+Algebra\+Distribution\+::nrow()}}, \mbox{\hyperlink{linear__solver_8h_source_l00809}{Serial\+\_\+compressed\+\_\+row\+\_\+flag}}, \mbox{\hyperlink{linear__solver_8h_source_l00797}{Serial\+\_\+f\+\_\+factors}}, \mbox{\hyperlink{linear__solver_8h_source_l00800}{Serial\+\_\+info}}, \mbox{\hyperlink{linear__solver_8h_source_l00803}{Serial\+\_\+n\+\_\+dof}}, \mbox{\hyperlink{namespaceoomph_ad3cf4046d72d2de41baaa7505068d9ab}{oomph\+::superlu()}}, \mbox{\hyperlink{namespaceoomph_afda4e6a29a247cb24203d0c93047a05e}{oomph\+::superlu\+\_\+dist\+\_\+distributed\+\_\+matrix()}}, and \mbox{\hyperlink{namespaceoomph_a69210c78770d5e7a589b23ca3b821ec1}{oomph\+::superlu\+\_\+dist\+\_\+global\+\_\+matrix()}}.
 
 
 
-Referenced by \mbox{\hyperlink{SuperLU__preconditioner_8h_source_l00106}{oomph\+::\+Super\+LUPreconditioner\+::clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{linear__solver_8h_source_l00549}{disable\+\_\+resolve()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01820}{factorise()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01865}{factorise\+\_\+distributed()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02161}{factorise\+\_\+serial()}}, \mbox{\hyperlink{linear__solver_8h_source_l00646}{set\+\_\+solver\+\_\+type()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00814}{solve()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01293}{solve\+\_\+transpose()}}, \mbox{\hyperlink{linear__solver_8h_source_l00723}{use\+\_\+distributed\+\_\+solve\+\_\+in\+\_\+superlu\+\_\+dist()}}, \mbox{\hyperlink{linear__solver_8h_source_l00710}{use\+\_\+global\+\_\+solve\+\_\+in\+\_\+superlu\+\_\+dist()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00534}{$\sim$\+Super\+LUSolver()}}.
+Referenced by \mbox{\hyperlink{SuperLU__preconditioner_8h_source_l00106}{oomph\+::\+Super\+LUPreconditioner\+::clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{linear__solver_8h_source_l00549}{disable\+\_\+resolve()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01893}{factorise()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01938}{factorise\+\_\+distributed()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02234}{factorise\+\_\+serial()}}, \mbox{\hyperlink{linear__solver_8h_source_l00646}{set\+\_\+solver\+\_\+type()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00887}{solve()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01366}{solve\+\_\+transpose()}}, \mbox{\hyperlink{linear__solver_8h_source_l00738}{use\+\_\+distributed\+\_\+solve\+\_\+in\+\_\+superlu\+\_\+dist()}}, \mbox{\hyperlink{linear__solver_8h_source_l00725}{use\+\_\+global\+\_\+solve\+\_\+in\+\_\+superlu\+\_\+dist()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00534}{$\sim$\+Super\+LUSolver()}}.
+
+\mbox{\Hypertarget{classoomph_1_1SuperLUSolver_a291e24ec27c24167db36c4f7935a8892}\label{classoomph_1_1SuperLUSolver_a291e24ec27c24167db36c4f7935a8892}} 
+\index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!compute\_condition\_number@{compute\_condition\_number}}
+\index{compute\_condition\_number@{compute\_condition\_number}!oomph::SuperLUSolver@{oomph::SuperLUSolver}}
+\doxysubsubsection{\texorpdfstring{compute\_condition\_number()}{compute\_condition\_number()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double oomph\+::\+Super\+LUSolver\+::compute\+\_\+condition\+\_\+number (\begin{DoxyParamCaption}\item[{const double \&}]{inf\+\_\+norm }\end{DoxyParamCaption})}
+
+
+
+Wrapper to Super\+LU\textquotesingle{}s dgscon() which computes the (reciprocal of the) condition number of a matrix. This version assumes we\textquotesingle{}re computing the condition number of a matrix which has already been factorised and who\textquotesingle{}s LU factors are in this object\textquotesingle{}s internal storage; it therefore only requires the infinity-\/norm to be passed in. 
+
+
+
+Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l00815}{815}} of file \mbox{\hyperlink{linear__solver_8cc_source}{linear\+\_\+solver.\+cc}}.
+
+
+
+References \mbox{\hyperlink{linear__solver_8h_source_l00841}{Dist\+\_\+solver\+\_\+data\+\_\+pt}}, \mbox{\hyperlink{linear__solver_8h_source_l00496}{Distributed}}, \mbox{\hyperlink{matrices_8cc_source_l03731}{oomph\+::\+CRDouble\+Matrix\+Helpers\+::inf\+\_\+norm()}}, \mbox{\hyperlink{binary__tree_8h_source_l00050}{oomph\+::\+Binary\+Tree\+Names\+::L}}, \mbox{\hyperlink{linear__solver_8h_source_l00797}{Serial\+\_\+f\+\_\+factors}}, \mbox{\hyperlink{linear__solver_8h_source_l00788}{Solver\+\_\+type}}, and \mbox{\hyperlink{octree_8h_source_l00072}{oomph\+::\+Oc\+Tree\+Names\+::U}}.
+
+
+
+Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l00868}{compute\+\_\+condition\+\_\+number()}}.
+
+\mbox{\Hypertarget{classoomph_1_1SuperLUSolver_ab4cf09b9e57ddd6aee6262fd45d36058}\label{classoomph_1_1SuperLUSolver_ab4cf09b9e57ddd6aee6262fd45d36058}} 
+\index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!compute\_condition\_number@{compute\_condition\_number}}
+\index{compute\_condition\_number@{compute\_condition\_number}!oomph::SuperLUSolver@{oomph::SuperLUSolver}}
+\doxysubsubsection{\texorpdfstring{compute\_condition\_number()}{compute\_condition\_number()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double oomph\+::\+Super\+LUSolver\+::compute\+\_\+condition\+\_\+number (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classoomph_1_1DoubleMatrixBase}{Double\+Matrix\+Base}} $\ast$const \&}]{matrix\+\_\+pt }\end{DoxyParamCaption})}
+
+
+
+Wrapper to Super\+LU\textquotesingle{}s dgscon() which computes the (reciprocal of the) condition number of a matrix. This version assumes we haven\textquotesingle{}t yet factorised the matrix and so first performs the LU decomposition (the factors of which are then stored internally), then computes the matrix norm which is passed to the matrix-\/less overload of this function. 
+
+
+
+Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l00868}{868}} of file \mbox{\hyperlink{linear__solver_8cc_source}{linear\+\_\+solver.\+cc}}.
+
+
+
+References \mbox{\hyperlink{linear__solver_8cc_source_l00815}{compute\+\_\+condition\+\_\+number()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01893}{factorise()}}, \mbox{\hyperlink{matrices_8h_source_l00363}{oomph\+::\+Double\+Matrix\+Base\+::inf\+\_\+norm()}}, and \mbox{\hyperlink{matrices_8cc_source_l03731}{oomph\+::\+CRDouble\+Matrix\+Helpers\+::inf\+\_\+norm()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_a887c4a5fd19034f7a74d91d453d4f425}\label{classoomph_1_1SuperLUSolver_a887c4a5fd19034f7a74d91d453d4f425}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!disable\_delete\_matrix\_data\_in\_superlu\_dist@{disable\_delete\_matrix\_data\_in\_superlu\_dist}}
@@ -416,11 +460,11 @@ Unset Delete\+\_\+matrix\+\_\+data flag. Super\+LU\+\_\+dist needs its own copy 
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00686}{686}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
+Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00701}{701}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
 
 
 
-References \mbox{\hyperlink{linear__solver_8h_source_l00849}{Dist\+\_\+delete\+\_\+matrix\+\_\+data}}.
+References \mbox{\hyperlink{linear__solver_8h_source_l00864}{Dist\+\_\+delete\+\_\+matrix\+\_\+data}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_ad4a6f466585f86cbba0b033eb8cda0e4}\label{classoomph_1_1SuperLUSolver_ad4a6f466585f86cbba0b033eb8cda0e4}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!disable\_doc\_stats@{disable\_doc\_stats}}
@@ -438,7 +482,7 @@ Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00609}{609}} of fi
 
 
 
-References \mbox{\hyperlink{linear__solver_8h_source_l00770}{Doc\+\_\+stats}}.
+References \mbox{\hyperlink{linear__solver_8h_source_l00785}{Doc\+\_\+stats}}.
 
 
 
@@ -464,7 +508,7 @@ Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00549}{549}} of fi
 
 
 
-References \mbox{\hyperlink{linear__solver_8cc_source_l02683}{clean\+\_\+up\+\_\+memory()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00144}{oomph\+::\+Linear\+Solver\+::disable\+\_\+resolve()}}.
+References \mbox{\hyperlink{linear__solver_8cc_source_l02756}{clean\+\_\+up\+\_\+memory()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00143}{oomph\+::\+Linear\+Solver\+::disable\+\_\+resolve()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_a3386eb5e27caa80d9c63a6061a304680}\label{classoomph_1_1SuperLUSolver_a3386eb5e27caa80d9c63a6061a304680}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!disable\_row\_and\_col\_permutations\_in\_superlu\_dist@{disable\_row\_and\_col\_permutations\_in\_superlu\_dist}}
@@ -478,11 +522,11 @@ Set flag so that Super\+LU\+\_\+\+DIST is not allowed to permute matrix rows and
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00701}{701}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
+Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00716}{716}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
 
 
 
-References \mbox{\hyperlink{linear__solver_8h_source_l00841}{Dist\+\_\+allow\+\_\+row\+\_\+and\+\_\+col\+\_\+permutations}}.
+References \mbox{\hyperlink{linear__solver_8h_source_l00856}{Dist\+\_\+allow\+\_\+row\+\_\+and\+\_\+col\+\_\+permutations}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_aeb52340bb6d747f60fba9d6c6f9ab2e9}\label{classoomph_1_1SuperLUSolver_aeb52340bb6d747f60fba9d6c6f9ab2e9}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!enable\_computation\_of\_gradient@{enable\_computation\_of\_gradient}}
@@ -518,11 +562,11 @@ Set Delete\+\_\+matrix\+\_\+data flag. Super\+LU\+\_\+dist needs its own copy of
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00678}{678}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
+Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00693}{693}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
 
 
 
-References \mbox{\hyperlink{linear__solver_8h_source_l00849}{Dist\+\_\+delete\+\_\+matrix\+\_\+data}}.
+References \mbox{\hyperlink{linear__solver_8h_source_l00864}{Dist\+\_\+delete\+\_\+matrix\+\_\+data}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_a3eca8399eb777ea97eaad15383eb5795}\label{classoomph_1_1SuperLUSolver_a3eca8399eb777ea97eaad15383eb5795}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!enable\_doc\_stats@{enable\_doc\_stats}}
@@ -540,7 +584,7 @@ Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00603}{603}} of fi
 
 
 
-References \mbox{\hyperlink{linear__solver_8h_source_l00770}{Doc\+\_\+stats}}.
+References \mbox{\hyperlink{linear__solver_8h_source_l00785}{Doc\+\_\+stats}}.
 
 
 
@@ -558,11 +602,11 @@ Set flag so that Super\+LU\+\_\+\+DIST is allowed to permute matrix rows and col
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00694}{694}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
+Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00709}{709}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
 
 
 
-References \mbox{\hyperlink{linear__solver_8h_source_l00841}{Dist\+\_\+allow\+\_\+row\+\_\+and\+\_\+col\+\_\+permutations}}.
+References \mbox{\hyperlink{linear__solver_8h_source_l00856}{Dist\+\_\+allow\+\_\+row\+\_\+and\+\_\+col\+\_\+permutations}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_a67d7a06fdff48c75736498c7b853d781}\label{classoomph_1_1SuperLUSolver_a67d7a06fdff48c75736498c7b853d781}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!factorise@{factorise}}
@@ -576,15 +620,15 @@ Do the factorisation stage Note\+: if Delete\+\_\+matrix\+\_\+data is true the f
 
 LU decompose the matrix addressed by matrix\+\_\+pt by using the Super\+LU solver. The resulting matrix factors are stored internally. 
 
-Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l01820}{1820}} of file \mbox{\hyperlink{linear__solver_8cc_source}{linear\+\_\+solver.\+cc}}.
+Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l01893}{1893}} of file \mbox{\hyperlink{linear__solver_8cc_source}{linear\+\_\+solver.\+cc}}.
 
 
 
-References \mbox{\hyperlink{linear__solver_8cc_source_l02683}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00335}{oomph\+::\+Linear\+Algebra\+Distribution\+::communicator\+\_\+pt()}}, \mbox{\hyperlink{linear__solver_8h_source_l00494}{Default}}, \mbox{\hyperlink{linear__solver_8h_source_l00496}{Distributed}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00457}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::distribution\+\_\+pt()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01865}{factorise\+\_\+distributed()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02161}{factorise\+\_\+serial()}}, \mbox{\hyperlink{oomph__utilities_8h_source_l00851}{oomph\+::\+MPI\+\_\+\+Helpers\+::mpi\+\_\+has\+\_\+been\+\_\+initialised()}}, \mbox{\hyperlink{linear__solver_8h_source_l00773}{Solver\+\_\+type}}, and \mbox{\hyperlink{linear__solver_8h_source_l00776}{Using\+\_\+dist}}.
+References \mbox{\hyperlink{linear__solver_8cc_source_l02756}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00335}{oomph\+::\+Linear\+Algebra\+Distribution\+::communicator\+\_\+pt()}}, \mbox{\hyperlink{linear__solver_8h_source_l00494}{Default}}, \mbox{\hyperlink{linear__solver_8h_source_l00496}{Distributed}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00457}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::distribution\+\_\+pt()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01938}{factorise\+\_\+distributed()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02234}{factorise\+\_\+serial()}}, \mbox{\hyperlink{oomph__utilities_8h_source_l00851}{oomph\+::\+MPI\+\_\+\+Helpers\+::mpi\+\_\+has\+\_\+been\+\_\+initialised()}}, \mbox{\hyperlink{linear__solver_8h_source_l00788}{Solver\+\_\+type}}, and \mbox{\hyperlink{linear__solver_8h_source_l00791}{Using\+\_\+dist}}.
 
 
 
-Referenced by \mbox{\hyperlink{SuperLU__preconditioner_8h_source_l00063}{oomph\+::\+Super\+LUPreconditioner\+::setup()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01074}{solve()}}, and \mbox{\hyperlink{linear__solver_8cc_source_l01554}{solve\+\_\+transpose()}}.
+Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l00868}{compute\+\_\+condition\+\_\+number()}}, \mbox{\hyperlink{SuperLU__preconditioner_8h_source_l00063}{oomph\+::\+Super\+LUPreconditioner\+::setup()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01147}{solve()}}, and \mbox{\hyperlink{linear__solver_8cc_source_l01627}{solve\+\_\+transpose()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_ab60386fae7cd417ad62f46c3cb1463c0}\label{classoomph_1_1SuperLUSolver_ab60386fae7cd417ad62f46c3cb1463c0}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!factorise\_distributed@{factorise\_distributed}}
@@ -598,15 +642,15 @@ factorise method for Super\+LU Dist
 
 LU decompose the matrix addressed by matrix\+\_\+pt using the Super\+LU\+\_\+\+DIST solver. The resulting matrix factors are stored internally. 
 
-Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l01865}{1865}} of file \mbox{\hyperlink{linear__solver_8cc_source}{linear\+\_\+solver.\+cc}}.
+Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l01938}{1938}} of file \mbox{\hyperlink{linear__solver_8cc_source}{linear\+\_\+solver.\+cc}}.
 
 
 
-References \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00507}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::build\+\_\+distribution()}}, \mbox{\hyperlink{matrices_8h_source_l01210}{oomph\+::\+CRDouble\+Matrix\+::built()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02683}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{matrices_8h_source_l03169}{oomph\+::\+CCMatrix$<$ T $>$\+::clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{matrices_8cc_source_l01657}{oomph\+::\+CRDouble\+Matrix\+::clear()}}, \mbox{\hyperlink{matrices_8h_source_l01072}{oomph\+::\+CRDouble\+Matrix\+::column\+\_\+index()}}, \mbox{\hyperlink{matrices_8h_source_l02692}{oomph\+::\+CCMatrix$<$ T $>$\+::column\+\_\+start()}}, \mbox{\hyperlink{oomph__utilities_8cc_source_l01046}{oomph\+::\+MPI\+\_\+\+Helpers\+::communicator\+\_\+pt()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00335}{oomph\+::\+Linear\+Algebra\+Distribution\+::communicator\+\_\+pt()}}, \mbox{\hyperlink{linear__solver_8h_source_l00841}{Dist\+\_\+allow\+\_\+row\+\_\+and\+\_\+col\+\_\+permutations}}, \mbox{\hyperlink{linear__solver_8h_source_l00849}{Dist\+\_\+delete\+\_\+matrix\+\_\+data}}, \mbox{\hyperlink{linear__solver_8h_source_l00823}{Dist\+\_\+distributed\+\_\+solve\+\_\+data\+\_\+allocated}}, \mbox{\hyperlink{linear__solver_8h_source_l00820}{Dist\+\_\+global\+\_\+solve\+\_\+data\+\_\+allocated}}, \mbox{\hyperlink{linear__solver_8h_source_l00856}{Dist\+\_\+index\+\_\+pt}}, \mbox{\hyperlink{linear__solver_8h_source_l00835}{Dist\+\_\+info}}, \mbox{\hyperlink{linear__solver_8h_source_l00832}{Dist\+\_\+npcol}}, \mbox{\hyperlink{linear__solver_8h_source_l00829}{Dist\+\_\+nprow}}, \mbox{\hyperlink{linear__solver_8h_source_l00826}{Dist\+\_\+solver\+\_\+data\+\_\+pt}}, \mbox{\hyperlink{linear__solver_8h_source_l00860}{Dist\+\_\+start\+\_\+pt}}, \mbox{\hyperlink{linear__solver_8h_source_l00852}{Dist\+\_\+value\+\_\+pt}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00493}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::distributed()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00457}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::distribution\+\_\+pt()}}, \mbox{\hyperlink{oomph__utilities_8cc_source_l01212}{oomph\+::\+Leak\+Check\+Names\+::doc()}}, \mbox{\hyperlink{linear__solver_8h_source_l00770}{Doc\+\_\+stats}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00481}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::first\+\_\+row()}}, \mbox{\hyperlink{cfortran_8h_source_l00603}{i}}, \mbox{\hyperlink{classoomph_1_1DoubleMatrixBase_a253feffbf1db1976cdd86c6134c50abe}{oomph\+::\+Double\+Matrix\+Base\+::ncol()}}, \mbox{\hyperlink{matrices_8h_source_l00640}{oomph\+::\+Sparse\+Matrix$<$ T, MATRIX\+\_\+\+TYPE $>$\+::nnz()}}, \mbox{\hyperlink{matrices_8h_source_l01096}{oomph\+::\+CRDouble\+Matrix\+::nnz()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00186}{oomph\+::\+Linear\+Algebra\+Distribution\+::nrow()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00463}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::nrow()}}, \mbox{\hyperlink{matrices_8h_source_l01002}{oomph\+::\+CRDouble\+Matrix\+::nrow()}}, \mbox{\hyperlink{matrices_8h_source_l02817}{oomph\+::\+CCDouble\+Matrix\+::nrow()}}, \mbox{\hyperlink{classoomph_1_1DoubleMatrixBase_acdcd6e1ea2bf2380f1a2fa32c7829cb5}{oomph\+::\+Double\+Matrix\+Base\+::nrow()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00469}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::nrow\+\_\+local()}}, \mbox{\hyperlink{matrices_8h_source_l02704}{oomph\+::\+CCMatrix$<$ T $>$\+::row\+\_\+index()}}, \mbox{\hyperlink{matrices_8h_source_l01060}{oomph\+::\+CRDouble\+Matrix\+::row\+\_\+start()}}, \mbox{\hyperlink{namespaceoomph_ac806709e87d971d63a6a4ba4c9e0e40d}{oomph\+::superlu\+\_\+cr\+\_\+to\+\_\+cc()}}, \mbox{\hyperlink{namespaceoomph_afda4e6a29a247cb24203d0c93047a05e}{oomph\+::superlu\+\_\+dist\+\_\+distributed\+\_\+matrix()}}, \mbox{\hyperlink{namespaceoomph_a69210c78770d5e7a589b23ca3b821ec1}{oomph\+::superlu\+\_\+dist\+\_\+global\+\_\+matrix()}}, \mbox{\hyperlink{matrices_8h_source_l00616}{oomph\+::\+Sparse\+Matrix$<$ T, MATRIX\+\_\+\+TYPE $>$\+::value()}}, and \mbox{\hyperlink{matrices_8h_source_l01084}{oomph\+::\+CRDouble\+Matrix\+::value()}}.
+References \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00507}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::build\+\_\+distribution()}}, \mbox{\hyperlink{matrices_8h_source_l01219}{oomph\+::\+CRDouble\+Matrix\+::built()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02756}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{matrices_8h_source_l03178}{oomph\+::\+CCMatrix$<$ T $>$\+::clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{matrices_8cc_source_l01657}{oomph\+::\+CRDouble\+Matrix\+::clear()}}, \mbox{\hyperlink{matrices_8h_source_l01081}{oomph\+::\+CRDouble\+Matrix\+::column\+\_\+index()}}, \mbox{\hyperlink{matrices_8h_source_l02701}{oomph\+::\+CCMatrix$<$ T $>$\+::column\+\_\+start()}}, \mbox{\hyperlink{oomph__utilities_8cc_source_l01046}{oomph\+::\+MPI\+\_\+\+Helpers\+::communicator\+\_\+pt()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00335}{oomph\+::\+Linear\+Algebra\+Distribution\+::communicator\+\_\+pt()}}, \mbox{\hyperlink{linear__solver_8h_source_l00856}{Dist\+\_\+allow\+\_\+row\+\_\+and\+\_\+col\+\_\+permutations}}, \mbox{\hyperlink{linear__solver_8h_source_l00864}{Dist\+\_\+delete\+\_\+matrix\+\_\+data}}, \mbox{\hyperlink{linear__solver_8h_source_l00838}{Dist\+\_\+distributed\+\_\+solve\+\_\+data\+\_\+allocated}}, \mbox{\hyperlink{linear__solver_8h_source_l00835}{Dist\+\_\+global\+\_\+solve\+\_\+data\+\_\+allocated}}, \mbox{\hyperlink{linear__solver_8h_source_l00871}{Dist\+\_\+index\+\_\+pt}}, \mbox{\hyperlink{linear__solver_8h_source_l00850}{Dist\+\_\+info}}, \mbox{\hyperlink{linear__solver_8h_source_l00847}{Dist\+\_\+npcol}}, \mbox{\hyperlink{linear__solver_8h_source_l00844}{Dist\+\_\+nprow}}, \mbox{\hyperlink{linear__solver_8h_source_l00841}{Dist\+\_\+solver\+\_\+data\+\_\+pt}}, \mbox{\hyperlink{linear__solver_8h_source_l00875}{Dist\+\_\+start\+\_\+pt}}, \mbox{\hyperlink{linear__solver_8h_source_l00867}{Dist\+\_\+value\+\_\+pt}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00493}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::distributed()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00457}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::distribution\+\_\+pt()}}, \mbox{\hyperlink{oomph__utilities_8cc_source_l01212}{oomph\+::\+Leak\+Check\+Names\+::doc()}}, \mbox{\hyperlink{linear__solver_8h_source_l00785}{Doc\+\_\+stats}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00481}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::first\+\_\+row()}}, \mbox{\hyperlink{cfortran_8h_source_l00603}{i}}, \mbox{\hyperlink{classoomph_1_1DoubleMatrixBase_a253feffbf1db1976cdd86c6134c50abe}{oomph\+::\+Double\+Matrix\+Base\+::ncol()}}, \mbox{\hyperlink{matrices_8h_source_l00649}{oomph\+::\+Sparse\+Matrix$<$ T, MATRIX\+\_\+\+TYPE $>$\+::nnz()}}, \mbox{\hyperlink{matrices_8h_source_l01105}{oomph\+::\+CRDouble\+Matrix\+::nnz()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00186}{oomph\+::\+Linear\+Algebra\+Distribution\+::nrow()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00463}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::nrow()}}, \mbox{\hyperlink{matrices_8h_source_l01011}{oomph\+::\+CRDouble\+Matrix\+::nrow()}}, \mbox{\hyperlink{matrices_8h_source_l02826}{oomph\+::\+CCDouble\+Matrix\+::nrow()}}, \mbox{\hyperlink{classoomph_1_1DoubleMatrixBase_acdcd6e1ea2bf2380f1a2fa32c7829cb5}{oomph\+::\+Double\+Matrix\+Base\+::nrow()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00469}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::nrow\+\_\+local()}}, \mbox{\hyperlink{matrices_8h_source_l02713}{oomph\+::\+CCMatrix$<$ T $>$\+::row\+\_\+index()}}, \mbox{\hyperlink{matrices_8h_source_l01069}{oomph\+::\+CRDouble\+Matrix\+::row\+\_\+start()}}, \mbox{\hyperlink{namespaceoomph_ac806709e87d971d63a6a4ba4c9e0e40d}{oomph\+::superlu\+\_\+cr\+\_\+to\+\_\+cc()}}, \mbox{\hyperlink{namespaceoomph_afda4e6a29a247cb24203d0c93047a05e}{oomph\+::superlu\+\_\+dist\+\_\+distributed\+\_\+matrix()}}, \mbox{\hyperlink{namespaceoomph_a69210c78770d5e7a589b23ca3b821ec1}{oomph\+::superlu\+\_\+dist\+\_\+global\+\_\+matrix()}}, \mbox{\hyperlink{matrices_8h_source_l00625}{oomph\+::\+Sparse\+Matrix$<$ T, MATRIX\+\_\+\+TYPE $>$\+::value()}}, and \mbox{\hyperlink{matrices_8h_source_l01093}{oomph\+::\+CRDouble\+Matrix\+::value()}}.
 
 
 
-Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l01820}{factorise()}}.
+Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l01893}{factorise()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_a6b1ce356d11fa878315e9b32ac566748}\label{classoomph_1_1SuperLUSolver_a6b1ce356d11fa878315e9b32ac566748}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!factorise\_serial@{factorise\_serial}}
@@ -620,15 +664,15 @@ factorise method for Super\+LU (serial)
 
 LU decompose the matrix addressed by matrix\+\_\+pt by using the Super\+LU solver. The resulting matrix factors are stored internally. 
 
-Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l02161}{2161}} of file \mbox{\hyperlink{linear__solver_8cc_source}{linear\+\_\+solver.\+cc}}.
+Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l02234}{2234}} of file \mbox{\hyperlink{linear__solver_8cc_source}{linear\+\_\+solver.\+cc}}.
 
 
 
-References \mbox{\hyperlink{linear__solver_8cc_source_l02683}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{matrices_8h_source_l01072}{oomph\+::\+CRDouble\+Matrix\+::column\+\_\+index()}}, \mbox{\hyperlink{matrices_8h_source_l02692}{oomph\+::\+CCMatrix$<$ T $>$\+::column\+\_\+start()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00493}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::distributed()}}, \mbox{\hyperlink{oomph__utilities_8cc_source_l01212}{oomph\+::\+Leak\+Check\+Names\+::doc()}}, \mbox{\hyperlink{linear__solver_8h_source_l00770}{Doc\+\_\+stats}}, \mbox{\hyperlink{cfortran_8h_source_l00603}{i}}, \mbox{\hyperlink{classoomph_1_1DoubleMatrixBase_a253feffbf1db1976cdd86c6134c50abe}{oomph\+::\+Double\+Matrix\+Base\+::ncol()}}, \mbox{\hyperlink{matrices_8h_source_l00640}{oomph\+::\+Sparse\+Matrix$<$ T, MATRIX\+\_\+\+TYPE $>$\+::nnz()}}, \mbox{\hyperlink{matrices_8h_source_l01096}{oomph\+::\+CRDouble\+Matrix\+::nnz()}}, \mbox{\hyperlink{classoomph_1_1DoubleMatrixBase_acdcd6e1ea2bf2380f1a2fa32c7829cb5}{oomph\+::\+Double\+Matrix\+Base\+::nrow()}}, \mbox{\hyperlink{matrices_8h_source_l02704}{oomph\+::\+CCMatrix$<$ T $>$\+::row\+\_\+index()}}, \mbox{\hyperlink{matrices_8h_source_l01060}{oomph\+::\+CRDouble\+Matrix\+::row\+\_\+start()}}, \mbox{\hyperlink{linear__solver_8h_source_l00794}{Serial\+\_\+compressed\+\_\+row\+\_\+flag}}, \mbox{\hyperlink{linear__solver_8h_source_l00782}{Serial\+\_\+f\+\_\+factors}}, \mbox{\hyperlink{linear__solver_8h_source_l00785}{Serial\+\_\+info}}, \mbox{\hyperlink{linear__solver_8h_source_l00788}{Serial\+\_\+n\+\_\+dof}}, \mbox{\hyperlink{linear__solver_8h_source_l00791}{Serial\+\_\+sign\+\_\+of\+\_\+determinant\+\_\+of\+\_\+matrix}}, \mbox{\hyperlink{oomph__utilities_8cc_source_l00243}{oomph\+::\+Cumulative\+Timings\+::start()}}, \mbox{\hyperlink{namespaceoomph_ad3cf4046d72d2de41baaa7505068d9ab}{oomph\+::superlu()}}, \mbox{\hyperlink{matrices_8h_source_l00616}{oomph\+::\+Sparse\+Matrix$<$ T, MATRIX\+\_\+\+TYPE $>$\+::value()}}, and \mbox{\hyperlink{matrices_8h_source_l01084}{oomph\+::\+CRDouble\+Matrix\+::value()}}.
+References \mbox{\hyperlink{linear__solver_8cc_source_l02756}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{matrices_8h_source_l01081}{oomph\+::\+CRDouble\+Matrix\+::column\+\_\+index()}}, \mbox{\hyperlink{matrices_8h_source_l02701}{oomph\+::\+CCMatrix$<$ T $>$\+::column\+\_\+start()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00493}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::distributed()}}, \mbox{\hyperlink{oomph__utilities_8cc_source_l01212}{oomph\+::\+Leak\+Check\+Names\+::doc()}}, \mbox{\hyperlink{linear__solver_8h_source_l00785}{Doc\+\_\+stats}}, \mbox{\hyperlink{cfortran_8h_source_l00603}{i}}, \mbox{\hyperlink{classoomph_1_1DoubleMatrixBase_a253feffbf1db1976cdd86c6134c50abe}{oomph\+::\+Double\+Matrix\+Base\+::ncol()}}, \mbox{\hyperlink{matrices_8h_source_l00649}{oomph\+::\+Sparse\+Matrix$<$ T, MATRIX\+\_\+\+TYPE $>$\+::nnz()}}, \mbox{\hyperlink{matrices_8h_source_l01105}{oomph\+::\+CRDouble\+Matrix\+::nnz()}}, \mbox{\hyperlink{classoomph_1_1DoubleMatrixBase_acdcd6e1ea2bf2380f1a2fa32c7829cb5}{oomph\+::\+Double\+Matrix\+Base\+::nrow()}}, \mbox{\hyperlink{matrices_8h_source_l02713}{oomph\+::\+CCMatrix$<$ T $>$\+::row\+\_\+index()}}, \mbox{\hyperlink{matrices_8h_source_l01069}{oomph\+::\+CRDouble\+Matrix\+::row\+\_\+start()}}, \mbox{\hyperlink{linear__solver_8h_source_l00809}{Serial\+\_\+compressed\+\_\+row\+\_\+flag}}, \mbox{\hyperlink{linear__solver_8h_source_l00797}{Serial\+\_\+f\+\_\+factors}}, \mbox{\hyperlink{linear__solver_8h_source_l00800}{Serial\+\_\+info}}, \mbox{\hyperlink{linear__solver_8h_source_l00803}{Serial\+\_\+n\+\_\+dof}}, \mbox{\hyperlink{linear__solver_8h_source_l00806}{Serial\+\_\+sign\+\_\+of\+\_\+determinant\+\_\+of\+\_\+matrix}}, \mbox{\hyperlink{oomph__utilities_8cc_source_l00243}{oomph\+::\+Cumulative\+Timings\+::start()}}, \mbox{\hyperlink{namespaceoomph_ad3cf4046d72d2de41baaa7505068d9ab}{oomph\+::superlu()}}, \mbox{\hyperlink{matrices_8h_source_l00625}{oomph\+::\+Sparse\+Matrix$<$ T, MATRIX\+\_\+\+TYPE $>$\+::value()}}, and \mbox{\hyperlink{matrices_8h_source_l01093}{oomph\+::\+CRDouble\+Matrix\+::value()}}.
 
 
 
-Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l01820}{factorise()}}.
+Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l01893}{factorise()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_aadb0962a432228fb906f3046b96fa59d}\label{classoomph_1_1SuperLUSolver_aadb0962a432228fb906f3046b96fa59d}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!get\_memory\_usage\_for\_lu\_factors@{get\_memory\_usage\_for\_lu\_factors}}
@@ -646,7 +690,7 @@ Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l00758}{758}} of f
 
 
 
-References \mbox{\hyperlink{linear__solver_8h_source_l00826}{Dist\+\_\+solver\+\_\+data\+\_\+pt}}, \mbox{\hyperlink{linear__solver_8h_source_l00496}{Distributed}}, \mbox{\hyperlink{namespaceoomph_afa6ccf7edb94bd0b516ecc462431eec2}{oomph\+::get\+\_\+lu\+\_\+factor\+\_\+memory\+\_\+usage\+\_\+in\+\_\+bytes()}}, \mbox{\hyperlink{namespaceoomph_a0714a3736ec7c01d37cfd2b86d8cd0da}{oomph\+::get\+\_\+lu\+\_\+factor\+\_\+memory\+\_\+usage\+\_\+in\+\_\+bytes\+\_\+dist()}}, \mbox{\hyperlink{linear__solver_8h_source_l00782}{Serial\+\_\+f\+\_\+factors}}, and \mbox{\hyperlink{linear__solver_8h_source_l00773}{Solver\+\_\+type}}.
+References \mbox{\hyperlink{linear__solver_8h_source_l00841}{Dist\+\_\+solver\+\_\+data\+\_\+pt}}, \mbox{\hyperlink{linear__solver_8h_source_l00496}{Distributed}}, \mbox{\hyperlink{namespaceoomph_afa6ccf7edb94bd0b516ecc462431eec2}{oomph\+::get\+\_\+lu\+\_\+factor\+\_\+memory\+\_\+usage\+\_\+in\+\_\+bytes()}}, \mbox{\hyperlink{namespaceoomph_a0714a3736ec7c01d37cfd2b86d8cd0da}{oomph\+::get\+\_\+lu\+\_\+factor\+\_\+memory\+\_\+usage\+\_\+in\+\_\+bytes\+\_\+dist()}}, \mbox{\hyperlink{linear__solver_8h_source_l00797}{Serial\+\_\+f\+\_\+factors}}, and \mbox{\hyperlink{linear__solver_8h_source_l00788}{Solver\+\_\+type}}.
 
 
 
@@ -668,11 +712,11 @@ Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l00786}{786}} of f
 
 
 
-References \mbox{\hyperlink{linear__solver_8h_source_l00826}{Dist\+\_\+solver\+\_\+data\+\_\+pt}}, \mbox{\hyperlink{linear__solver_8h_source_l00496}{Distributed}}, \mbox{\hyperlink{namespaceoomph_a06d9bb3fe552fe55d8e9ffe4d4a8ffbd}{oomph\+::get\+\_\+total\+\_\+memory\+\_\+usage\+\_\+in\+\_\+bytes()}}, \mbox{\hyperlink{namespaceoomph_a4db51611062d6c5548a68f721b19bf29}{oomph\+::get\+\_\+total\+\_\+memory\+\_\+usage\+\_\+in\+\_\+bytes\+\_\+dist()}}, \mbox{\hyperlink{linear__solver_8h_source_l00782}{Serial\+\_\+f\+\_\+factors}}, and \mbox{\hyperlink{linear__solver_8h_source_l00773}{Solver\+\_\+type}}.
+References \mbox{\hyperlink{linear__solver_8h_source_l00841}{Dist\+\_\+solver\+\_\+data\+\_\+pt}}, \mbox{\hyperlink{linear__solver_8h_source_l00496}{Distributed}}, \mbox{\hyperlink{namespaceoomph_a06d9bb3fe552fe55d8e9ffe4d4a8ffbd}{oomph\+::get\+\_\+total\+\_\+memory\+\_\+usage\+\_\+in\+\_\+bytes()}}, \mbox{\hyperlink{namespaceoomph_a4db51611062d6c5548a68f721b19bf29}{oomph\+::get\+\_\+total\+\_\+memory\+\_\+usage\+\_\+in\+\_\+bytes\+\_\+dist()}}, \mbox{\hyperlink{linear__solver_8h_source_l00797}{Serial\+\_\+f\+\_\+factors}}, and \mbox{\hyperlink{linear__solver_8h_source_l00788}{Solver\+\_\+type}}.
 
 
 
-Referenced by \mbox{\hyperlink{SuperLU__preconditioner_8h_source_l00133}{oomph\+::\+Super\+LUPreconditioner\+::get\+\_\+memory\+\_\+usage\+\_\+for\+\_\+superlu()}}, \mbox{\hyperlink{SuperLU__preconditioner_8h_source_l00122}{oomph\+::\+Super\+LUPreconditioner\+::get\+\_\+total\+\_\+memory\+\_\+needed\+\_\+for\+\_\+superlu()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01074}{solve()}}, and \mbox{\hyperlink{linear__solver_8cc_source_l01554}{solve\+\_\+transpose()}}.
+Referenced by \mbox{\hyperlink{SuperLU__preconditioner_8h_source_l00133}{oomph\+::\+Super\+LUPreconditioner\+::get\+\_\+memory\+\_\+usage\+\_\+for\+\_\+superlu()}}, \mbox{\hyperlink{SuperLU__preconditioner_8h_source_l00122}{oomph\+::\+Super\+LUPreconditioner\+::get\+\_\+total\+\_\+memory\+\_\+needed\+\_\+for\+\_\+superlu()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01147}{solve()}}, and \mbox{\hyperlink{linear__solver_8cc_source_l01627}{solve\+\_\+transpose()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_a9e9bdeac1f619319b931d1dea53a2d96}\label{classoomph_1_1SuperLUSolver_a9e9bdeac1f619319b931d1dea53a2d96}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!jacobian\_setup\_time@{jacobian\_setup\_time}}
@@ -694,7 +738,7 @@ Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00616}{616}} of fi
 
 
 
-References \mbox{\hyperlink{linear__solver_8h_source_l00761}{Jacobian\+\_\+setup\+\_\+time}}.
+References \mbox{\hyperlink{linear__solver_8h_source_l00776}{Jacobian\+\_\+setup\+\_\+time}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_a39e375e5ca81863127fe6d381ef97b65}\label{classoomph_1_1SuperLUSolver_a39e375e5ca81863127fe6d381ef97b65}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!linear\_solver\_solution\_time@{linear\_solver\_solution\_time}}
@@ -716,7 +760,7 @@ Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00623}{623}} of fi
 
 
 
-References \mbox{\hyperlink{linear__solver_8h_source_l00764}{Solution\+\_\+time}}.
+References \mbox{\hyperlink{linear__solver_8h_source_l00779}{Solution\+\_\+time}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_a2d107f4319f3ab5b49004661e0797b51}\label{classoomph_1_1SuperLUSolver_a2d107f4319f3ab5b49004661e0797b51}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!operator=@{operator=}}
@@ -744,11 +788,11 @@ Reimplemented from \mbox{\hyperlink{classoomph_1_1LinearSolver_a3b310d08333033ed
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l01769}{1769}} of file \mbox{\hyperlink{linear__solver_8cc_source}{linear\+\_\+solver.\+cc}}.
+Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l01842}{1842}} of file \mbox{\hyperlink{linear__solver_8cc_source}{linear\+\_\+solver.\+cc}}.
 
 
 
-References \mbox{\hyperlink{linear__solver_8cc_source_l02292}{backsub()}}, \mbox{\hyperlink{oomph__utilities_8cc_source_l01316}{oomph\+::\+Timing\+Helpers\+::convert\+\_\+secs\+\_\+to\+\_\+formatted\+\_\+string()}}, \mbox{\hyperlink{linear__solver_8h_source_l00077}{oomph\+::\+Linear\+Solver\+::\+Doc\+\_\+time}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00463}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::nrow()}}, \mbox{\hyperlink{oomph__definitions_8cc_source_l00319}{oomph\+::oomph\+\_\+info}}, \mbox{\hyperlink{linear__solver_8h_source_l00764}{Solution\+\_\+time}}, and \mbox{\hyperlink{oomph__utilities_8cc_source_l01295}{oomph\+::\+Timing\+Helpers\+::timer()}}.
+References \mbox{\hyperlink{linear__solver_8cc_source_l02365}{backsub()}}, \mbox{\hyperlink{oomph__utilities_8cc_source_l01316}{oomph\+::\+Timing\+Helpers\+::convert\+\_\+secs\+\_\+to\+\_\+formatted\+\_\+string()}}, \mbox{\hyperlink{linear__solver_8h_source_l00077}{oomph\+::\+Linear\+Solver\+::\+Doc\+\_\+time}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00463}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::nrow()}}, \mbox{\hyperlink{oomph__definitions_8cc_source_l00319}{oomph\+::oomph\+\_\+info}}, \mbox{\hyperlink{linear__solver_8h_source_l00779}{Solution\+\_\+time}}, and \mbox{\hyperlink{oomph__utilities_8cc_source_l01295}{oomph\+::\+Timing\+Helpers\+::timer()}}.
 
 
 
@@ -770,11 +814,11 @@ Reimplemented from \mbox{\hyperlink{classoomph_1_1LinearSolver_acf539c2dd415e22e
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l01793}{1793}} of file \mbox{\hyperlink{linear__solver_8cc_source}{linear\+\_\+solver.\+cc}}.
+Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l01866}{1866}} of file \mbox{\hyperlink{linear__solver_8cc_source}{linear\+\_\+solver.\+cc}}.
 
 
 
-References \mbox{\hyperlink{linear__solver_8cc_source_l02312}{backsub\+\_\+transpose()}}, \mbox{\hyperlink{oomph__utilities_8cc_source_l01316}{oomph\+::\+Timing\+Helpers\+::convert\+\_\+secs\+\_\+to\+\_\+formatted\+\_\+string()}}, \mbox{\hyperlink{linear__solver_8h_source_l00077}{oomph\+::\+Linear\+Solver\+::\+Doc\+\_\+time}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00463}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::nrow()}}, \mbox{\hyperlink{oomph__definitions_8cc_source_l00319}{oomph\+::oomph\+\_\+info}}, \mbox{\hyperlink{linear__solver_8h_source_l00764}{Solution\+\_\+time}}, and \mbox{\hyperlink{oomph__utilities_8cc_source_l01295}{oomph\+::\+Timing\+Helpers\+::timer()}}.
+References \mbox{\hyperlink{linear__solver_8cc_source_l02385}{backsub\+\_\+transpose()}}, \mbox{\hyperlink{oomph__utilities_8cc_source_l01316}{oomph\+::\+Timing\+Helpers\+::convert\+\_\+secs\+\_\+to\+\_\+formatted\+\_\+string()}}, \mbox{\hyperlink{linear__solver_8h_source_l00077}{oomph\+::\+Linear\+Solver\+::\+Doc\+\_\+time}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00463}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::nrow()}}, \mbox{\hyperlink{oomph__definitions_8cc_source_l00319}{oomph\+::oomph\+\_\+info}}, \mbox{\hyperlink{linear__solver_8h_source_l00779}{Solution\+\_\+time}}, and \mbox{\hyperlink{oomph__utilities_8cc_source_l01295}{oomph\+::\+Timing\+Helpers\+::timer()}}.
 
 
 
@@ -796,7 +840,7 @@ Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00646}{646}} of fi
 
 
 
-References \mbox{\hyperlink{linear__solver_8cc_source_l02683}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{linear__solver_8h_source_l00773}{Solver\+\_\+type}}, and \mbox{\hyperlink{cfortran_8h_source_l00568}{t}}.
+References \mbox{\hyperlink{linear__solver_8cc_source_l02756}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{linear__solver_8h_source_l00788}{Solver\+\_\+type}}, and \mbox{\hyperlink{cfortran_8h_source_l00568}{t}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_a94e94a44f4cb93f2adf035e9b99990e7}\label{classoomph_1_1SuperLUSolver_a94e94a44f4cb93f2adf035e9b99990e7}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!solve@{solve}}
@@ -814,11 +858,11 @@ Reimplemented from \mbox{\hyperlink{classoomph_1_1LinearSolver_a546c09822d18191d
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l01074}{1074}} of file \mbox{\hyperlink{linear__solver_8cc_source}{linear\+\_\+solver.\+cc}}.
+Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l01147}{1147}} of file \mbox{\hyperlink{linear__solver_8cc_source}{linear\+\_\+solver.\+cc}}.
 
 
 
-References \mbox{\hyperlink{linear__solver_8cc_source_l02292}{backsub()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00507}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::build\+\_\+distribution()}}, \mbox{\hyperlink{double__vector_8h_source_l00154}{oomph\+::\+Double\+Vector\+::built()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02683}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{oomph__utilities_8cc_source_l01316}{oomph\+::\+Timing\+Helpers\+::convert\+\_\+secs\+\_\+to\+\_\+formatted\+\_\+string()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00329}{oomph\+::\+Linear\+Algebra\+Distribution\+::distributed()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00457}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::distribution\+\_\+pt()}}, \mbox{\hyperlink{linear__solver_8h_source_l00077}{oomph\+::\+Linear\+Solver\+::\+Doc\+\_\+time}}, \mbox{\hyperlink{linear__solver_8h_source_l00073}{oomph\+::\+Linear\+Solver\+::\+Enable\+\_\+resolve}}, \mbox{\hyperlink{linear__solver_8cc_source_l01820}{factorise()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00786}{get\+\_\+total\+\_\+needed\+\_\+memory()}}, \mbox{\hyperlink{classoomph_1_1DoubleMatrixBase_a253feffbf1db1976cdd86c6134c50abe}{oomph\+::\+Double\+Matrix\+Base\+::ncol()}}, \mbox{\hyperlink{matrices_8h_source_l01096}{oomph\+::\+CRDouble\+Matrix\+::nnz()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00463}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::nrow()}}, \mbox{\hyperlink{matrices_8h_source_l01002}{oomph\+::\+CRDouble\+Matrix\+::nrow()}}, \mbox{\hyperlink{classoomph_1_1DoubleMatrixBase_acdcd6e1ea2bf2380f1a2fa32c7829cb5}{oomph\+::\+Double\+Matrix\+Base\+::nrow()}}, \mbox{\hyperlink{oomph__definitions_8cc_source_l00319}{oomph\+::oomph\+\_\+info}}, \mbox{\hyperlink{linear__solver_8h_source_l00764}{Solution\+\_\+time}}, and \mbox{\hyperlink{oomph__utilities_8cc_source_l01295}{oomph\+::\+Timing\+Helpers\+::timer()}}.
+References \mbox{\hyperlink{linear__solver_8cc_source_l02365}{backsub()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00507}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::build\+\_\+distribution()}}, \mbox{\hyperlink{double__vector_8h_source_l00154}{oomph\+::\+Double\+Vector\+::built()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02756}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{oomph__utilities_8cc_source_l01316}{oomph\+::\+Timing\+Helpers\+::convert\+\_\+secs\+\_\+to\+\_\+formatted\+\_\+string()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00329}{oomph\+::\+Linear\+Algebra\+Distribution\+::distributed()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00457}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::distribution\+\_\+pt()}}, \mbox{\hyperlink{linear__solver_8h_source_l00077}{oomph\+::\+Linear\+Solver\+::\+Doc\+\_\+time}}, \mbox{\hyperlink{linear__solver_8h_source_l00073}{oomph\+::\+Linear\+Solver\+::\+Enable\+\_\+resolve}}, \mbox{\hyperlink{linear__solver_8cc_source_l01893}{factorise()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00786}{get\+\_\+total\+\_\+needed\+\_\+memory()}}, \mbox{\hyperlink{classoomph_1_1DoubleMatrixBase_a253feffbf1db1976cdd86c6134c50abe}{oomph\+::\+Double\+Matrix\+Base\+::ncol()}}, \mbox{\hyperlink{matrices_8h_source_l01105}{oomph\+::\+CRDouble\+Matrix\+::nnz()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00463}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::nrow()}}, \mbox{\hyperlink{matrices_8h_source_l01011}{oomph\+::\+CRDouble\+Matrix\+::nrow()}}, \mbox{\hyperlink{classoomph_1_1DoubleMatrixBase_acdcd6e1ea2bf2380f1a2fa32c7829cb5}{oomph\+::\+Double\+Matrix\+Base\+::nrow()}}, \mbox{\hyperlink{oomph__definitions_8cc_source_l00319}{oomph\+::oomph\+\_\+info}}, \mbox{\hyperlink{linear__solver_8h_source_l00779}{Solution\+\_\+time}}, and \mbox{\hyperlink{oomph__utilities_8cc_source_l01295}{oomph\+::\+Timing\+Helpers\+::timer()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_a5a121df89c72a8741d051aa176b12255}\label{classoomph_1_1SuperLUSolver_a5a121df89c72a8741d051aa176b12255}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!solve@{solve}}
@@ -836,15 +880,15 @@ Implements \mbox{\hyperlink{classoomph_1_1LinearSolver_a15ce22542b74ed1826ea485e
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l00814}{814}} of file \mbox{\hyperlink{linear__solver_8cc_source}{linear\+\_\+solver.\+cc}}.
+Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l00887}{887}} of file \mbox{\hyperlink{linear__solver_8cc_source}{linear\+\_\+solver.\+cc}}.
 
 
 
-References \mbox{\hyperlink{double__vector_8cc_source_l00035}{oomph\+::\+Double\+Vector\+::build()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00507}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::build\+\_\+distribution()}}, \mbox{\hyperlink{double__vector_8h_source_l00154}{oomph\+::\+Double\+Vector\+::built()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02683}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{problem_8h_source_l01246}{oomph\+::\+Problem\+::communicator\+\_\+pt()}}, \mbox{\hyperlink{linear__solver_8h_source_l00081}{oomph\+::\+Linear\+Solver\+::\+Compute\+\_\+gradient}}, \mbox{\hyperlink{oomph__utilities_8cc_source_l01316}{oomph\+::\+Timing\+Helpers\+::convert\+\_\+secs\+\_\+to\+\_\+formatted\+\_\+string()}}, \mbox{\hyperlink{linear__solver_8h_source_l00494}{Default}}, \mbox{\hyperlink{linear__solver_8h_source_l00849}{Dist\+\_\+delete\+\_\+matrix\+\_\+data}}, \mbox{\hyperlink{linear__solver_8h_source_l00817}{Dist\+\_\+use\+\_\+global\+\_\+solver}}, \mbox{\hyperlink{linear__solver_8h_source_l00496}{Distributed}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00457}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::distribution\+\_\+pt()}}, \mbox{\hyperlink{linear__solver_8h_source_l00077}{oomph\+::\+Linear\+Solver\+::\+Doc\+\_\+time}}, \mbox{\hyperlink{problem_8cc_source_l03890}{oomph\+::\+Problem\+::get\+\_\+jacobian()}}, \mbox{\hyperlink{linear__solver_8h_source_l00088}{oomph\+::\+Linear\+Solver\+::\+Gradient\+\_\+for\+\_\+glob\+\_\+conv\+\_\+newton\+\_\+solve}}, \mbox{\hyperlink{linear__solver_8h_source_l00084}{oomph\+::\+Linear\+Solver\+::\+Gradient\+\_\+has\+\_\+been\+\_\+computed}}, \mbox{\hyperlink{linear__solver_8h_source_l00761}{Jacobian\+\_\+setup\+\_\+time}}, \mbox{\hyperlink{matrices_8cc_source_l01882}{oomph\+::\+CRDouble\+Matrix\+::multiply\+\_\+transpose()}}, \mbox{\hyperlink{matrices_8cc_source_l00715}{oomph\+::\+CCDouble\+Matrix\+::multiply\+\_\+transpose()}}, \mbox{\hyperlink{problem_8h_source_l01674}{oomph\+::\+Problem\+::ndof()}}, \mbox{\hyperlink{oomph__definitions_8cc_source_l00319}{oomph\+::oomph\+\_\+info}}, \mbox{\hyperlink{double__vector_8cc_source_l00164}{oomph\+::\+Double\+Vector\+::redistribute()}}, \mbox{\hyperlink{linear__solver_8h_source_l00794}{Serial\+\_\+compressed\+\_\+row\+\_\+flag}}, \mbox{\hyperlink{linear__solver_8h_source_l00791}{Serial\+\_\+sign\+\_\+of\+\_\+determinant\+\_\+of\+\_\+matrix}}, \mbox{\hyperlink{problem_8h_source_l02424}{oomph\+::\+Problem\+::sign\+\_\+of\+\_\+jacobian()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00814}{solve()}}, \mbox{\hyperlink{linear__solver_8h_source_l00773}{Solver\+\_\+type}}, \mbox{\hyperlink{linear__solver_8h_source_l00767}{Suppress\+\_\+solve}}, and \mbox{\hyperlink{oomph__utilities_8cc_source_l01295}{oomph\+::\+Timing\+Helpers\+::timer()}}.
+References \mbox{\hyperlink{double__vector_8cc_source_l00035}{oomph\+::\+Double\+Vector\+::build()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00507}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::build\+\_\+distribution()}}, \mbox{\hyperlink{double__vector_8h_source_l00154}{oomph\+::\+Double\+Vector\+::built()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02756}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{problem_8h_source_l01246}{oomph\+::\+Problem\+::communicator\+\_\+pt()}}, \mbox{\hyperlink{linear__solver_8h_source_l00081}{oomph\+::\+Linear\+Solver\+::\+Compute\+\_\+gradient}}, \mbox{\hyperlink{oomph__utilities_8cc_source_l01316}{oomph\+::\+Timing\+Helpers\+::convert\+\_\+secs\+\_\+to\+\_\+formatted\+\_\+string()}}, \mbox{\hyperlink{linear__solver_8h_source_l00494}{Default}}, \mbox{\hyperlink{linear__solver_8h_source_l00864}{Dist\+\_\+delete\+\_\+matrix\+\_\+data}}, \mbox{\hyperlink{linear__solver_8h_source_l00832}{Dist\+\_\+use\+\_\+global\+\_\+solver}}, \mbox{\hyperlink{linear__solver_8h_source_l00496}{Distributed}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00457}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::distribution\+\_\+pt()}}, \mbox{\hyperlink{linear__solver_8h_source_l00077}{oomph\+::\+Linear\+Solver\+::\+Doc\+\_\+time}}, \mbox{\hyperlink{problem_8cc_source_l03890}{oomph\+::\+Problem\+::get\+\_\+jacobian()}}, \mbox{\hyperlink{linear__solver_8h_source_l00088}{oomph\+::\+Linear\+Solver\+::\+Gradient\+\_\+for\+\_\+glob\+\_\+conv\+\_\+newton\+\_\+solve}}, \mbox{\hyperlink{linear__solver_8h_source_l00084}{oomph\+::\+Linear\+Solver\+::\+Gradient\+\_\+has\+\_\+been\+\_\+computed}}, \mbox{\hyperlink{linear__solver_8h_source_l00776}{Jacobian\+\_\+setup\+\_\+time}}, \mbox{\hyperlink{matrices_8cc_source_l01882}{oomph\+::\+CRDouble\+Matrix\+::multiply\+\_\+transpose()}}, \mbox{\hyperlink{matrices_8cc_source_l00715}{oomph\+::\+CCDouble\+Matrix\+::multiply\+\_\+transpose()}}, \mbox{\hyperlink{problem_8h_source_l01674}{oomph\+::\+Problem\+::ndof()}}, \mbox{\hyperlink{oomph__definitions_8cc_source_l00319}{oomph\+::oomph\+\_\+info}}, \mbox{\hyperlink{double__vector_8cc_source_l00164}{oomph\+::\+Double\+Vector\+::redistribute()}}, \mbox{\hyperlink{linear__solver_8h_source_l00809}{Serial\+\_\+compressed\+\_\+row\+\_\+flag}}, \mbox{\hyperlink{linear__solver_8h_source_l00806}{Serial\+\_\+sign\+\_\+of\+\_\+determinant\+\_\+of\+\_\+matrix}}, \mbox{\hyperlink{problem_8h_source_l02424}{oomph\+::\+Problem\+::sign\+\_\+of\+\_\+jacobian()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00887}{solve()}}, \mbox{\hyperlink{linear__solver_8h_source_l00788}{Solver\+\_\+type}}, \mbox{\hyperlink{linear__solver_8h_source_l00782}{Suppress\+\_\+solve}}, and \mbox{\hyperlink{oomph__utilities_8cc_source_l01295}{oomph\+::\+Timing\+Helpers\+::timer()}}.
 
 
 
-Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l00814}{solve()}}.
+Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l00887}{solve()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_a4954bcec402af933d69825d58824fafc}\label{classoomph_1_1SuperLUSolver_a4954bcec402af933d69825d58824fafc}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!solve\_transpose@{solve\_transpose}}
@@ -862,11 +906,11 @@ Reimplemented from \mbox{\hyperlink{classoomph_1_1LinearSolver_a600b4d06d85c238b
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l01554}{1554}} of file \mbox{\hyperlink{linear__solver_8cc_source}{linear\+\_\+solver.\+cc}}.
+Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l01627}{1627}} of file \mbox{\hyperlink{linear__solver_8cc_source}{linear\+\_\+solver.\+cc}}.
 
 
 
-References \mbox{\hyperlink{linear__solver_8cc_source_l02312}{backsub\+\_\+transpose()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00507}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::build\+\_\+distribution()}}, \mbox{\hyperlink{double__vector_8h_source_l00154}{oomph\+::\+Double\+Vector\+::built()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02683}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{oomph__utilities_8cc_source_l01316}{oomph\+::\+Timing\+Helpers\+::convert\+\_\+secs\+\_\+to\+\_\+formatted\+\_\+string()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00329}{oomph\+::\+Linear\+Algebra\+Distribution\+::distributed()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00457}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::distribution\+\_\+pt()}}, \mbox{\hyperlink{linear__solver_8h_source_l00077}{oomph\+::\+Linear\+Solver\+::\+Doc\+\_\+time}}, \mbox{\hyperlink{linear__solver_8h_source_l00073}{oomph\+::\+Linear\+Solver\+::\+Enable\+\_\+resolve}}, \mbox{\hyperlink{linear__solver_8cc_source_l01820}{factorise()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00786}{get\+\_\+total\+\_\+needed\+\_\+memory()}}, \mbox{\hyperlink{classoomph_1_1DoubleMatrixBase_a253feffbf1db1976cdd86c6134c50abe}{oomph\+::\+Double\+Matrix\+Base\+::ncol()}}, \mbox{\hyperlink{matrices_8h_source_l01096}{oomph\+::\+CRDouble\+Matrix\+::nnz()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00463}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::nrow()}}, \mbox{\hyperlink{matrices_8h_source_l01002}{oomph\+::\+CRDouble\+Matrix\+::nrow()}}, \mbox{\hyperlink{classoomph_1_1DoubleMatrixBase_acdcd6e1ea2bf2380f1a2fa32c7829cb5}{oomph\+::\+Double\+Matrix\+Base\+::nrow()}}, \mbox{\hyperlink{oomph__definitions_8cc_source_l00319}{oomph\+::oomph\+\_\+info}}, \mbox{\hyperlink{linear__solver_8h_source_l00764}{Solution\+\_\+time}}, and \mbox{\hyperlink{oomph__utilities_8cc_source_l01295}{oomph\+::\+Timing\+Helpers\+::timer()}}.
+References \mbox{\hyperlink{linear__solver_8cc_source_l02385}{backsub\+\_\+transpose()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00507}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::build\+\_\+distribution()}}, \mbox{\hyperlink{double__vector_8h_source_l00154}{oomph\+::\+Double\+Vector\+::built()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02756}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{oomph__utilities_8cc_source_l01316}{oomph\+::\+Timing\+Helpers\+::convert\+\_\+secs\+\_\+to\+\_\+formatted\+\_\+string()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00329}{oomph\+::\+Linear\+Algebra\+Distribution\+::distributed()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00457}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::distribution\+\_\+pt()}}, \mbox{\hyperlink{linear__solver_8h_source_l00077}{oomph\+::\+Linear\+Solver\+::\+Doc\+\_\+time}}, \mbox{\hyperlink{linear__solver_8h_source_l00073}{oomph\+::\+Linear\+Solver\+::\+Enable\+\_\+resolve}}, \mbox{\hyperlink{linear__solver_8cc_source_l01893}{factorise()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00786}{get\+\_\+total\+\_\+needed\+\_\+memory()}}, \mbox{\hyperlink{classoomph_1_1DoubleMatrixBase_a253feffbf1db1976cdd86c6134c50abe}{oomph\+::\+Double\+Matrix\+Base\+::ncol()}}, \mbox{\hyperlink{matrices_8h_source_l01105}{oomph\+::\+CRDouble\+Matrix\+::nnz()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00463}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::nrow()}}, \mbox{\hyperlink{matrices_8h_source_l01011}{oomph\+::\+CRDouble\+Matrix\+::nrow()}}, \mbox{\hyperlink{classoomph_1_1DoubleMatrixBase_acdcd6e1ea2bf2380f1a2fa32c7829cb5}{oomph\+::\+Double\+Matrix\+Base\+::nrow()}}, \mbox{\hyperlink{oomph__definitions_8cc_source_l00319}{oomph\+::oomph\+\_\+info}}, \mbox{\hyperlink{linear__solver_8h_source_l00779}{Solution\+\_\+time}}, and \mbox{\hyperlink{oomph__utilities_8cc_source_l01295}{oomph\+::\+Timing\+Helpers\+::timer()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_a10bdce2b176a3ca514b82f66cd50e037}\label{classoomph_1_1SuperLUSolver_a10bdce2b176a3ca514b82f66cd50e037}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!solve\_transpose@{solve\_transpose}}
@@ -884,15 +928,15 @@ Reimplemented from \mbox{\hyperlink{classoomph_1_1LinearSolver_a8e970813a1583f61
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l01293}{1293}} of file \mbox{\hyperlink{linear__solver_8cc_source}{linear\+\_\+solver.\+cc}}.
+Definition at line \mbox{\hyperlink{linear__solver_8cc_source_l01366}{1366}} of file \mbox{\hyperlink{linear__solver_8cc_source}{linear\+\_\+solver.\+cc}}.
 
 
 
-References \mbox{\hyperlink{double__vector_8cc_source_l00035}{oomph\+::\+Double\+Vector\+::build()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00507}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::build\+\_\+distribution()}}, \mbox{\hyperlink{double__vector_8h_source_l00154}{oomph\+::\+Double\+Vector\+::built()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02683}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{problem_8h_source_l01246}{oomph\+::\+Problem\+::communicator\+\_\+pt()}}, \mbox{\hyperlink{linear__solver_8h_source_l00081}{oomph\+::\+Linear\+Solver\+::\+Compute\+\_\+gradient}}, \mbox{\hyperlink{oomph__utilities_8cc_source_l01316}{oomph\+::\+Timing\+Helpers\+::convert\+\_\+secs\+\_\+to\+\_\+formatted\+\_\+string()}}, \mbox{\hyperlink{linear__solver_8h_source_l00494}{Default}}, \mbox{\hyperlink{linear__solver_8h_source_l00849}{Dist\+\_\+delete\+\_\+matrix\+\_\+data}}, \mbox{\hyperlink{linear__solver_8h_source_l00817}{Dist\+\_\+use\+\_\+global\+\_\+solver}}, \mbox{\hyperlink{linear__solver_8h_source_l00496}{Distributed}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00457}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::distribution\+\_\+pt()}}, \mbox{\hyperlink{linear__solver_8h_source_l00077}{oomph\+::\+Linear\+Solver\+::\+Doc\+\_\+time}}, \mbox{\hyperlink{problem_8cc_source_l03890}{oomph\+::\+Problem\+::get\+\_\+jacobian()}}, \mbox{\hyperlink{linear__solver_8h_source_l00088}{oomph\+::\+Linear\+Solver\+::\+Gradient\+\_\+for\+\_\+glob\+\_\+conv\+\_\+newton\+\_\+solve}}, \mbox{\hyperlink{linear__solver_8h_source_l00084}{oomph\+::\+Linear\+Solver\+::\+Gradient\+\_\+has\+\_\+been\+\_\+computed}}, \mbox{\hyperlink{linear__solver_8h_source_l00761}{Jacobian\+\_\+setup\+\_\+time}}, \mbox{\hyperlink{matrices_8cc_source_l01882}{oomph\+::\+CRDouble\+Matrix\+::multiply\+\_\+transpose()}}, \mbox{\hyperlink{matrices_8cc_source_l00715}{oomph\+::\+CCDouble\+Matrix\+::multiply\+\_\+transpose()}}, \mbox{\hyperlink{problem_8h_source_l01674}{oomph\+::\+Problem\+::ndof()}}, \mbox{\hyperlink{oomph__definitions_8cc_source_l00319}{oomph\+::oomph\+\_\+info}}, \mbox{\hyperlink{double__vector_8cc_source_l00164}{oomph\+::\+Double\+Vector\+::redistribute()}}, \mbox{\hyperlink{linear__solver_8h_source_l00794}{Serial\+\_\+compressed\+\_\+row\+\_\+flag}}, \mbox{\hyperlink{linear__solver_8h_source_l00791}{Serial\+\_\+sign\+\_\+of\+\_\+determinant\+\_\+of\+\_\+matrix}}, \mbox{\hyperlink{problem_8h_source_l02424}{oomph\+::\+Problem\+::sign\+\_\+of\+\_\+jacobian()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01293}{solve\+\_\+transpose()}}, \mbox{\hyperlink{linear__solver_8h_source_l00773}{Solver\+\_\+type}}, \mbox{\hyperlink{linear__solver_8h_source_l00767}{Suppress\+\_\+solve}}, and \mbox{\hyperlink{oomph__utilities_8cc_source_l01295}{oomph\+::\+Timing\+Helpers\+::timer()}}.
+References \mbox{\hyperlink{double__vector_8cc_source_l00035}{oomph\+::\+Double\+Vector\+::build()}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00507}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::build\+\_\+distribution()}}, \mbox{\hyperlink{double__vector_8h_source_l00154}{oomph\+::\+Double\+Vector\+::built()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02756}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{problem_8h_source_l01246}{oomph\+::\+Problem\+::communicator\+\_\+pt()}}, \mbox{\hyperlink{linear__solver_8h_source_l00081}{oomph\+::\+Linear\+Solver\+::\+Compute\+\_\+gradient}}, \mbox{\hyperlink{oomph__utilities_8cc_source_l01316}{oomph\+::\+Timing\+Helpers\+::convert\+\_\+secs\+\_\+to\+\_\+formatted\+\_\+string()}}, \mbox{\hyperlink{linear__solver_8h_source_l00494}{Default}}, \mbox{\hyperlink{linear__solver_8h_source_l00864}{Dist\+\_\+delete\+\_\+matrix\+\_\+data}}, \mbox{\hyperlink{linear__solver_8h_source_l00832}{Dist\+\_\+use\+\_\+global\+\_\+solver}}, \mbox{\hyperlink{linear__solver_8h_source_l00496}{Distributed}}, \mbox{\hyperlink{linear__algebra__distribution_8h_source_l00457}{oomph\+::\+Distributable\+Linear\+Algebra\+Object\+::distribution\+\_\+pt()}}, \mbox{\hyperlink{linear__solver_8h_source_l00077}{oomph\+::\+Linear\+Solver\+::\+Doc\+\_\+time}}, \mbox{\hyperlink{problem_8cc_source_l03890}{oomph\+::\+Problem\+::get\+\_\+jacobian()}}, \mbox{\hyperlink{linear__solver_8h_source_l00088}{oomph\+::\+Linear\+Solver\+::\+Gradient\+\_\+for\+\_\+glob\+\_\+conv\+\_\+newton\+\_\+solve}}, \mbox{\hyperlink{linear__solver_8h_source_l00084}{oomph\+::\+Linear\+Solver\+::\+Gradient\+\_\+has\+\_\+been\+\_\+computed}}, \mbox{\hyperlink{linear__solver_8h_source_l00776}{Jacobian\+\_\+setup\+\_\+time}}, \mbox{\hyperlink{matrices_8cc_source_l01882}{oomph\+::\+CRDouble\+Matrix\+::multiply\+\_\+transpose()}}, \mbox{\hyperlink{matrices_8cc_source_l00715}{oomph\+::\+CCDouble\+Matrix\+::multiply\+\_\+transpose()}}, \mbox{\hyperlink{problem_8h_source_l01674}{oomph\+::\+Problem\+::ndof()}}, \mbox{\hyperlink{oomph__definitions_8cc_source_l00319}{oomph\+::oomph\+\_\+info}}, \mbox{\hyperlink{double__vector_8cc_source_l00164}{oomph\+::\+Double\+Vector\+::redistribute()}}, \mbox{\hyperlink{linear__solver_8h_source_l00809}{Serial\+\_\+compressed\+\_\+row\+\_\+flag}}, \mbox{\hyperlink{linear__solver_8h_source_l00806}{Serial\+\_\+sign\+\_\+of\+\_\+determinant\+\_\+of\+\_\+matrix}}, \mbox{\hyperlink{problem_8h_source_l02424}{oomph\+::\+Problem\+::sign\+\_\+of\+\_\+jacobian()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01366}{solve\+\_\+transpose()}}, \mbox{\hyperlink{linear__solver_8h_source_l00788}{Solver\+\_\+type}}, \mbox{\hyperlink{linear__solver_8h_source_l00782}{Suppress\+\_\+solve}}, and \mbox{\hyperlink{oomph__utilities_8cc_source_l01295}{oomph\+::\+Timing\+Helpers\+::timer()}}.
 
 
 
-Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l01293}{solve\+\_\+transpose()}}.
+Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l01366}{solve\+\_\+transpose()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_abd96a292e666e7553651add727265529}\label{classoomph_1_1SuperLUSolver_abd96a292e666e7553651add727265529}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!use\_compressed\_column\_for\_superlu\_serial@{use\_compressed\_column\_for\_superlu\_serial}}
@@ -910,7 +954,7 @@ Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00662}{662}} of fi
 
 
 
-References \mbox{\hyperlink{linear__solver_8h_source_l00794}{Serial\+\_\+compressed\+\_\+row\+\_\+flag}}.
+References \mbox{\hyperlink{linear__solver_8h_source_l00809}{Serial\+\_\+compressed\+\_\+row\+\_\+flag}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_ad0d31829d3afe5f7a315d1b37693e8a2}\label{classoomph_1_1SuperLUSolver_ad0d31829d3afe5f7a315d1b37693e8a2}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!use\_compressed\_row\_for\_superlu\_serial@{use\_compressed\_row\_for\_superlu\_serial}}
@@ -928,7 +972,7 @@ Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00656}{656}} of fi
 
 
 
-References \mbox{\hyperlink{linear__solver_8h_source_l00794}{Serial\+\_\+compressed\+\_\+row\+\_\+flag}}.
+References \mbox{\hyperlink{linear__solver_8h_source_l00809}{Serial\+\_\+compressed\+\_\+row\+\_\+flag}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_a400adf19a2051b05baec7a300bda5406}\label{classoomph_1_1SuperLUSolver_a400adf19a2051b05baec7a300bda5406}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!use\_distributed\_solve\_in\_superlu\_dist@{use\_distributed\_solve\_in\_superlu\_dist}}
@@ -942,11 +986,11 @@ Calling this method will ensure that when the problem based solve interface is u
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00723}{723}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
+Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00738}{738}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
 
 
 
-References \mbox{\hyperlink{linear__solver_8cc_source_l02683}{clean\+\_\+up\+\_\+memory()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00817}{Dist\+\_\+use\+\_\+global\+\_\+solver}}.
+References \mbox{\hyperlink{linear__solver_8cc_source_l02756}{clean\+\_\+up\+\_\+memory()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00832}{Dist\+\_\+use\+\_\+global\+\_\+solver}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_a4eac19f126f7da82f6af48416410442a}\label{classoomph_1_1SuperLUSolver_a4eac19f126f7da82f6af48416410442a}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!use\_global\_solve\_in\_superlu\_dist@{use\_global\_solve\_in\_superlu\_dist}}
@@ -960,11 +1004,11 @@ Calling this method will ensure that when the problem based solve interface is u
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00710}{710}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
+Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00725}{725}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
 
 
 
-References \mbox{\hyperlink{linear__solver_8cc_source_l02683}{clean\+\_\+up\+\_\+memory()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00817}{Dist\+\_\+use\+\_\+global\+\_\+solver}}.
+References \mbox{\hyperlink{linear__solver_8cc_source_l02756}{clean\+\_\+up\+\_\+memory()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00832}{Dist\+\_\+use\+\_\+global\+\_\+solver}}.
 
 
 
@@ -981,11 +1025,11 @@ If true then Super\+LU\+\_\+\+DIST is allowed to permute matrix rows and columns
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00841}{841}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
+Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00856}{856}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{linear__solver_8h_source_l00701}{disable\+\_\+row\+\_\+and\+\_\+col\+\_\+permutations\+\_\+in\+\_\+superlu\+\_\+dist()}}, \mbox{\hyperlink{linear__solver_8h_source_l00694}{enable\+\_\+row\+\_\+and\+\_\+col\+\_\+permutations\+\_\+in\+\_\+superlu\+\_\+dist()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01865}{factorise\+\_\+distributed()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00500}{Super\+LUSolver()}}.
+Referenced by \mbox{\hyperlink{linear__solver_8h_source_l00716}{disable\+\_\+row\+\_\+and\+\_\+col\+\_\+permutations\+\_\+in\+\_\+superlu\+\_\+dist()}}, \mbox{\hyperlink{linear__solver_8h_source_l00709}{enable\+\_\+row\+\_\+and\+\_\+col\+\_\+permutations\+\_\+in\+\_\+superlu\+\_\+dist()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01938}{factorise\+\_\+distributed()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00500}{Super\+LUSolver()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_a0c44f15dfab9ac11376a8272fcf0a3b4}\label{classoomph_1_1SuperLUSolver_a0c44f15dfab9ac11376a8272fcf0a3b4}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!Dist\_delete\_matrix\_data@{Dist\_delete\_matrix\_data}}
@@ -999,11 +1043,11 @@ Delete\+\_\+matrix\+\_\+data flag. Super\+LU\+\_\+dist needs its own copy of the
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00849}{849}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
+Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00864}{864}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{linear__solver_8h_source_l00686}{disable\+\_\+delete\+\_\+matrix\+\_\+data\+\_\+in\+\_\+superlu\+\_\+dist()}}, \mbox{\hyperlink{linear__solver_8h_source_l00678}{enable\+\_\+delete\+\_\+matrix\+\_\+data\+\_\+in\+\_\+superlu\+\_\+dist()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01865}{factorise\+\_\+distributed()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00814}{solve()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01293}{solve\+\_\+transpose()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00500}{Super\+LUSolver()}}.
+Referenced by \mbox{\hyperlink{linear__solver_8h_source_l00701}{disable\+\_\+delete\+\_\+matrix\+\_\+data\+\_\+in\+\_\+superlu\+\_\+dist()}}, \mbox{\hyperlink{linear__solver_8h_source_l00693}{enable\+\_\+delete\+\_\+matrix\+\_\+data\+\_\+in\+\_\+superlu\+\_\+dist()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01938}{factorise\+\_\+distributed()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00887}{solve()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01366}{solve\+\_\+transpose()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00500}{Super\+LUSolver()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_ae1058d90e75f3cc6229581382f159324}\label{classoomph_1_1SuperLUSolver_ae1058d90e75f3cc6229581382f159324}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!Dist\_distributed\_solve\_data\_allocated@{Dist\_distributed\_solve\_data\_allocated}}
@@ -1017,11 +1061,11 @@ Flag is true if solve data has been generated for distributed matrix.
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00823}{823}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
+Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00838}{838}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02340}{backsub\+\_\+distributed()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02683}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01865}{factorise\+\_\+distributed()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00500}{Super\+LUSolver()}}.
+Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02413}{backsub\+\_\+distributed()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02756}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01938}{factorise\+\_\+distributed()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00500}{Super\+LUSolver()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_ac5458172732cfe687891af65cc2d45e6}\label{classoomph_1_1SuperLUSolver_ac5458172732cfe687891af65cc2d45e6}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!Dist\_global\_solve\_data\_allocated@{Dist\_global\_solve\_data\_allocated}}
@@ -1035,11 +1079,11 @@ Flag is true if solve data has been generated for a global matrix.
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00820}{820}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
+Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00835}{835}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02340}{backsub\+\_\+distributed()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02683}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01865}{factorise\+\_\+distributed()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00500}{Super\+LUSolver()}}.
+Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02413}{backsub\+\_\+distributed()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02756}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01938}{factorise\+\_\+distributed()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00500}{Super\+LUSolver()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_a1c7efdc631fad57eaa4d96a4d927a23f}\label{classoomph_1_1SuperLUSolver_a1c7efdc631fad57eaa4d96a4d927a23f}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!Dist\_index\_pt@{Dist\_index\_pt}}
@@ -1053,11 +1097,11 @@ Pointer for storage of matrix rows or column indices required by Super\+LU\+\_\+
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00856}{856}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
+Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00871}{871}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02683}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01865}{factorise\+\_\+distributed()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00500}{Super\+LUSolver()}}.
+Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02756}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01938}{factorise\+\_\+distributed()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00500}{Super\+LUSolver()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_ab9792c27162920763f77861f30c552d1}\label{classoomph_1_1SuperLUSolver_ab9792c27162920763f77861f30c552d1}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!Dist\_info@{Dist\_info}}
@@ -1071,11 +1115,11 @@ Info flag for the Super\+LU solver.
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00835}{835}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
+Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00850}{850}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02340}{backsub\+\_\+distributed()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02683}{clean\+\_\+up\+\_\+memory()}}, and \mbox{\hyperlink{linear__solver_8cc_source_l01865}{factorise\+\_\+distributed()}}.
+Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02413}{backsub\+\_\+distributed()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02756}{clean\+\_\+up\+\_\+memory()}}, and \mbox{\hyperlink{linear__solver_8cc_source_l01938}{factorise\+\_\+distributed()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_ae377dc4f0d37fa9ba3056ed8d9bdcd35}\label{classoomph_1_1SuperLUSolver_ae377dc4f0d37fa9ba3056ed8d9bdcd35}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!Dist\_npcol@{Dist\_npcol}}
@@ -1089,11 +1133,11 @@ Number of columns for the process grid.
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00832}{832}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
+Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00847}{847}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02340}{backsub\+\_\+distributed()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02683}{clean\+\_\+up\+\_\+memory()}}, and \mbox{\hyperlink{linear__solver_8cc_source_l01865}{factorise\+\_\+distributed()}}.
+Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02413}{backsub\+\_\+distributed()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02756}{clean\+\_\+up\+\_\+memory()}}, and \mbox{\hyperlink{linear__solver_8cc_source_l01938}{factorise\+\_\+distributed()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_af46267ceb2fe5b52e1460dd827cc9593}\label{classoomph_1_1SuperLUSolver_af46267ceb2fe5b52e1460dd827cc9593}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!Dist\_nprow@{Dist\_nprow}}
@@ -1107,11 +1151,11 @@ Number of rows for the process grid.
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00829}{829}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
+Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00844}{844}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02340}{backsub\+\_\+distributed()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02683}{clean\+\_\+up\+\_\+memory()}}, and \mbox{\hyperlink{linear__solver_8cc_source_l01865}{factorise\+\_\+distributed()}}.
+Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02413}{backsub\+\_\+distributed()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02756}{clean\+\_\+up\+\_\+memory()}}, and \mbox{\hyperlink{linear__solver_8cc_source_l01938}{factorise\+\_\+distributed()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_add0e2151ba6dffc2317f0ae63938b429}\label{classoomph_1_1SuperLUSolver_add0e2151ba6dffc2317f0ae63938b429}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!Dist\_solver\_data\_pt@{Dist\_solver\_data\_pt}}
@@ -1125,11 +1169,11 @@ Storage for the LU factors and other data required by Super\+LU.
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00826}{826}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
+Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00841}{841}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02340}{backsub\+\_\+distributed()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02683}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01865}{factorise\+\_\+distributed()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00758}{get\+\_\+memory\+\_\+usage\+\_\+for\+\_\+lu\+\_\+factors()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00786}{get\+\_\+total\+\_\+needed\+\_\+memory()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00500}{Super\+LUSolver()}}.
+Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02413}{backsub\+\_\+distributed()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02756}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00815}{compute\+\_\+condition\+\_\+number()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01938}{factorise\+\_\+distributed()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00758}{get\+\_\+memory\+\_\+usage\+\_\+for\+\_\+lu\+\_\+factors()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00786}{get\+\_\+total\+\_\+needed\+\_\+memory()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00500}{Super\+LUSolver()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_a7b5c61ed28e441622bfe3f623dee28b7}\label{classoomph_1_1SuperLUSolver_a7b5c61ed28e441622bfe3f623dee28b7}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!Dist\_start\_pt@{Dist\_start\_pt}}
@@ -1143,11 +1187,11 @@ Pointers for storage of matrix column or row starts.
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00860}{860}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
+Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00875}{875}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02683}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01865}{factorise\+\_\+distributed()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00500}{Super\+LUSolver()}}.
+Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02756}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01938}{factorise\+\_\+distributed()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00500}{Super\+LUSolver()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_aab7193cb7f228dc57c4e6c237ea065ba}\label{classoomph_1_1SuperLUSolver_aab7193cb7f228dc57c4e6c237ea065ba}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!Dist\_use\_global\_solver@{Dist\_use\_global\_solver}}
@@ -1161,11 +1205,11 @@ Flag that determines whether the MPIProblem based solve function uses the global
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00817}{817}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
+Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00832}{832}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l00814}{solve()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01293}{solve\+\_\+transpose()}}, \mbox{\hyperlink{linear__solver_8h_source_l00500}{Super\+LUSolver()}}, \mbox{\hyperlink{linear__solver_8h_source_l00723}{use\+\_\+distributed\+\_\+solve\+\_\+in\+\_\+superlu\+\_\+dist()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00710}{use\+\_\+global\+\_\+solve\+\_\+in\+\_\+superlu\+\_\+dist()}}.
+Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l00887}{solve()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01366}{solve\+\_\+transpose()}}, \mbox{\hyperlink{linear__solver_8h_source_l00500}{Super\+LUSolver()}}, \mbox{\hyperlink{linear__solver_8h_source_l00738}{use\+\_\+distributed\+\_\+solve\+\_\+in\+\_\+superlu\+\_\+dist()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00725}{use\+\_\+global\+\_\+solve\+\_\+in\+\_\+superlu\+\_\+dist()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_a4aa2df1c91537adb245395aff054b591}\label{classoomph_1_1SuperLUSolver_a4aa2df1c91537adb245395aff054b591}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!Dist\_value\_pt@{Dist\_value\_pt}}
@@ -1179,11 +1223,11 @@ Pointer for storage of the matrix values required by Super\+LU\+\_\+\+DIST.
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00852}{852}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
+Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00867}{867}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02683}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01865}{factorise\+\_\+distributed()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00500}{Super\+LUSolver()}}.
+Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02756}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01938}{factorise\+\_\+distributed()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00500}{Super\+LUSolver()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_a052def009be940b82847d6c476fd0319}\label{classoomph_1_1SuperLUSolver_a052def009be940b82847d6c476fd0319}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!Doc\_stats@{Doc\_stats}}
@@ -1197,11 +1241,11 @@ Set to true to output statistics (false by default).
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00770}{770}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
+Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00785}{785}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02340}{backsub\+\_\+distributed()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02503}{backsub\+\_\+serial()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02593}{backsub\+\_\+transpose\+\_\+serial()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02683}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{linear__solver_8h_source_l00609}{disable\+\_\+doc\+\_\+stats()}}, \mbox{\hyperlink{linear__solver_8h_source_l00603}{enable\+\_\+doc\+\_\+stats()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01865}{factorise\+\_\+distributed()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02161}{factorise\+\_\+serial()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00500}{Super\+LUSolver()}}.
+Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02413}{backsub\+\_\+distributed()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02576}{backsub\+\_\+serial()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02666}{backsub\+\_\+transpose\+\_\+serial()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02756}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{linear__solver_8h_source_l00609}{disable\+\_\+doc\+\_\+stats()}}, \mbox{\hyperlink{linear__solver_8h_source_l00603}{enable\+\_\+doc\+\_\+stats()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01938}{factorise\+\_\+distributed()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02234}{factorise\+\_\+serial()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00500}{Super\+LUSolver()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_ac712018d9ba5b50a1e6777e55303b5b8}\label{classoomph_1_1SuperLUSolver_ac712018d9ba5b50a1e6777e55303b5b8}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!Jacobian\_setup\_time@{Jacobian\_setup\_time}}
@@ -1215,11 +1259,11 @@ Jacobian setup time.
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00761}{761}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
+Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00776}{776}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{linear__solver_8h_source_l00616}{jacobian\+\_\+setup\+\_\+time()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00814}{solve()}}, and \mbox{\hyperlink{linear__solver_8cc_source_l01293}{solve\+\_\+transpose()}}.
+Referenced by \mbox{\hyperlink{linear__solver_8h_source_l00616}{jacobian\+\_\+setup\+\_\+time()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00887}{solve()}}, and \mbox{\hyperlink{linear__solver_8cc_source_l01366}{solve\+\_\+transpose()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_a50f46a4d8c674f3853ce0f682ebd4096}\label{classoomph_1_1SuperLUSolver_a50f46a4d8c674f3853ce0f682ebd4096}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!Serial\_compressed\_row\_flag@{Serial\_compressed\_row\_flag}}
@@ -1233,11 +1277,11 @@ Use compressed row version?
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00794}{794}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
+Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00809}{809}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02503}{backsub\+\_\+serial()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02593}{backsub\+\_\+transpose\+\_\+serial()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02683}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02161}{factorise\+\_\+serial()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00814}{solve()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01293}{solve\+\_\+transpose()}}, \mbox{\hyperlink{linear__solver_8h_source_l00500}{Super\+LUSolver()}}, \mbox{\hyperlink{linear__solver_8h_source_l00662}{use\+\_\+compressed\+\_\+column\+\_\+for\+\_\+superlu\+\_\+serial()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00656}{use\+\_\+compressed\+\_\+row\+\_\+for\+\_\+superlu\+\_\+serial()}}.
+Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02576}{backsub\+\_\+serial()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02666}{backsub\+\_\+transpose\+\_\+serial()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02756}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02234}{factorise\+\_\+serial()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00887}{solve()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01366}{solve\+\_\+transpose()}}, \mbox{\hyperlink{linear__solver_8h_source_l00500}{Super\+LUSolver()}}, \mbox{\hyperlink{linear__solver_8h_source_l00662}{use\+\_\+compressed\+\_\+column\+\_\+for\+\_\+superlu\+\_\+serial()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00656}{use\+\_\+compressed\+\_\+row\+\_\+for\+\_\+superlu\+\_\+serial()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_a7dc6fcd6c30c90fd66b7ea828075a718}\label{classoomph_1_1SuperLUSolver_a7dc6fcd6c30c90fd66b7ea828075a718}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!Serial\_f\_factors@{Serial\_f\_factors}}
@@ -1251,11 +1295,11 @@ Storage for the LU factors as required by Super\+LU.
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00782}{782}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
+Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00797}{797}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02503}{backsub\+\_\+serial()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02593}{backsub\+\_\+transpose\+\_\+serial()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02683}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02161}{factorise\+\_\+serial()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00758}{get\+\_\+memory\+\_\+usage\+\_\+for\+\_\+lu\+\_\+factors()}}, and \mbox{\hyperlink{linear__solver_8cc_source_l00786}{get\+\_\+total\+\_\+needed\+\_\+memory()}}.
+Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02576}{backsub\+\_\+serial()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02666}{backsub\+\_\+transpose\+\_\+serial()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02756}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00815}{compute\+\_\+condition\+\_\+number()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02234}{factorise\+\_\+serial()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00758}{get\+\_\+memory\+\_\+usage\+\_\+for\+\_\+lu\+\_\+factors()}}, and \mbox{\hyperlink{linear__solver_8cc_source_l00786}{get\+\_\+total\+\_\+needed\+\_\+memory()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_afb45da60b3bb2e75db5bd7d83b488064}\label{classoomph_1_1SuperLUSolver_afb45da60b3bb2e75db5bd7d83b488064}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!Serial\_info@{Serial\_info}}
@@ -1269,11 +1313,11 @@ Info flag for the Super\+LU solver.
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00785}{785}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
+Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00800}{800}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02503}{backsub\+\_\+serial()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02593}{backsub\+\_\+transpose\+\_\+serial()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02683}{clean\+\_\+up\+\_\+memory()}}, and \mbox{\hyperlink{linear__solver_8cc_source_l02161}{factorise\+\_\+serial()}}.
+Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02576}{backsub\+\_\+serial()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02666}{backsub\+\_\+transpose\+\_\+serial()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02756}{clean\+\_\+up\+\_\+memory()}}, and \mbox{\hyperlink{linear__solver_8cc_source_l02234}{factorise\+\_\+serial()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_a7c18b341d34df78809d8c5c3332d675d}\label{classoomph_1_1SuperLUSolver_a7c18b341d34df78809d8c5c3332d675d}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!Serial\_n\_dof@{Serial\_n\_dof}}
@@ -1287,11 +1331,11 @@ The number of unknowns in the linear system.
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00788}{788}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
+Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00803}{803}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02503}{backsub\+\_\+serial()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02593}{backsub\+\_\+transpose\+\_\+serial()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02683}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02161}{factorise\+\_\+serial()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00500}{Super\+LUSolver()}}.
+Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02576}{backsub\+\_\+serial()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02666}{backsub\+\_\+transpose\+\_\+serial()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02756}{clean\+\_\+up\+\_\+memory()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02234}{factorise\+\_\+serial()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00500}{Super\+LUSolver()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_aa9c97e960b45b82eb01dd5548bed89a1}\label{classoomph_1_1SuperLUSolver_aa9c97e960b45b82eb01dd5548bed89a1}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!Serial\_sign\_of\_determinant\_of\_matrix@{Serial\_sign\_of\_determinant\_of\_matrix}}
@@ -1305,11 +1349,11 @@ Sign of the determinant of the matrix.
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00791}{791}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
+Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00806}{806}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02161}{factorise\+\_\+serial()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00814}{solve()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01293}{solve\+\_\+transpose()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00500}{Super\+LUSolver()}}.
+Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02234}{factorise\+\_\+serial()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00887}{solve()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01366}{solve\+\_\+transpose()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00500}{Super\+LUSolver()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_a45c813ff80cad04e58efebe9bb1bfecb}\label{classoomph_1_1SuperLUSolver_a45c813ff80cad04e58efebe9bb1bfecb}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!Solution\_time@{Solution\_time}}
@@ -1323,11 +1367,11 @@ Solution time.
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00764}{764}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
+Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00779}{779}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{linear__solver_8h_source_l00623}{linear\+\_\+solver\+\_\+solution\+\_\+time()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01769}{resolve()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01793}{resolve\+\_\+transpose()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01074}{solve()}}, and \mbox{\hyperlink{linear__solver_8cc_source_l01554}{solve\+\_\+transpose()}}.
+Referenced by \mbox{\hyperlink{linear__solver_8h_source_l00623}{linear\+\_\+solver\+\_\+solution\+\_\+time()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01842}{resolve()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01866}{resolve\+\_\+transpose()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01147}{solve()}}, and \mbox{\hyperlink{linear__solver_8cc_source_l01627}{solve\+\_\+transpose()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_a26ba07c6f63b830e73c594debe9e68a9}\label{classoomph_1_1SuperLUSolver_a26ba07c6f63b830e73c594debe9e68a9}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!Solver\_type@{Solver\_type}}
@@ -1341,11 +1385,11 @@ the solver type. see Super\+LU\+\_\+solver\+\_\+type for details.
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00773}{773}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
+Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00788}{788}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l01820}{factorise()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00758}{get\+\_\+memory\+\_\+usage\+\_\+for\+\_\+lu\+\_\+factors()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00786}{get\+\_\+total\+\_\+needed\+\_\+memory()}}, \mbox{\hyperlink{linear__solver_8h_source_l00646}{set\+\_\+solver\+\_\+type()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00814}{solve()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01293}{solve\+\_\+transpose()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00500}{Super\+LUSolver()}}.
+Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l00815}{compute\+\_\+condition\+\_\+number()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01893}{factorise()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00758}{get\+\_\+memory\+\_\+usage\+\_\+for\+\_\+lu\+\_\+factors()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00786}{get\+\_\+total\+\_\+needed\+\_\+memory()}}, \mbox{\hyperlink{linear__solver_8h_source_l00646}{set\+\_\+solver\+\_\+type()}}, \mbox{\hyperlink{linear__solver_8cc_source_l00887}{solve()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01366}{solve\+\_\+transpose()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00500}{Super\+LUSolver()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_a11c89f3138e42a38eb0cd5def128eabf}\label{classoomph_1_1SuperLUSolver_a11c89f3138e42a38eb0cd5def128eabf}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!Suppress\_incorrect\_rhs\_distribution\_warning\_in\_resolve@{Suppress\_incorrect\_rhs\_distribution\_warning\_in\_resolve}}
@@ -1365,11 +1409,11 @@ Static flag that determines whether the warning about incorrect distribution of 
 
 Static warning to suppress warnings about incorrect distribution of RHS vector. Default is false. 
 
-Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00811}{811}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
+Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00826}{826}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02340}{backsub\+\_\+distributed()}}.
+Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02413}{backsub\+\_\+distributed()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_a88f9065710fb4b6096369586be76a67c}\label{classoomph_1_1SuperLUSolver_a88f9065710fb4b6096369586be76a67c}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!Suppress\_solve@{Suppress\_solve}}
@@ -1383,11 +1427,11 @@ Suppress solve?
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00767}{767}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
+Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00782}{782}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l00814}{solve()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01293}{solve\+\_\+transpose()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00500}{Super\+LUSolver()}}.
+Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l00887}{solve()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01366}{solve\+\_\+transpose()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00500}{Super\+LUSolver()}}.
 
 \mbox{\Hypertarget{classoomph_1_1SuperLUSolver_a7420188d74f95b5b1543268ff3ccc9e0}\label{classoomph_1_1SuperLUSolver_a7420188d74f95b5b1543268ff3ccc9e0}} 
 \index{oomph::SuperLUSolver@{oomph::SuperLUSolver}!Using\_dist@{Using\_dist}}
@@ -1401,11 +1445,11 @@ boolean flag indicating whether superlu dist is being used
 
 
 
-Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00776}{776}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
+Definition at line \mbox{\hyperlink{linear__solver_8h_source_l00791}{791}} of file \mbox{\hyperlink{linear__solver_8h_source}{linear\+\_\+solver.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02292}{backsub()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02312}{backsub\+\_\+transpose()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01820}{factorise()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00500}{Super\+LUSolver()}}.
+Referenced by \mbox{\hyperlink{linear__solver_8cc_source_l02365}{backsub()}}, \mbox{\hyperlink{linear__solver_8cc_source_l02385}{backsub\+\_\+transpose()}}, \mbox{\hyperlink{linear__solver_8cc_source_l01893}{factorise()}}, and \mbox{\hyperlink{linear__solver_8h_source_l00500}{Super\+LUSolver()}}.
 
 
 
