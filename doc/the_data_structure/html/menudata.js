@@ -239,7 +239,8 @@ var menudata={children:[
 {text:"p",url:"functions_eval.html#index_p"},
 {text:"s",url:"functions_eval.html#index_s"},
 {text:"u",url:"functions_eval.html#index_u"},
-{text:"v",url:"functions_eval.html#index_v"}]},
+{text:"v",url:"functions_eval.html#index_v"},
+{text:"w",url:"functions_eval.html#index_w"}]},
 {text:"Related Functions",url:"functions_rela.html",children:[
 {text:"a",url:"functions_rela.html#index_a"},
 {text:"b",url:"functions_rela.html#index_b"},
