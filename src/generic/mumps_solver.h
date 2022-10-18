@@ -244,11 +244,6 @@ namespace oomph
       Jacobian_ordering_flag = Scotch_ordering;
     }
 
-    void override_mumps_icntl(const int& icntl, const double& value)
-    {
-      Icntl_override_map.insert(std::make_pair(icntl, value));
-    }
-    
   private:
     /// Initialise instance of mumps data structure
     void initialise_mumps();
@@ -319,15 +314,7 @@ namespace oomph
       Pord_ordering = 4,
       Metis_ordering = 5
     };
-    
-    /// Error codes (returned in INFOG(1))
-    /// (add to these as appropriate)
-    enum MumpsErrorCodes
-    {
-      Numerically_singular_matrix = -10,
-      Workspace_allocation_size   = -13
-    };
-    
+
     /// symmetry of the Jacobian matrix we're solving;
     /// takes one of the enum values above
     unsigned Jacobian_symmetry_flag;
@@ -336,10 +323,6 @@ namespace oomph
     /// which specifies which package (PORD, Metis or SCOTCH)
     /// is used to reorder the Jacobian matrix during the analysis
     unsigned Jacobian_ordering_flag;
-
-    /// a map of any overrides of the ICNTL control parameters;
-    /// the key is the ICNTL number, and the value is the parameter value
-    std::map<int,double> Icntl_override_map;
   };
 
 

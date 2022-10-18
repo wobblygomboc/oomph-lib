@@ -263,7 +263,7 @@ Additional Inherited Members</h2></td></tr>
 class oomph::DenseMatrix&lt; T &gt;</div><p >//////////////////////////////////////////////////////////////////////////// //////////////////////////////////////////////////////////////////////////// </p>
 <p >Class for dense matrices, storing all the values of the matrix as a pointer to a pointer with assorted output functions inherited from Matrix&lt;T&gt;. The curious recursive template pattern is used here to pass the specific class to the base class so that round bracket access can be inlined. </p>
 
-<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l00394">394</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l00385">385</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aecfca835918b50b607e080fc706b6fcf" name="aecfca835918b50b607e080fc706b6fcf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aecfca835918b50b607e080fc706b6fcf">&#9670;&nbsp;</a></span>DenseMatrix() <span class="overload">[1/5]</span></h2>
@@ -292,7 +292,7 @@ template&lt;class T &gt; </div>
 
 <p>Empty constructor, simply assign the lengths N and M to 0. </p>
 
-<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l00408">408</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l00399">399</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
 
 </div>
 </div>
@@ -324,9 +324,9 @@ template&lt;class T &gt; </div>
 
 <p>Copy constructor: Deep copy! </p>
 
-<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l00411">411</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l00402">402</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
 
-<p class="reference">References <a class="el" href="cfortran_8h_source.html#l00603">i</a>, <a class="el" href="matrices_8h_source.html#l00404">oomph::DenseMatrix&lt; T &gt;::M</a>, <a class="el" href="matrices_8h_source.html#l00398">oomph::DenseMatrix&lt; T &gt;::Matrixdata</a>, <a class="el" href="matrices_8h_source.html#l00401">oomph::DenseMatrix&lt; T &gt;::N</a>, <a class="el" href="matrices_8h_source.html#l00500">oomph::DenseMatrix&lt; T &gt;::ncol()</a>, <a class="el" href="matrices_8h_source.html#l00494">oomph::DenseMatrix&lt; T &gt;::nrow()</a>, and <a class="el" href="elements_8h_source.html#l01242">oomph::ElementGeometry::T</a>.</p>
+<p class="reference">References <a class="el" href="cfortran_8h_source.html#l00603">i</a>, <a class="el" href="matrices_8h_source.html#l00395">oomph::DenseMatrix&lt; T &gt;::M</a>, <a class="el" href="matrices_8h_source.html#l00389">oomph::DenseMatrix&lt; T &gt;::Matrixdata</a>, <a class="el" href="matrices_8h_source.html#l00392">oomph::DenseMatrix&lt; T &gt;::N</a>, <a class="el" href="matrices_8h_source.html#l00491">oomph::DenseMatrix&lt; T &gt;::ncol()</a>, <a class="el" href="matrices_8h_source.html#l00485">oomph::DenseMatrix&lt; T &gt;::nrow()</a>, and <a class="el" href="elements_8h_source.html#l01242">oomph::ElementGeometry::T</a>.</p>
 
 </div>
 </div>
@@ -352,7 +352,7 @@ template&lt;class T &gt; </div>
 <p >////////////////////////////////////////////////////////////////////// //////////////////////////////////////////////////////////////////////</p>
 <p >Constructor to build a square n by n matrix </p>
 
-<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l02915">2915</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l02906">2906</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
 
 <p class="reference">References <a class="el" href="quadtree_8h_source.html#l00060">oomph::QuadTreeNames::N</a>, and <a class="el" href="elements_8h_source.html#l01242">oomph::ElementGeometry::T</a>.</p>
 
@@ -388,7 +388,7 @@ template&lt;class T &gt; </div>
 
 <p>Constructor to build a matrix with n rows and m columns. </p>
 
-<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l02933">2933</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l02924">2924</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
 
 <p class="reference">References <a class="el" href="quadtree_8h_source.html#l00060">oomph::QuadTreeNames::N</a>, and <a class="el" href="elements_8h_source.html#l01242">oomph::ElementGeometry::T</a>.</p>
 
@@ -430,7 +430,7 @@ template&lt;class T &gt; </div>
 
 <p>Constructor to build a matrix with n rows and m columns, with initial value initial_val. </p>
 
-<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l02950">2950</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l02941">2941</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
 
 <p class="reference">References <a class="el" href="quadtree_8h_source.html#l00060">oomph::QuadTreeNames::N</a>, and <a class="el" href="elements_8h_source.html#l01242">oomph::ElementGeometry::T</a>.</p>
 
@@ -463,9 +463,9 @@ template&lt;class T &gt; </div>
 
 <p>Destructor, clean up the matrix data. </p>
 
-<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l00487">487</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l00478">478</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
 
-<p class="reference">References <a class="el" href="matrices_8h_source.html#l00398">oomph::DenseMatrix&lt; T &gt;::Matrixdata</a>.</p>
+<p class="reference">References <a class="el" href="matrices_8h_source.html#l00389">oomph::DenseMatrix&lt; T &gt;::Matrixdata</a>.</p>
 
 </div>
 </div>
@@ -508,11 +508,11 @@ template&lt;class T &gt; </div>
 
 <p>The access function that will be called by the read-write round-bracket operator. </p>
 
-<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l00456">456</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l00447">447</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
 
-<p class="reference">References <a class="el" href="cfortran_8h_source.html#l00603">i</a>, <a class="el" href="matrices_8h_source.html#l00404">oomph::DenseMatrix&lt; T &gt;::M</a>, <a class="el" href="matrices_8h_source.html#l00398">oomph::DenseMatrix&lt; T &gt;::Matrixdata</a>, and <a class="el" href="matrices_8h_source.html#l00078">oomph::Matrix&lt; T, DenseMatrix&lt; T &gt; &gt;::range_check()</a>.</p>
+<p class="reference">References <a class="el" href="cfortran_8h_source.html#l00603">i</a>, <a class="el" href="matrices_8h_source.html#l00395">oomph::DenseMatrix&lt; T &gt;::M</a>, <a class="el" href="matrices_8h_source.html#l00389">oomph::DenseMatrix&lt; T &gt;::Matrixdata</a>, and <a class="el" href="matrices_8h_source.html#l00078">oomph::Matrix&lt; T, DenseMatrix&lt; T &gt; &gt;::range_check()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="matrices_8h_source.html#l01325">oomph::DenseDoubleMatrix::operator()()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="matrices_8h_source.html#l01316">oomph::DenseDoubleMatrix::operator()()</a>.</p>
 
 </div>
 </div>
@@ -554,11 +554,11 @@ template&lt;class T &gt; </div>
 
 <p>The access function the will be called by the read-only (const version) round-bracket operator. </p>
 
-<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l00466">466</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l00457">457</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
 
-<p class="reference">References <a class="el" href="cfortran_8h_source.html#l00603">i</a>, <a class="el" href="matrices_8h_source.html#l00404">oomph::DenseMatrix&lt; T &gt;::M</a>, <a class="el" href="matrices_8h_source.html#l00398">oomph::DenseMatrix&lt; T &gt;::Matrixdata</a>, and <a class="el" href="matrices_8h_source.html#l00078">oomph::Matrix&lt; T, DenseMatrix&lt; T &gt; &gt;::range_check()</a>.</p>
+<p class="reference">References <a class="el" href="cfortran_8h_source.html#l00603">i</a>, <a class="el" href="matrices_8h_source.html#l00395">oomph::DenseMatrix&lt; T &gt;::M</a>, <a class="el" href="matrices_8h_source.html#l00389">oomph::DenseMatrix&lt; T &gt;::Matrixdata</a>, and <a class="el" href="matrices_8h_source.html#l00078">oomph::Matrix&lt; T, DenseMatrix&lt; T &gt; &gt;::range_check()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="matrices_8h_source.html#l01317">oomph::DenseDoubleMatrix::operator()()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="matrices_8h_source.html#l01308">oomph::DenseDoubleMatrix::operator()()</a>.</p>
 
 </div>
 </div>
@@ -583,7 +583,7 @@ template&lt;class T &gt; </div>
 <p>Indexed output function to print a matrix to the stream outfile as i,j,a(i,j) </p>
 <p >Indexed output as i,j,a(i,j) </p>
 
-<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l03098">3098</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l03089">3089</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
 
 <p class="reference">References <a class="el" href="cfortran_8h_source.html#l00603">i</a>, and <a class="el" href="quadtree_8h_source.html#l00060">oomph::QuadTreeNames::N</a>.</p>
 
@@ -609,7 +609,7 @@ template&lt;class T &gt; </div>
 
 <p>Indexed output function to print a matrix to a file as i,j,a(i,j). Specify filename. </p>
 
-<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l03117">3117</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l03108">3108</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
 
 </div>
 </div>
@@ -641,9 +641,9 @@ template&lt;class T &gt; </div>
 
 <p>Initialize all values in the matrix to val. </p>
 
-<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l00523">523</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l00514">514</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
 
-<p class="reference">References <a class="el" href="cfortran_8h_source.html#l00603">i</a>, <a class="el" href="matrices_8h_source.html#l00404">oomph::DenseMatrix&lt; T &gt;::M</a>, <a class="el" href="matrices_8h_source.html#l00398">oomph::DenseMatrix&lt; T &gt;::Matrixdata</a>, and <a class="el" href="matrices_8h_source.html#l00401">oomph::DenseMatrix&lt; T &gt;::N</a>.</p>
+<p class="reference">References <a class="el" href="cfortran_8h_source.html#l00603">i</a>, <a class="el" href="matrices_8h_source.html#l00395">oomph::DenseMatrix&lt; T &gt;::M</a>, <a class="el" href="matrices_8h_source.html#l00389">oomph::DenseMatrix&lt; T &gt;::Matrixdata</a>, and <a class="el" href="matrices_8h_source.html#l00392">oomph::DenseMatrix&lt; T &gt;::N</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="periodic__orbit__handler_8h_source.html#l00643">oomph::PeriodicOrbitTemporalMesh&lt; ELEMENT &gt;::assemble_residuals_and_jacobian()</a>, <a class="el" href="beam__elements_8cc_source.html#l01199">oomph::FSIHermiteBeamElement::dposition_dlagrangian_at_local_coordinate()</a>, <a class="el" href="shell__elements_8cc_source.html#l01332">oomph::FSIDiagHermiteShellElement::dposition_dlagrangian_at_local_coordinate()</a>, <a class="el" href="elements_8h_source.html#l01061">oomph::GeneralisedElement::get_djacobian_and_dmass_matrix_dparameter()</a>, <a class="el" href="elements_8h_source.html#l01046">oomph::GeneralisedElement::get_djacobian_dparameter()</a>, <a class="el" href="elements_8h_source.html#l01083">oomph::GeneralisedElement::get_hessian_vector_products()</a>, <a class="el" href="periodic__orbit__handler_8h_source.html#l01472">oomph::PeriodicOrbitBaseElement::get_inner_product_matrix()</a>, <a class="el" href="dg__elements_8cc_source.html#l00614">oomph::DGElement::get_inverse_mass_matrix_times_residuals()</a>, <a class="el" href="problem_8cc_source.html#l03890">oomph::Problem::get_jacobian()</a>, <a class="el" href="elements_8h_source.html#l00990">oomph::GeneralisedElement::get_jacobian()</a>, <a class="el" href="elements_8h_source.html#l01016">oomph::GeneralisedElement::get_jacobian_and_mass_matrix()</a>, <a class="el" href="elements_8h_source.html#l01003">oomph::GeneralisedElement::get_mass_matrix()</a>, <a class="el" href="pseudo__buckling__ring_8h_source.html#l00745">oomph::PseudoBucklingRingElement::get_residuals_generic()</a>, <a class="el" href="discontinuous__galerkin__equal__order__pressure__spacetime__navier__stokes__elements_8cc_source.html#l01536">oomph::SpaceTimeNavierStokesEquations&lt; DIM &gt;::get_vorticity()</a>, <a class="el" href="mixed__order__petrov__galerkin__space__time__navier__stokes__elements_8cc_source.html#l01543">oomph::SpaceTimeNavierStokesMixedOrderEquations&lt; DIM &gt;::get_vorticity()</a>, <a class="el" href="timesteppers_8h_source.html#l00374">oomph::TimeStepper::make_steady()</a>, <a class="el" href="dg__elements_8cc_source.html#l00578">oomph::DGElement::pre_compute_mass_matrix()</a>, <a class="el" href="discontinuous__galerkin__equal__order__pressure__spacetime__navier__stokes__elements_8cc_source.html#l01468">oomph::SpaceTimeNavierStokesEquations&lt; DIM &gt;::strain_rate()</a>, and <a class="el" href="mixed__order__petrov__galerkin__space__time__navier__stokes__elements_8cc_source.html#l01475">oomph::SpaceTimeNavierStokesMixedOrderEquations&lt; DIM &gt;::strain_rate()</a>.</p>
 
@@ -678,11 +678,11 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classoomph_1_1Matrix.html#ad1af46b34096c348272b0dfacb5ce6a9">oomph::Matrix&lt; T, DenseMatrix&lt; T &gt; &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l00500">500</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l00491">491</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
 
-<p class="reference">References <a class="el" href="matrices_8h_source.html#l00404">oomph::DenseMatrix&lt; T &gt;::M</a>.</p>
+<p class="reference">References <a class="el" href="matrices_8h_source.html#l00395">oomph::DenseMatrix&lt; T &gt;::M</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="constitutive__laws_8cc_source.html#l00052">oomph::ConstitutiveLaw::are_matrices_of_equal_dimensions()</a>, <a class="el" href="constitutive__laws_8cc_source.html#l00113">oomph::ConstitutiveLaw::calculate_contravariant()</a>, <a class="el" href="constitutive__laws_8cc_source.html#l00225">oomph::ConstitutiveLaw::calculate_d_contravariant_dG()</a>, <a class="el" href="constitutive__laws_8cc_source.html#l00352">oomph::ConstitutiveLaw::calculate_d_second_piola_kirchhoff_stress_dG()</a>, <a class="el" href="matrices_8cc_source.html#l04349">oomph::CRDoubleMatrixHelpers::concatenate()</a>, <a class="el" href="matrices_8cc_source.html#l05223">oomph::CRDoubleMatrixHelpers::concatenate_without_communication()</a>, <a class="el" href="matrices_8h_source.html#l00411">oomph::DenseMatrix&lt; T &gt;::DenseMatrix()</a>, <a class="el" href="elements_8cc_source.html#l02669">oomph::FiniteElement::dJ_eulerian_dnodal_coordinates()</a>, <a class="el" href="matrices_8cc_source.html#l00224">oomph::DenseDoubleMatrix::eigenvalues_by_jacobi()</a>, <a class="el" href="generalised__newtonian__axisym__navier__stokes__elements_8cc_source.html#l00977">oomph::GeneralisedNewtonianAxisymmetricNavierStokesEquations::extrapolated_strain_rate()</a>, <a class="el" href="generalised__newtonian__navier__stokes__elements_8cc_source.html#l01175">oomph::GeneralisedNewtonianNavierStokesEquations&lt; DIM &gt;::extrapolated_strain_rate()</a>, <a class="el" href="matrices_8cc_source.html#l04003">oomph::CRDoubleMatrixHelpers::gershgorin_eigenvalue_estimate()</a>, <a class="el" href="block__preconditioner_8cc_source.html#l02537">oomph::BlockPreconditioner&lt; MATRIX &gt;::get_blocks()</a>, <a class="el" href="linear__elasticity__elements_8cc_source.html#l00047">oomph::LinearElasticityEquationsBase&lt; DIM &gt;::get_strain()</a>, <a class="el" href="poroelasticity__elements_8cc_source.html#l00054">oomph::PoroelasticityEquations&lt; DIM &gt;::get_strain()</a>, <a class="el" href="solid__elements_8cc_source.html#l00047">oomph::PVDEquationsBase&lt; DIM &gt;::get_strain()</a>, <a class="el" href="linear__elasticity__elements_8cc_source.html#l00145">oomph::LinearElasticityEquations&lt; DIM &gt;::get_stress()</a>, <a class="el" href="poroelasticity__elements_8cc_source.html#l00154">oomph::PoroelasticityEquations&lt; DIM &gt;::get_stress()</a>, <a class="el" href="matrices_8cc_source.html#l03731">oomph::CRDoubleMatrixHelpers::inf_norm()</a>, <a class="el" href="constitutive__laws_8cc_source.html#l00036">oomph::ConstitutiveLaw::is_matrix_square()</a>, <a class="el" href="matrices_8h_source.html#l01310">oomph::DenseDoubleMatrix::ncol()</a>, <a class="el" href="timesteppers_8h_source.html#l00601">oomph::TimeStepper::ntstorage()</a>, <a class="el" href="matrices_8h_source.html#l00429">oomph::DenseMatrix&lt; T &gt;::operator=()</a>, <a class="el" href="lagrange__enforced__flow__preconditioner_8cc_source.html#l00507">oomph::LagrangeEnforcedFlowPreconditioner::setup()</a>, <a class="el" href="axisym__navier__stokes__elements_8cc_source.html#l00725">oomph::AxisymmetricNavierStokesEquations::strain_rate()</a>, <a class="el" href="generalised__newtonian__axisym__navier__stokes__elements_8cc_source.html#l00749">oomph::GeneralisedNewtonianAxisymmetricNavierStokesEquations::strain_rate()</a>, <a class="el" href="generalised__newtonian__navier__stokes__elements_8cc_source.html#l01012">oomph::GeneralisedNewtonianNavierStokesEquations&lt; DIM &gt;::strain_rate()</a>, <a class="el" href="linearised__axisym__navier__stokes__elements_8cc_source.html#l00255">oomph::LinearisedAxisymmetricNavierStokesEquations::strain_rate()</a>, <a class="el" href="navier__stokes__elements_8cc_source.html#l01185">oomph::NavierStokesEquations&lt; DIM &gt;::strain_rate()</a>, <a class="el" href="polar__navier__stokes__elements_8cc_source.html#l00822">oomph::PolarNavierStokesEquations::strain_rate()</a>, <a class="el" href="discontinuous__galerkin__equal__order__pressure__spacetime__navier__stokes__elements_8cc_source.html#l01468">oomph::SpaceTimeNavierStokesEquations&lt; DIM &gt;::strain_rate()</a>, <a class="el" href="mixed__order__petrov__galerkin__space__time__navier__stokes__elements_8cc_source.html#l01475">oomph::SpaceTimeNavierStokesMixedOrderEquations&lt; DIM &gt;::strain_rate()</a>, <a class="el" href="linearised__navier__stokes__elements_8cc_source.html#l00248">oomph::LinearisedNavierStokesEquations::strain_rate()</a>, and <a class="el" href="polar__navier__stokes__elements_8cc_source.html#l00909">oomph::PolarNavierStokesEquations::strain_rate_by_r()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="constitutive__laws_8cc_source.html#l00052">oomph::ConstitutiveLaw::are_matrices_of_equal_dimensions()</a>, <a class="el" href="constitutive__laws_8cc_source.html#l00113">oomph::ConstitutiveLaw::calculate_contravariant()</a>, <a class="el" href="constitutive__laws_8cc_source.html#l00225">oomph::ConstitutiveLaw::calculate_d_contravariant_dG()</a>, <a class="el" href="constitutive__laws_8cc_source.html#l00352">oomph::ConstitutiveLaw::calculate_d_second_piola_kirchhoff_stress_dG()</a>, <a class="el" href="matrices_8cc_source.html#l04349">oomph::CRDoubleMatrixHelpers::concatenate()</a>, <a class="el" href="matrices_8cc_source.html#l05223">oomph::CRDoubleMatrixHelpers::concatenate_without_communication()</a>, <a class="el" href="matrices_8h_source.html#l00402">oomph::DenseMatrix&lt; T &gt;::DenseMatrix()</a>, <a class="el" href="elements_8cc_source.html#l02669">oomph::FiniteElement::dJ_eulerian_dnodal_coordinates()</a>, <a class="el" href="matrices_8cc_source.html#l00224">oomph::DenseDoubleMatrix::eigenvalues_by_jacobi()</a>, <a class="el" href="generalised__newtonian__axisym__navier__stokes__elements_8cc_source.html#l00977">oomph::GeneralisedNewtonianAxisymmetricNavierStokesEquations::extrapolated_strain_rate()</a>, <a class="el" href="generalised__newtonian__navier__stokes__elements_8cc_source.html#l01175">oomph::GeneralisedNewtonianNavierStokesEquations&lt; DIM &gt;::extrapolated_strain_rate()</a>, <a class="el" href="matrices_8cc_source.html#l04003">oomph::CRDoubleMatrixHelpers::gershgorin_eigenvalue_estimate()</a>, <a class="el" href="block__preconditioner_8cc_source.html#l02537">oomph::BlockPreconditioner&lt; MATRIX &gt;::get_blocks()</a>, <a class="el" href="linear__elasticity__elements_8cc_source.html#l00047">oomph::LinearElasticityEquationsBase&lt; DIM &gt;::get_strain()</a>, <a class="el" href="poroelasticity__elements_8cc_source.html#l00054">oomph::PoroelasticityEquations&lt; DIM &gt;::get_strain()</a>, <a class="el" href="solid__elements_8cc_source.html#l00047">oomph::PVDEquationsBase&lt; DIM &gt;::get_strain()</a>, <a class="el" href="linear__elasticity__elements_8cc_source.html#l00145">oomph::LinearElasticityEquations&lt; DIM &gt;::get_stress()</a>, <a class="el" href="poroelasticity__elements_8cc_source.html#l00154">oomph::PoroelasticityEquations&lt; DIM &gt;::get_stress()</a>, <a class="el" href="matrices_8cc_source.html#l03731">oomph::CRDoubleMatrixHelpers::inf_norm()</a>, <a class="el" href="constitutive__laws_8cc_source.html#l00036">oomph::ConstitutiveLaw::is_matrix_square()</a>, <a class="el" href="matrices_8h_source.html#l01301">oomph::DenseDoubleMatrix::ncol()</a>, <a class="el" href="timesteppers_8h_source.html#l00601">oomph::TimeStepper::ntstorage()</a>, <a class="el" href="matrices_8h_source.html#l00420">oomph::DenseMatrix&lt; T &gt;::operator=()</a>, <a class="el" href="lagrange__enforced__flow__preconditioner_8cc_source.html#l00507">oomph::LagrangeEnforcedFlowPreconditioner::setup()</a>, <a class="el" href="axisym__navier__stokes__elements_8cc_source.html#l00725">oomph::AxisymmetricNavierStokesEquations::strain_rate()</a>, <a class="el" href="generalised__newtonian__axisym__navier__stokes__elements_8cc_source.html#l00749">oomph::GeneralisedNewtonianAxisymmetricNavierStokesEquations::strain_rate()</a>, <a class="el" href="generalised__newtonian__navier__stokes__elements_8cc_source.html#l01012">oomph::GeneralisedNewtonianNavierStokesEquations&lt; DIM &gt;::strain_rate()</a>, <a class="el" href="linearised__axisym__navier__stokes__elements_8cc_source.html#l00255">oomph::LinearisedAxisymmetricNavierStokesEquations::strain_rate()</a>, <a class="el" href="navier__stokes__elements_8cc_source.html#l01185">oomph::NavierStokesEquations&lt; DIM &gt;::strain_rate()</a>, <a class="el" href="polar__navier__stokes__elements_8cc_source.html#l00822">oomph::PolarNavierStokesEquations::strain_rate()</a>, <a class="el" href="discontinuous__galerkin__equal__order__pressure__spacetime__navier__stokes__elements_8cc_source.html#l01468">oomph::SpaceTimeNavierStokesEquations&lt; DIM &gt;::strain_rate()</a>, <a class="el" href="mixed__order__petrov__galerkin__space__time__navier__stokes__elements_8cc_source.html#l01475">oomph::SpaceTimeNavierStokesMixedOrderEquations&lt; DIM &gt;::strain_rate()</a>, <a class="el" href="linearised__navier__stokes__elements_8cc_source.html#l00248">oomph::LinearisedNavierStokesEquations::strain_rate()</a>, and <a class="el" href="polar__navier__stokes__elements_8cc_source.html#l00909">oomph::PolarNavierStokesEquations::strain_rate_by_r()</a>.</p>
 
 </div>
 </div>
@@ -715,11 +715,11 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classoomph_1_1Matrix.html#ac366ca5324d3e00e23d9800f3d5f4d5f">oomph::Matrix&lt; T, DenseMatrix&lt; T &gt; &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l00494">494</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l00485">485</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
 
-<p class="reference">References <a class="el" href="matrices_8h_source.html#l00401">oomph::DenseMatrix&lt; T &gt;::N</a>.</p>
+<p class="reference">References <a class="el" href="matrices_8h_source.html#l00392">oomph::DenseMatrix&lt; T &gt;::N</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="constitutive__laws_8cc_source.html#l00052">oomph::ConstitutiveLaw::are_matrices_of_equal_dimensions()</a>, <a class="el" href="helmholtz__geometric__multigrid_8h_source.html#l00873">oomph::HelmholtzMGPreconditioner&lt; DIM &gt;::block_preconditioner_self_test()</a>, <a class="el" href="constitutive__laws_8cc_source.html#l00682">oomph::GeneralisedHookean::calculate_second_piola_kirchhoff_stress()</a>, <a class="el" href="constitutive__laws_8cc_source.html#l00896">oomph::IsotropicStrainEnergyFunctionConstitutiveLaw::calculate_second_piola_kirchhoff_stress()</a>, <a class="el" href="matrices_8cc_source.html#l04349">oomph::CRDoubleMatrixHelpers::concatenate()</a>, <a class="el" href="matrices_8cc_source.html#l05223">oomph::CRDoubleMatrixHelpers::concatenate_without_communication()</a>, <a class="el" href="matrices_8h_source.html#l00411">oomph::DenseMatrix&lt; T &gt;::DenseMatrix()</a>, <a class="el" href="elements_8cc_source.html#l02669">oomph::FiniteElement::dJ_eulerian_dnodal_coordinates()</a>, <a class="el" href="matrices_8cc_source.html#l00224">oomph::DenseDoubleMatrix::eigenvalues_by_jacobi()</a>, <a class="el" href="generalised__newtonian__axisym__navier__stokes__elements_8cc_source.html#l00977">oomph::GeneralisedNewtonianAxisymmetricNavierStokesEquations::extrapolated_strain_rate()</a>, <a class="el" href="generalised__newtonian__navier__stokes__elements_8cc_source.html#l01175">oomph::GeneralisedNewtonianNavierStokesEquations&lt; DIM &gt;::extrapolated_strain_rate()</a>, <a class="el" href="axisym__navier__stokes__elements_8cc_source.html#l03239">oomph::AxisymmetricNavierStokesEquations::fill_in_contribution_to_hessian_vector_products()</a>, <a class="el" href="generalised__newtonian__axisym__navier__stokes__elements_8cc_source.html#l04098">oomph::GeneralisedNewtonianAxisymmetricNavierStokesEquations::fill_in_contribution_to_hessian_vector_products()</a>, <a class="el" href="displacement__based__foeppl__von__karman__elements_8h_source.html#l00451">oomph::DisplacementBasedFoepplvonKarmanEquations::fill_in_contribution_to_jacobian_and_mass_matrix()</a>, <a class="el" href="matrices_8cc_source.html#l04003">oomph::CRDoubleMatrixHelpers::gershgorin_eigenvalue_estimate()</a>, <a class="el" href="block__preconditioner_8cc_source.html#l02537">oomph::BlockPreconditioner&lt; MATRIX &gt;::get_blocks()</a>, <a class="el" href="linear__elasticity__elements_8cc_source.html#l00047">oomph::LinearElasticityEquationsBase&lt; DIM &gt;::get_strain()</a>, <a class="el" href="poroelasticity__elements_8cc_source.html#l00054">oomph::PoroelasticityEquations&lt; DIM &gt;::get_strain()</a>, <a class="el" href="solid__elements_8cc_source.html#l00047">oomph::PVDEquationsBase&lt; DIM &gt;::get_strain()</a>, <a class="el" href="linear__elasticity__elements_8cc_source.html#l00145">oomph::LinearElasticityEquations&lt; DIM &gt;::get_stress()</a>, <a class="el" href="poroelasticity__elements_8cc_source.html#l00154">oomph::PoroelasticityEquations&lt; DIM &gt;::get_stress()</a>, <a class="el" href="timesteppers_8h_source.html#l00318">oomph::TimeStepper::highest_derivative()</a>, <a class="el" href="matrices_8cc_source.html#l03731">oomph::CRDoubleMatrixHelpers::inf_norm()</a>, <a class="el" href="constitutive__laws_8cc_source.html#l00036">oomph::ConstitutiveLaw::is_matrix_square()</a>, <a class="el" href="matrices_8h_source.html#l01304">oomph::DenseDoubleMatrix::nrow()</a>, <a class="el" href="matrices_8h_source.html#l00429">oomph::DenseMatrix&lt; T &gt;::operator=()</a>, <a class="el" href="oomph__utilities_8cc_source.html#l00163">oomph::SecondInvariantHelper::second_invariant()</a>, <a class="el" href="lagrange__enforced__flow__preconditioner_8cc_source.html#l00507">oomph::LagrangeEnforcedFlowPreconditioner::setup()</a>, <a class="el" href="axisym__navier__stokes__elements_8cc_source.html#l00725">oomph::AxisymmetricNavierStokesEquations::strain_rate()</a>, <a class="el" href="generalised__newtonian__axisym__navier__stokes__elements_8cc_source.html#l00749">oomph::GeneralisedNewtonianAxisymmetricNavierStokesEquations::strain_rate()</a>, <a class="el" href="generalised__newtonian__navier__stokes__elements_8cc_source.html#l01012">oomph::GeneralisedNewtonianNavierStokesEquations&lt; DIM &gt;::strain_rate()</a>, <a class="el" href="linearised__axisym__navier__stokes__elements_8cc_source.html#l00255">oomph::LinearisedAxisymmetricNavierStokesEquations::strain_rate()</a>, <a class="el" href="navier__stokes__elements_8cc_source.html#l01185">oomph::NavierStokesEquations&lt; DIM &gt;::strain_rate()</a>, <a class="el" href="polar__navier__stokes__elements_8cc_source.html#l00822">oomph::PolarNavierStokesEquations::strain_rate()</a>, <a class="el" href="discontinuous__galerkin__equal__order__pressure__spacetime__navier__stokes__elements_8cc_source.html#l01468">oomph::SpaceTimeNavierStokesEquations&lt; DIM &gt;::strain_rate()</a>, <a class="el" href="mixed__order__petrov__galerkin__space__time__navier__stokes__elements_8cc_source.html#l01475">oomph::SpaceTimeNavierStokesMixedOrderEquations&lt; DIM &gt;::strain_rate()</a>, <a class="el" href="linearised__navier__stokes__elements_8cc_source.html#l00248">oomph::LinearisedNavierStokesEquations::strain_rate()</a>, and <a class="el" href="polar__navier__stokes__elements_8cc_source.html#l00909">oomph::PolarNavierStokesEquations::strain_rate_by_r()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="constitutive__laws_8cc_source.html#l00052">oomph::ConstitutiveLaw::are_matrices_of_equal_dimensions()</a>, <a class="el" href="helmholtz__geometric__multigrid_8h_source.html#l00873">oomph::HelmholtzMGPreconditioner&lt; DIM &gt;::block_preconditioner_self_test()</a>, <a class="el" href="constitutive__laws_8cc_source.html#l00682">oomph::GeneralisedHookean::calculate_second_piola_kirchhoff_stress()</a>, <a class="el" href="constitutive__laws_8cc_source.html#l00896">oomph::IsotropicStrainEnergyFunctionConstitutiveLaw::calculate_second_piola_kirchhoff_stress()</a>, <a class="el" href="matrices_8cc_source.html#l04349">oomph::CRDoubleMatrixHelpers::concatenate()</a>, <a class="el" href="matrices_8cc_source.html#l05223">oomph::CRDoubleMatrixHelpers::concatenate_without_communication()</a>, <a class="el" href="matrices_8h_source.html#l00402">oomph::DenseMatrix&lt; T &gt;::DenseMatrix()</a>, <a class="el" href="elements_8cc_source.html#l02669">oomph::FiniteElement::dJ_eulerian_dnodal_coordinates()</a>, <a class="el" href="matrices_8cc_source.html#l00224">oomph::DenseDoubleMatrix::eigenvalues_by_jacobi()</a>, <a class="el" href="generalised__newtonian__axisym__navier__stokes__elements_8cc_source.html#l00977">oomph::GeneralisedNewtonianAxisymmetricNavierStokesEquations::extrapolated_strain_rate()</a>, <a class="el" href="generalised__newtonian__navier__stokes__elements_8cc_source.html#l01175">oomph::GeneralisedNewtonianNavierStokesEquations&lt; DIM &gt;::extrapolated_strain_rate()</a>, <a class="el" href="axisym__navier__stokes__elements_8cc_source.html#l03239">oomph::AxisymmetricNavierStokesEquations::fill_in_contribution_to_hessian_vector_products()</a>, <a class="el" href="generalised__newtonian__axisym__navier__stokes__elements_8cc_source.html#l04098">oomph::GeneralisedNewtonianAxisymmetricNavierStokesEquations::fill_in_contribution_to_hessian_vector_products()</a>, <a class="el" href="displacement__based__foeppl__von__karman__elements_8h_source.html#l00451">oomph::DisplacementBasedFoepplvonKarmanEquations::fill_in_contribution_to_jacobian_and_mass_matrix()</a>, <a class="el" href="matrices_8cc_source.html#l04003">oomph::CRDoubleMatrixHelpers::gershgorin_eigenvalue_estimate()</a>, <a class="el" href="block__preconditioner_8cc_source.html#l02537">oomph::BlockPreconditioner&lt; MATRIX &gt;::get_blocks()</a>, <a class="el" href="linear__elasticity__elements_8cc_source.html#l00047">oomph::LinearElasticityEquationsBase&lt; DIM &gt;::get_strain()</a>, <a class="el" href="poroelasticity__elements_8cc_source.html#l00054">oomph::PoroelasticityEquations&lt; DIM &gt;::get_strain()</a>, <a class="el" href="solid__elements_8cc_source.html#l00047">oomph::PVDEquationsBase&lt; DIM &gt;::get_strain()</a>, <a class="el" href="linear__elasticity__elements_8cc_source.html#l00145">oomph::LinearElasticityEquations&lt; DIM &gt;::get_stress()</a>, <a class="el" href="poroelasticity__elements_8cc_source.html#l00154">oomph::PoroelasticityEquations&lt; DIM &gt;::get_stress()</a>, <a class="el" href="timesteppers_8h_source.html#l00318">oomph::TimeStepper::highest_derivative()</a>, <a class="el" href="matrices_8cc_source.html#l03731">oomph::CRDoubleMatrixHelpers::inf_norm()</a>, <a class="el" href="constitutive__laws_8cc_source.html#l00036">oomph::ConstitutiveLaw::is_matrix_square()</a>, <a class="el" href="matrices_8h_source.html#l01295">oomph::DenseDoubleMatrix::nrow()</a>, <a class="el" href="matrices_8h_source.html#l00420">oomph::DenseMatrix&lt; T &gt;::operator=()</a>, <a class="el" href="oomph__utilities_8cc_source.html#l00163">oomph::SecondInvariantHelper::second_invariant()</a>, <a class="el" href="lagrange__enforced__flow__preconditioner_8cc_source.html#l00507">oomph::LagrangeEnforcedFlowPreconditioner::setup()</a>, <a class="el" href="axisym__navier__stokes__elements_8cc_source.html#l00725">oomph::AxisymmetricNavierStokesEquations::strain_rate()</a>, <a class="el" href="generalised__newtonian__axisym__navier__stokes__elements_8cc_source.html#l00749">oomph::GeneralisedNewtonianAxisymmetricNavierStokesEquations::strain_rate()</a>, <a class="el" href="generalised__newtonian__navier__stokes__elements_8cc_source.html#l01012">oomph::GeneralisedNewtonianNavierStokesEquations&lt; DIM &gt;::strain_rate()</a>, <a class="el" href="linearised__axisym__navier__stokes__elements_8cc_source.html#l00255">oomph::LinearisedAxisymmetricNavierStokesEquations::strain_rate()</a>, <a class="el" href="navier__stokes__elements_8cc_source.html#l01185">oomph::NavierStokesEquations&lt; DIM &gt;::strain_rate()</a>, <a class="el" href="polar__navier__stokes__elements_8cc_source.html#l00822">oomph::PolarNavierStokesEquations::strain_rate()</a>, <a class="el" href="discontinuous__galerkin__equal__order__pressure__spacetime__navier__stokes__elements_8cc_source.html#l01468">oomph::SpaceTimeNavierStokesEquations&lt; DIM &gt;::strain_rate()</a>, <a class="el" href="mixed__order__petrov__galerkin__space__time__navier__stokes__elements_8cc_source.html#l01475">oomph::SpaceTimeNavierStokesMixedOrderEquations&lt; DIM &gt;::strain_rate()</a>, <a class="el" href="linearised__navier__stokes__elements_8cc_source.html#l00248">oomph::LinearisedNavierStokesEquations::strain_rate()</a>, and <a class="el" href="polar__navier__stokes__elements_8cc_source.html#l00909">oomph::PolarNavierStokesEquations::strain_rate_by_r()</a>.</p>
 
 </div>
 </div>
@@ -751,9 +751,9 @@ template&lt;class T &gt; </div>
 
 <p>Copy assignment. </p>
 
-<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l00429">429</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l00420">420</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
 
-<p class="reference">References <a class="el" href="cfortran_8h_source.html#l00603">i</a>, <a class="el" href="matrices_8h_source.html#l00404">oomph::DenseMatrix&lt; T &gt;::M</a>, <a class="el" href="matrices_8h_source.html#l00401">oomph::DenseMatrix&lt; T &gt;::N</a>, <a class="el" href="matrices_8h_source.html#l00500">oomph::DenseMatrix&lt; T &gt;::ncol()</a>, <a class="el" href="matrices_8h_source.html#l00494">oomph::DenseMatrix&lt; T &gt;::nrow()</a>, and <a class="el" href="matrices_8h_source.html#l00507">oomph::DenseMatrix&lt; T &gt;::resize()</a>.</p>
+<p class="reference">References <a class="el" href="cfortran_8h_source.html#l00603">i</a>, <a class="el" href="matrices_8h_source.html#l00395">oomph::DenseMatrix&lt; T &gt;::M</a>, <a class="el" href="matrices_8h_source.html#l00392">oomph::DenseMatrix&lt; T &gt;::N</a>, <a class="el" href="matrices_8h_source.html#l00491">oomph::DenseMatrix&lt; T &gt;::ncol()</a>, <a class="el" href="matrices_8h_source.html#l00485">oomph::DenseMatrix&lt; T &gt;::nrow()</a>, and <a class="el" href="matrices_8h_source.html#l00498">oomph::DenseMatrix&lt; T &gt;::resize()</a>.</p>
 
 </div>
 </div>
@@ -787,7 +787,7 @@ template&lt;class T &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classoomph_1_1Matrix.html#ace9b59cbe514c77f0b3816b144c740f6">oomph::Matrix&lt; T, DenseMatrix&lt; T &gt; &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l03063">3063</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l03054">3054</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
 
 <p class="reference">References <a class="el" href="cfortran_8h_source.html#l00603">i</a>, and <a class="el" href="quadtree_8h_source.html#l00060">oomph::QuadTreeNames::N</a>.</p>
 
@@ -813,7 +813,7 @@ template&lt;class T &gt; </div>
 
 <p>Output function to print a matrix row-by-row to a file. Specify filename. </p>
 
-<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l03083">3083</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l03074">3074</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
 
 <p class="reference">References <a class="el" href="oomph__utilities_8cc_source.html#l00436">oomph::CommandLineArgs::output()</a>.</p>
 
@@ -849,7 +849,7 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classoomph_1_1Matrix.html#a10ee338f4d3893010291a692aea04248">oomph::Matrix&lt; T, DenseMatrix&lt; T &gt; &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l03133">3133</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l03124">3124</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
 
 <p class="reference">References <a class="el" href="quadtree_8h_source.html#l00060">oomph::QuadTreeNames::N</a>, and <a class="el" href="elements_8h_source.html#l01242">oomph::ElementGeometry::T</a>.</p>
 
@@ -883,11 +883,11 @@ template&lt;class T &gt; </div>
 
 <p>Resize to a square nxn matrix; any values already present will be transfered. </p>
 
-<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l00507">507</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l00498">498</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
 
-<p class="reference">References <a class="el" href="matrices_8h_source.html#l00507">oomph::DenseMatrix&lt; T &gt;::resize()</a>.</p>
+<p class="reference">References <a class="el" href="matrices_8h_source.html#l00498">oomph::DenseMatrix&lt; T &gt;::resize()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="timesteppers_8h_source.html#l01193">oomph::BDF&lt; NSTEPS &gt;::BDF()</a>, <a class="el" href="matrices_8cc_source.html#l00224">oomph::DenseDoubleMatrix::eigenvalues_by_jacobi()</a>, <a class="el" href="periodic__orbit__handler_8cc_source.html#l00077">oomph::PeriodicOrbitEquations::fill_in_generic_residual_contribution_orbit()</a>, <a class="el" href="multi__domain__boussinesq__elements_8h_source.html#l01435">oomph::RefineableNavierStokesBoussinesqElement&lt; NST_ELEMENT, AD_ELEMENT &gt;::get_dbody_force_nst_dexternal_element_data()</a>, <a class="el" href="multi__domain__boussinesq__elements_8h_source.html#l01377">oomph::NavierStokesBoussinesqElement&lt; NST_ELEMENT, AD_ELEMENT &gt;::get_dbody_force_nst_dexternal_element_data()</a>, <a class="el" href="problem_8cc_source.html#l07823">oomph::Problem::get_fd_jacobian()</a>, <a class="el" href="dg__elements_8cc_source.html#l00614">oomph::DGElement::get_inverse_mass_matrix_times_residuals()</a>, <a class="el" href="problem_8cc_source.html#l03890">oomph::Problem::get_jacobian()</a>, <a class="el" href="implicit__midpoint__rule_8h_source.html#l00047">oomph::IMRBase::IMRBase()</a>, <a class="el" href="matrices_8cc_source.html#l00481">oomph::DenseDoubleMatrix::matrix_reduction()</a>, <a class="el" href="generalised__timesteppers_8h_source.html#l00126">oomph::ContinuationStorageScheme::modify_storage()</a>, <a class="el" href="matrices_8cc_source.html#l00521">oomph::DenseDoubleMatrix::multiply()</a>, <a class="el" href="matrices_8h_source.html#l00429">oomph::DenseMatrix&lt; T &gt;::operator=()</a>, <a class="el" href="dg__elements_8cc_source.html#l00578">oomph::DGElement::pre_compute_mass_matrix()</a>, <a class="el" href="matrices_8h_source.html#l00507">oomph::DenseMatrix&lt; T &gt;::resize()</a>, <a class="el" href="octree_8cc_source.html#l01040">oomph::OcTree::setup_static_data()</a>, <a class="el" href="quadtree_8cc_source.html#l00120">oomph::QuadTree::setup_static_data()</a>, <a class="el" href="frontal__solver_8cc_source.html#l00127">oomph::HSL_MA42::solve()</a>, and <a class="el" href="timesteppers_8h_source.html#l00279">oomph::TimeStepper::TimeStepper()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="timesteppers_8h_source.html#l01193">oomph::BDF&lt; NSTEPS &gt;::BDF()</a>, <a class="el" href="matrices_8cc_source.html#l00224">oomph::DenseDoubleMatrix::eigenvalues_by_jacobi()</a>, <a class="el" href="periodic__orbit__handler_8cc_source.html#l00077">oomph::PeriodicOrbitEquations::fill_in_generic_residual_contribution_orbit()</a>, <a class="el" href="multi__domain__boussinesq__elements_8h_source.html#l01435">oomph::RefineableNavierStokesBoussinesqElement&lt; NST_ELEMENT, AD_ELEMENT &gt;::get_dbody_force_nst_dexternal_element_data()</a>, <a class="el" href="multi__domain__boussinesq__elements_8h_source.html#l01377">oomph::NavierStokesBoussinesqElement&lt; NST_ELEMENT, AD_ELEMENT &gt;::get_dbody_force_nst_dexternal_element_data()</a>, <a class="el" href="problem_8cc_source.html#l07823">oomph::Problem::get_fd_jacobian()</a>, <a class="el" href="dg__elements_8cc_source.html#l00614">oomph::DGElement::get_inverse_mass_matrix_times_residuals()</a>, <a class="el" href="problem_8cc_source.html#l03890">oomph::Problem::get_jacobian()</a>, <a class="el" href="implicit__midpoint__rule_8h_source.html#l00047">oomph::IMRBase::IMRBase()</a>, <a class="el" href="matrices_8cc_source.html#l00481">oomph::DenseDoubleMatrix::matrix_reduction()</a>, <a class="el" href="generalised__timesteppers_8h_source.html#l00126">oomph::ContinuationStorageScheme::modify_storage()</a>, <a class="el" href="matrices_8cc_source.html#l00521">oomph::DenseDoubleMatrix::multiply()</a>, <a class="el" href="matrices_8h_source.html#l00420">oomph::DenseMatrix&lt; T &gt;::operator=()</a>, <a class="el" href="dg__elements_8cc_source.html#l00578">oomph::DGElement::pre_compute_mass_matrix()</a>, <a class="el" href="matrices_8h_source.html#l00498">oomph::DenseMatrix&lt; T &gt;::resize()</a>, <a class="el" href="octree_8cc_source.html#l01040">oomph::OcTree::setup_static_data()</a>, <a class="el" href="quadtree_8cc_source.html#l00120">oomph::QuadTree::setup_static_data()</a>, <a class="el" href="frontal__solver_8cc_source.html#l00127">oomph::HSL_MA42::solve()</a>, and <a class="el" href="timesteppers_8h_source.html#l00279">oomph::TimeStepper::TimeStepper()</a>.</p>
 
 </div>
 </div>
@@ -922,7 +922,7 @@ template&lt;class T &gt; </div>
 <p>Resize to a non-square n x m matrix; any values already present will be transfered. </p>
 <p >Resize to a non-square n_row x m_col matrix, where any values already present will be transfered. </p>
 
-<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l02968">2968</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l02959">2959</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
 
 <p class="reference">References <a class="el" href="cfortran_8h_source.html#l00603">i</a>, <a class="el" href="quadtree_8h_source.html#l00060">oomph::QuadTreeNames::N</a>, and <a class="el" href="elements_8h_source.html#l01242">oomph::ElementGeometry::T</a>.</p>
 
@@ -965,7 +965,7 @@ template&lt;class T &gt; </div>
 <p>Resize to a non-square n x m matrix and initialize the new values to initial_value. </p>
 <p >Resize to a non-square n_row x m_col matrix and initialize the new entries to specified value. </p>
 
-<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l03017">3017</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l03008">3008</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
 
 <p class="reference">References <a class="el" href="cfortran_8h_source.html#l00603">i</a>, <a class="el" href="quadtree_8h_source.html#l00060">oomph::QuadTreeNames::N</a>, and <a class="el" href="elements_8h_source.html#l01242">oomph::ElementGeometry::T</a>.</p>
 
@@ -1002,7 +1002,7 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classoomph_1_1Matrix.html#a7a5b44e7688ce2c2f7552da104e615c8">oomph::Matrix&lt; T, DenseMatrix&lt; T &gt; &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l03152">3152</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l03143">3143</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
 
 <p class="reference">References <a class="el" href="cfortran_8h_source.html#l00603">i</a>, <a class="el" href="quadtree_8h_source.html#l00060">oomph::QuadTreeNames::N</a>, and <a class="el" href="elements_8h_source.html#l01242">oomph::ElementGeometry::T</a>.</p>
 
@@ -1033,9 +1033,9 @@ template&lt;class T &gt; </div>
 
 <p>Number of columns. </p>
 
-<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l00404">404</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l00395">395</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="matrices_8h_source.html#l00411">oomph::DenseMatrix&lt; T &gt;::DenseMatrix()</a>, <a class="el" href="matrices_8h_source.html#l00456">oomph::DenseMatrix&lt; T &gt;::entry()</a>, <a class="el" href="matrices_8h_source.html#l00466">oomph::DenseMatrix&lt; T &gt;::get_entry()</a>, <a class="el" href="matrices_8h_source.html#l00523">oomph::DenseMatrix&lt; T &gt;::initialise()</a>, <a class="el" href="matrices_8h_source.html#l00500">oomph::DenseMatrix&lt; T &gt;::ncol()</a>, and <a class="el" href="matrices_8h_source.html#l00429">oomph::DenseMatrix&lt; T &gt;::operator=()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="matrices_8h_source.html#l00402">oomph::DenseMatrix&lt; T &gt;::DenseMatrix()</a>, <a class="el" href="matrices_8h_source.html#l00447">oomph::DenseMatrix&lt; T &gt;::entry()</a>, <a class="el" href="matrices_8h_source.html#l00457">oomph::DenseMatrix&lt; T &gt;::get_entry()</a>, <a class="el" href="matrices_8h_source.html#l00514">oomph::DenseMatrix&lt; T &gt;::initialise()</a>, <a class="el" href="matrices_8h_source.html#l00491">oomph::DenseMatrix&lt; T &gt;::ncol()</a>, and <a class="el" href="matrices_8h_source.html#l00420">oomph::DenseMatrix&lt; T &gt;::operator=()</a>.</p>
 
 </div>
 </div>
@@ -1063,9 +1063,9 @@ template&lt;class T &gt; </div>
 
 <p>Internal representation of matrix as a pointer to data. </p>
 
-<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l00398">398</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l00389">389</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="matrices_8h_source.html#l00411">oomph::DenseMatrix&lt; T &gt;::DenseMatrix()</a>, <a class="el" href="matrices_8h_source.html#l00456">oomph::DenseMatrix&lt; T &gt;::entry()</a>, <a class="el" href="matrices_8h_source.html#l00466">oomph::DenseMatrix&lt; T &gt;::get_entry()</a>, <a class="el" href="matrices_8h_source.html#l00523">oomph::DenseMatrix&lt; T &gt;::initialise()</a>, and <a class="el" href="matrices_8h_source.html#l00487">oomph::DenseMatrix&lt; T &gt;::~DenseMatrix()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="matrices_8h_source.html#l00402">oomph::DenseMatrix&lt; T &gt;::DenseMatrix()</a>, <a class="el" href="matrices_8h_source.html#l00447">oomph::DenseMatrix&lt; T &gt;::entry()</a>, <a class="el" href="matrices_8h_source.html#l00457">oomph::DenseMatrix&lt; T &gt;::get_entry()</a>, <a class="el" href="matrices_8h_source.html#l00514">oomph::DenseMatrix&lt; T &gt;::initialise()</a>, and <a class="el" href="matrices_8h_source.html#l00478">oomph::DenseMatrix&lt; T &gt;::~DenseMatrix()</a>.</p>
 
 </div>
 </div>
@@ -1093,9 +1093,9 @@ template&lt;class T &gt; </div>
 
 <p>Number of rows. </p>
 
-<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l00401">401</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l00392">392</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="matrices_8h_source.html#l00411">oomph::DenseMatrix&lt; T &gt;::DenseMatrix()</a>, <a class="el" href="matrices_8h_source.html#l00523">oomph::DenseMatrix&lt; T &gt;::initialise()</a>, <a class="el" href="matrices_8h_source.html#l00494">oomph::DenseMatrix&lt; T &gt;::nrow()</a>, and <a class="el" href="matrices_8h_source.html#l00429">oomph::DenseMatrix&lt; T &gt;::operator=()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="matrices_8h_source.html#l00402">oomph::DenseMatrix&lt; T &gt;::DenseMatrix()</a>, <a class="el" href="matrices_8h_source.html#l00514">oomph::DenseMatrix&lt; T &gt;::initialise()</a>, <a class="el" href="matrices_8h_source.html#l00485">oomph::DenseMatrix&lt; T &gt;::nrow()</a>, and <a class="el" href="matrices_8h_source.html#l00420">oomph::DenseMatrix&lt; T &gt;::operator=()</a>.</p>
 
 </div>
 </div>
@@ -1131,7 +1131,7 @@ template&lt;class T &gt; </div>
     <footer>
       <div class="container">
         <div class="text-muted" style="float:right;">Generated by <a href="http://www.doxygen.org/index.html">
-          <img style="height:18px;" class="footer-img" src="doxygen.png" alt="doxygen"></a> on Fri Oct 14 2022 20:54:03
+          <img style="height:18px;" class="footer-img" src="doxygen.png" alt="doxygen"></a> on Tue Oct 18 2022 14:34:23
         </div>
       </div>
     </footer>

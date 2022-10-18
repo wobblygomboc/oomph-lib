@@ -204,8 +204,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a843d44405b70da1d96b43218a21e6ffc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoomph_1_1DoubleMatrixBase.html#a843d44405b70da1d96b43218a21e6ffc">multiply_transpose</a> (const <a class="el" href="classoomph_1_1DoubleVector.html">DoubleVector</a> &amp;x, <a class="el" href="classoomph_1_1DoubleVector.html">DoubleVector</a> &amp;soln) const =0</td></tr>
 <tr class="memdesc:a843d44405b70da1d96b43218a21e6ffc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply the transposed matrix by the vector x: soln=A^T x.  <a href="classoomph_1_1DoubleMatrixBase.html#a843d44405b70da1d96b43218a21e6ffc">More...</a><br /></td></tr>
 <tr class="separator:a843d44405b70da1d96b43218a21e6ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08783e33bf20e245864de8adb0b38870"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoomph_1_1DoubleMatrixBase.html#a08783e33bf20e245864de8adb0b38870">inf_norm</a> () const</td></tr>
-<tr class="separator:a08783e33bf20e245864de8adb0b38870"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -306,37 +304,6 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a08783e33bf20e245864de8adb0b38870" name="a08783e33bf20e245864de8adb0b38870"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08783e33bf20e245864de8adb0b38870">&#9670;&nbsp;</a></span>inf_norm()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual double oomph::DoubleMatrixBase::inf_norm </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reimplemented in <a class="el" href="classoomph_1_1CRDoubleMatrix.html#a6cd938ba5f026f1508239cef05b16cb4">oomph::CRDoubleMatrix</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="matrices_8h_source.html#l00363">363</a> of file <a class="el" href="matrices_8h_source.html">matrices.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="linear__solver_8cc_source.html#l00868">oomph::SuperLUSolver::compute_condition_number()</a>.</p>
-
-</div>
-</div>
 <a id="aa2ef063bc84bee59fec7a933093ac8f7" name="aa2ef063bc84bee59fec7a933093ac8f7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa2ef063bc84bee59fec7a933093ac8f7">&#9670;&nbsp;</a></span>linear_solver_pt() <span class="overload">[1/2]</span></h2>
 
@@ -552,7 +519,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classoomph_1_1CRDoubleMatrix.html#a4ed5597d8a34dd14f90b0e6cfb88ca2e">oomph::CRDoubleMatrix</a>, <a class="el" href="classoomph_1_1DenseDoubleMatrix.html#aec36d12984999f29f5fc21feea55df1d">oomph::DenseDoubleMatrix</a>, <a class="el" href="classoomph_1_1CCDoubleMatrix.html#aa38cc544ab30f9318161763e13c20957">oomph::CCDoubleMatrix</a>, and <a class="el" href="classoomph_1_1SumOfMatrices.html#ad18b4591850b5e89ee6695407aaeec54">oomph::SumOfMatrices</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="sum__of__matrices_8h_source.html#l00415">oomph::SumOfMatrices::add_matrix()</a>, <a class="el" href="mumps__solver_8cc_source.html#l00187">oomph::MumpsSolver::factorise()</a>, <a class="el" href="linear__solver_8cc_source.html#l01938">oomph::SuperLUSolver::factorise_distributed()</a>, <a class="el" href="linear__solver_8cc_source.html#l02234">oomph::SuperLUSolver::factorise_serial()</a>, <a class="el" href="sum__of__matrices_8h_source.html#l00515">oomph::SumOfMatrices::ncol()</a>, <a class="el" href="hypre__solver_8cc_source.html#l01714">oomph::HyprePreconditioner::setup()</a>, <a class="el" href="trilinos__preconditioners_8cc_source.html#l00053">oomph::TrilinosPreconditionerBase::setup()</a>, <a class="el" href="linear__solver_8cc_source.html#l00419">oomph::DenseLU::solve()</a>, <a class="el" href="linear__solver_8cc_source.html#l01147">oomph::SuperLUSolver::solve()</a>, <a class="el" href="mumps__solver_8cc_source.html#l00764">oomph::MumpsSolver::solve()</a>, <a class="el" href="hypre__solver_8cc_source.html#l01436">oomph::HypreSolver::solve()</a>, <a class="el" href="trilinos__solver_8cc_source.html#l00135">oomph::TrilinosAztecOOSolver::solve()</a>, <a class="el" href="iterative__linear__solver_8cc_source.html#l00605">oomph::CG&lt; MATRIX &gt;::solve_helper()</a>, <a class="el" href="iterative__linear__solver_8cc_source.html#l00171">oomph::BiCGStab&lt; MATRIX &gt;::solve_helper()</a>, and <a class="el" href="linear__solver_8cc_source.html#l01627">oomph::SuperLUSolver::solve_transpose()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="sum__of__matrices_8h_source.html#l00415">oomph::SumOfMatrices::add_matrix()</a>, <a class="el" href="mumps__solver_8cc_source.html#l00180">oomph::MumpsSolver::factorise()</a>, <a class="el" href="linear__solver_8cc_source.html#l01865">oomph::SuperLUSolver::factorise_distributed()</a>, <a class="el" href="linear__solver_8cc_source.html#l02161">oomph::SuperLUSolver::factorise_serial()</a>, <a class="el" href="sum__of__matrices_8h_source.html#l00515">oomph::SumOfMatrices::ncol()</a>, <a class="el" href="hypre__solver_8cc_source.html#l01714">oomph::HyprePreconditioner::setup()</a>, <a class="el" href="trilinos__preconditioners_8cc_source.html#l00053">oomph::TrilinosPreconditionerBase::setup()</a>, <a class="el" href="linear__solver_8cc_source.html#l00419">oomph::DenseLU::solve()</a>, <a class="el" href="linear__solver_8cc_source.html#l01074">oomph::SuperLUSolver::solve()</a>, <a class="el" href="mumps__solver_8cc_source.html#l00724">oomph::MumpsSolver::solve()</a>, <a class="el" href="hypre__solver_8cc_source.html#l01436">oomph::HypreSolver::solve()</a>, <a class="el" href="trilinos__solver_8cc_source.html#l00135">oomph::TrilinosAztecOOSolver::solve()</a>, <a class="el" href="iterative__linear__solver_8cc_source.html#l00605">oomph::CG&lt; MATRIX &gt;::solve_helper()</a>, <a class="el" href="iterative__linear__solver_8cc_source.html#l00171">oomph::BiCGStab&lt; MATRIX &gt;::solve_helper()</a>, and <a class="el" href="linear__solver_8cc_source.html#l01554">oomph::SuperLUSolver::solve_transpose()</a>.</p>
 
 </div>
 </div>
@@ -583,7 +550,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classoomph_1_1CRDoubleMatrix.html#abd8d231b0549540144b4739a667b1e75">oomph::CRDoubleMatrix</a>, <a class="el" href="classoomph_1_1DenseDoubleMatrix.html#ab67993d1a41ca5ddf05c8210673723f0">oomph::DenseDoubleMatrix</a>, <a class="el" href="classoomph_1_1CCDoubleMatrix.html#ab541153fa5ab2c1bc18e5339bacadfb9">oomph::CCDoubleMatrix</a>, and <a class="el" href="classoomph_1_1SumOfMatrices.html#a5d3b790f7e4f1bce927ecfb61844a52a">oomph::SumOfMatrices</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="sum__of__matrices_8h_source.html#l00415">oomph::SumOfMatrices::add_matrix()</a>, <a class="el" href="linear__solver_8cc_source.html#l00131">oomph::DenseLU::factorise()</a>, <a class="el" href="mumps__solver_8cc_source.html#l00187">oomph::MumpsSolver::factorise()</a>, <a class="el" href="linear__solver_8cc_source.html#l01938">oomph::SuperLUSolver::factorise_distributed()</a>, <a class="el" href="linear__solver_8cc_source.html#l02234">oomph::SuperLUSolver::factorise_serial()</a>, <a class="el" href="sum__of__matrices_8h_source.html#l00501">oomph::SumOfMatrices::nrow()</a>, <a class="el" href="general__purpose__preconditioners_8cc_source.html#l00043">oomph::MatrixBasedDiagPreconditioner::setup()</a>, <a class="el" href="hypre__solver_8cc_source.html#l01714">oomph::HyprePreconditioner::setup()</a>, <a class="el" href="preconditioner_8h_source.html#l00267">oomph::IdentityPreconditioner::setup()</a>, <a class="el" href="trilinos__preconditioners_8cc_source.html#l00053">oomph::TrilinosPreconditionerBase::setup()</a>, <a class="el" href="linear__solver_8cc_source.html#l00419">oomph::DenseLU::solve()</a>, <a class="el" href="linear__solver_8cc_source.html#l01147">oomph::SuperLUSolver::solve()</a>, <a class="el" href="mumps__solver_8cc_source.html#l00764">oomph::MumpsSolver::solve()</a>, <a class="el" href="hypre__solver_8cc_source.html#l01436">oomph::HypreSolver::solve()</a>, <a class="el" href="trilinos__solver_8cc_source.html#l00135">oomph::TrilinosAztecOOSolver::solve()</a>, <a class="el" href="iterative__linear__solver_8cc_source.html#l00605">oomph::CG&lt; MATRIX &gt;::solve_helper()</a>, <a class="el" href="iterative__linear__solver_8cc_source.html#l00171">oomph::BiCGStab&lt; MATRIX &gt;::solve_helper()</a>, <a class="el" href="iterative__linear__solver_8cc_source.html#l02862">oomph::AugmentedProblemGMRES::solve_helper()</a>, and <a class="el" href="linear__solver_8cc_source.html#l01627">oomph::SuperLUSolver::solve_transpose()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="sum__of__matrices_8h_source.html#l00415">oomph::SumOfMatrices::add_matrix()</a>, <a class="el" href="linear__solver_8cc_source.html#l00131">oomph::DenseLU::factorise()</a>, <a class="el" href="mumps__solver_8cc_source.html#l00180">oomph::MumpsSolver::factorise()</a>, <a class="el" href="linear__solver_8cc_source.html#l01865">oomph::SuperLUSolver::factorise_distributed()</a>, <a class="el" href="linear__solver_8cc_source.html#l02161">oomph::SuperLUSolver::factorise_serial()</a>, <a class="el" href="sum__of__matrices_8h_source.html#l00501">oomph::SumOfMatrices::nrow()</a>, <a class="el" href="general__purpose__preconditioners_8cc_source.html#l00043">oomph::MatrixBasedDiagPreconditioner::setup()</a>, <a class="el" href="hypre__solver_8cc_source.html#l01714">oomph::HyprePreconditioner::setup()</a>, <a class="el" href="preconditioner_8h_source.html#l00267">oomph::IdentityPreconditioner::setup()</a>, <a class="el" href="trilinos__preconditioners_8cc_source.html#l00053">oomph::TrilinosPreconditionerBase::setup()</a>, <a class="el" href="linear__solver_8cc_source.html#l00419">oomph::DenseLU::solve()</a>, <a class="el" href="linear__solver_8cc_source.html#l01074">oomph::SuperLUSolver::solve()</a>, <a class="el" href="mumps__solver_8cc_source.html#l00724">oomph::MumpsSolver::solve()</a>, <a class="el" href="hypre__solver_8cc_source.html#l01436">oomph::HypreSolver::solve()</a>, <a class="el" href="trilinos__solver_8cc_source.html#l00135">oomph::TrilinosAztecOOSolver::solve()</a>, <a class="el" href="iterative__linear__solver_8cc_source.html#l00605">oomph::CG&lt; MATRIX &gt;::solve_helper()</a>, <a class="el" href="iterative__linear__solver_8cc_source.html#l00171">oomph::BiCGStab&lt; MATRIX &gt;::solve_helper()</a>, <a class="el" href="iterative__linear__solver_8cc_source.html#l02862">oomph::AugmentedProblemGMRES::solve_helper()</a>, and <a class="el" href="linear__solver_8cc_source.html#l01554">oomph::SuperLUSolver::solve_transpose()</a>.</p>
 
 </div>
 </div>
@@ -912,7 +879,7 @@ Protected Attributes</h2></td></tr>
     <footer>
       <div class="container">
         <div class="text-muted" style="float:right;">Generated by <a href="http://www.doxygen.org/index.html">
-          <img style="height:18px;" class="footer-img" src="doxygen.png" alt="doxygen"></a> on Fri Oct 14 2022 20:54:07
+          <img style="height:18px;" class="footer-img" src="doxygen.png" alt="doxygen"></a> on Tue Oct 18 2022 14:34:27
         </div>
       </div>
     </footer>
