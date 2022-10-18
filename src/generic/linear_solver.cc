@@ -815,7 +815,8 @@ namespace oomph
   double SuperLUSolver::compute_condition_number(const double& inf_norm)
   {
     // SuperLU structure for storing the matrix factors
-    typedef struct {
+    typedef struct
+    {
       SuperMatrix* L;
       SuperMatrix* U;
       int* perm_c;
@@ -824,19 +825,19 @@ namespace oomph
 
     int info = 0;
     SuperLUStat_t stat;
-  
+
     /* Initialize the statistics variables. */
     StatInit(&stat);
 
     // set the norm to be the infinity-norm
     char* norm = (char*)"I";
-  
+
     // extract the LU factors
     SuperMatrix* L;
     SuperMatrix* U;
-    
+
 #ifdef OOMPH_HAS_MPI
-    
+
     if (Solver_type == Distributed)
     {
       L = ((factors_t*)Dist_solver_data_pt)->L;
@@ -851,11 +852,10 @@ namespace oomph
 
     // get the (reciprocal) condition number
     double reciprocal_condition_number = 0.0;
-    
-    dgscon(norm, L, U, inf_norm,
-	   &reciprocal_condition_number, &stat, &info);
 
-    return 1.0/reciprocal_condition_number;
+    dgscon(norm, L, U, inf_norm, &reciprocal_condition_number, &stat, &info);
+
+    return 1.0 / reciprocal_condition_number;
   }
 
   //==========================================================================
@@ -870,7 +870,7 @@ namespace oomph
   {
     // perform the LU decomposition (this stores the factors internally)
     factorise(matrix_pt);
-    
+
     // get the infinity-norm of the matrix
     double inf_norm = matrix_pt->inf_norm();
 
@@ -878,7 +878,7 @@ namespace oomph
     // LU factors are already in internal storage
     return compute_condition_number(inf_norm);
   }
-  
+
   //==========================================================================
   /// Solver: Takes pointer to problem and returns the results Vector
   /// which contains the solution of the linear system defined by

@@ -107,7 +107,7 @@ namespace oomph
     // Call c interface to double precision mumps to initialise
     dmumps_c(Mumps_struc_pt);
     Mumps_is_initialised = true;
-    
+
     // Output stream for global info on host. Negative value suppresses printing
     Mumps_struc_pt->ICNTL(3) = -1;
 
@@ -133,11 +133,10 @@ namespace oomph
     // Non-distributed solution
     Mumps_struc_pt->ICNTL(21) = 0;
 
-    // apply any user-supplied overrides for the ICNTL parameters    
-    for(std::pair<int,double> icntl_value_pair : Icntl_override_map)
+    // apply any user-supplied overrides for the ICNTL parameters
+    for (std::pair<int, double> icntl_value_pair : Icntl_override_map)
     {
-      Mumps_struc_pt->ICNTL(icntl_value_pair.first) =
-	icntl_value_pair.second;
+      Mumps_struc_pt->ICNTL(icntl_value_pair.first) = icntl_value_pair.second;
     }
   }
 
@@ -431,7 +430,7 @@ namespace oomph
 
         // Loop until successfully factorised
         bool factorised = false;
-	
+
         while (!factorised)
         {
           // Set workspace to multiple of that -- ought to be "significantly
@@ -452,60 +451,61 @@ namespace oomph
           dmumps_c(Mumps_struc_pt);
 
           // Check for error
-	  switch (Mumps_struc_pt->INFOG(1))
-	  {
-	    // successful factorisation
-	    case 0:
-	    {
-	      factorised = true;
-	      break;
-	    } 
-	    case MumpsErrorCodes::Numerically_singular_matrix:
-	    {
-	      std::ostringstream error_message_stream;
-	      error_message_stream << "Error during mumps factorisation: "
-				   << "numerically singular Jacobian matrix\n";
+          switch (Mumps_struc_pt->INFOG(1))
+          {
+            // successful factorisation
+            case 0:
+            {
+              factorised = true;
+              break;
+            }
+            case MumpsErrorCodes::Numerically_singular_matrix:
+            {
+              std::ostringstream error_message_stream;
+              error_message_stream << "Error during mumps factorisation: "
+                                   << "numerically singular Jacobian matrix\n";
 
-	      // can't recover from this, die
-	      throw OomphLibError(error_message_stream.str(),
-				  OOMPH_CURRENT_FUNCTION,
-				  OOMPH_EXCEPTION_LOCATION);
-		
-	      break;
-	    }
-	    case MumpsErrorCodes::Workspace_allocation_size:
-	    {
-	      // Increase scaling factor for workspace and run again
-	      Workspace_scaling_factor *= 2;
-		
-	      if (!Suppress_mumps_info_during_solve)
-	      {
-		oomph_info << "Error during mumps factorisation!\n"
-			   << "Allocated workspace too small; \n"		
-			   << "increasing Workspace_scaling_factor to: "
-			   << Workspace_scaling_factor << std::endl;
-	      }
+              // can't recover from this, die
+              throw OomphLibError(error_message_stream.str(),
+                                  OOMPH_CURRENT_FUNCTION,
+                                  OOMPH_EXCEPTION_LOCATION);
 
-	      break;
-	    }
-	    
-	    // add more cases from MumpsErrorCodes enum here as required
-	      
-	    default:
-	    {
-	      // some other unspecified error, tell user and die
-	      std::ostringstream error_message_stream;
-	      error_message_stream << "Error during mumps factorisation!\n"
-				   << "Error codes: " << Mumps_struc_pt->INFO(1) << " "
-				   << Mumps_struc_pt->INFO(2) << std::endl;
+              break;
+            }
+            case MumpsErrorCodes::Workspace_allocation_size:
+            {
+              // Increase scaling factor for workspace and run again
+              Workspace_scaling_factor *= 2;
 
-	      throw OomphLibError(error_message_stream.str(),
-				  OOMPH_CURRENT_FUNCTION,
-				  OOMPH_EXCEPTION_LOCATION);
-		
-	      break;
-	    }
-	  }
+              if (!Suppress_mumps_info_during_solve)
+              {
+                oomph_info << "Error during mumps factorisation!\n"
+                           << "Allocated workspace too small; \n"
+                           << "increasing Workspace_scaling_factor to: "
+                           << Workspace_scaling_factor << std::endl;
+              }
+
+              break;
+            }
+
+              // add more cases from MumpsErrorCodes enum here as required
+
+            default:
+            {
+              // some other unspecified error, tell user and die
+              std::ostringstream error_message_stream;
+              error_message_stream << "Error during mumps factorisation!\n"
+                                   << "Error codes: " << Mumps_struc_pt->INFO(1)
+                                   << " " << Mumps_struc_pt->INFO(2)
+                                   << std::endl;
+
+              throw OomphLibError(error_message_stream.str(),
+                                  OOMPH_CURRENT_FUNCTION,
+                                  OOMPH_EXCEPTION_LOCATION);
+
+              break;
+            }
+          }
         }
 
 

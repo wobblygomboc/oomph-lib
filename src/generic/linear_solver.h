@@ -320,7 +320,6 @@ namespace oomph
       }
 #endif
     }
-    
   };
 
   //=============================================================================
@@ -663,7 +662,7 @@ namespace oomph
     {
       Serial_compressed_row_flag = false;
     }
-    
+
     /// Wrapper to SuperLU's dgscon() which computes the (reciprocal of the)
     /// condition number of a matrix. This version assumes we're computing the
     /// condition number of a matrix which has already been factorised and who's
@@ -676,8 +675,7 @@ namespace oomph
     /// factorised the matrix and so first performs the LU decomposition (the
     /// factors of which are then stored internally), then computes the matrix
     /// norm which is passed to the matrix-less overload of this function.
-    double compute_condition_number(
-      DoubleMatrixBase* const& matrix_pt);
+    double compute_condition_number(DoubleMatrixBase* const& matrix_pt);
 
 #ifdef OOMPH_HAS_MPI
 
