@@ -1,5 +1,5 @@
-\hypertarget{classUndeformedWall}{}\doxysection{Undeformed\+Wall Class Reference}
-\label{classUndeformedWall}\index{UndeformedWall@{UndeformedWall}}
+\doxysection{Undeformed\+Wall Class Reference}
+\hypertarget{classUndeformedWall}{}\label{classUndeformedWall}\index{UndeformedWall@{UndeformedWall}}
 
 
 /////////////////////////////////////////////////////////////////////// ///////////////////////////////////////////////////////////////////////  
@@ -15,7 +15,7 @@ Inheritance diagram for Undeformed\+Wall\+:\begin{figure}[H]
 \includegraphics[height=2.000000cm]{classUndeformedWall}
 \end{center}
 \end{figure}
-\doxysubsection*{Public Member Functions}
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classUndeformedWall_ad09cfdcd234be0ab47eb97a8a470602a}{Undeformed\+Wall}} (const double \&x0, const double \&h)
@@ -26,7 +26,7 @@ void \mbox{\hyperlink{classUndeformedWall_a9cbb52e30fd47d1841c1c3dc812f4b96}{pos
 \begin{DoxyCompactList}\small\item\em Parametrised position on object\+: r(zeta). Evaluated at previous timestep. t=0\+: current time; t\texorpdfstring{$>$}{>}0\+: previous timestep. Calls steady version. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classUndeformedWall_a709e65fc95e9443a886125e455595e5d}{d2position}} (const Vector$<$ double $>$ \&zeta, Vector$<$ double $>$ \&r, Dense\+Matrix$<$ double $>$ \&drdzeta, Rank\+Three\+Tensor$<$ double $>$ \&ddrdzeta) const
 \begin{DoxyCompactList}\small\item\em Posn vector and its 1st \& 2nd derivatives w.\+r.\+t. to coordinates\+: $ \frac{dR_i}{d \zeta_\alpha}$ = drdzeta(alpha,i). $ \frac{d^2R_i}{d \zeta_\alpha d \zeta_\beta}$ = ddrdzeta(alpha,beta,i). Evaluated at current time. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Private Attributes}
+\doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 double \mbox{\hyperlink{classUndeformedWall_a7ab875c46fef905df33eb47e0336581b}{X0}}
@@ -45,7 +45,7 @@ Definition at line \mbox{\hyperlink{fsi__chan__problem_8h_source_l00155}{155}} o
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classUndeformedWall_ad09cfdcd234be0ab47eb97a8a470602a}\label{classUndeformedWall_ad09cfdcd234be0ab47eb97a8a470602a}} 
+\Hypertarget{classUndeformedWall_ad09cfdcd234be0ab47eb97a8a470602a}\label{classUndeformedWall_ad09cfdcd234be0ab47eb97a8a470602a} 
 \index{UndeformedWall@{UndeformedWall}!UndeformedWall@{UndeformedWall}}
 \index{UndeformedWall@{UndeformedWall}!UndeformedWall@{UndeformedWall}}
 \doxysubsubsection{\texorpdfstring{UndeformedWall()}{UndeformedWall()}}
@@ -66,7 +66,7 @@ References \mbox{\hyperlink{fsi__chan__problem_8h_source_l00220}{H}}, and \mbox{
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classUndeformedWall_a709e65fc95e9443a886125e455595e5d}\label{classUndeformedWall_a709e65fc95e9443a886125e455595e5d}} 
+\Hypertarget{classUndeformedWall_a709e65fc95e9443a886125e455595e5d}\label{classUndeformedWall_a709e65fc95e9443a886125e455595e5d} 
 \index{UndeformedWall@{UndeformedWall}!d2position@{d2position}}
 \index{d2position@{d2position}!UndeformedWall@{UndeformedWall}}
 \doxysubsubsection{\texorpdfstring{d2position()}{d2position()}}
@@ -84,7 +84,7 @@ Definition at line \mbox{\hyperlink{fsi__chan__problem_8h_source_l00195}{195}} o
 
 References \mbox{\hyperlink{fsi__chan__problem_8h_source_l00220}{H}}, and \mbox{\hyperlink{fsi__chan__problem_8h_source_l00217}{X0}}.
 
-\mbox{\Hypertarget{classUndeformedWall_a9cbb52e30fd47d1841c1c3dc812f4b96}\label{classUndeformedWall_a9cbb52e30fd47d1841c1c3dc812f4b96}} 
+\Hypertarget{classUndeformedWall_a9cbb52e30fd47d1841c1c3dc812f4b96}\label{classUndeformedWall_a9cbb52e30fd47d1841c1c3dc812f4b96} 
 \index{UndeformedWall@{UndeformedWall}!position@{position}}
 \index{position@{position}!UndeformedWall@{UndeformedWall}}
 \doxysubsubsection{\texorpdfstring{position()}{position()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
@@ -102,7 +102,7 @@ Definition at line \mbox{\hyperlink{fsi__chan__problem_8h_source_l00181}{181}} o
 
 References \mbox{\hyperlink{fsi__chan__problem_8h_source_l00170}{position()}}.
 
-\mbox{\Hypertarget{classUndeformedWall_ab0410681e2096091319a79e79937cba3}\label{classUndeformedWall_ab0410681e2096091319a79e79937cba3}} 
+\Hypertarget{classUndeformedWall_ab0410681e2096091319a79e79937cba3}\label{classUndeformedWall_ab0410681e2096091319a79e79937cba3} 
 \index{UndeformedWall@{UndeformedWall}!position@{position}}
 \index{position@{position}!UndeformedWall@{UndeformedWall}}
 \doxysubsubsection{\texorpdfstring{position()}{position()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
@@ -127,7 +127,7 @@ Referenced by \mbox{\hyperlink{fsi__chan__problem_8h_source_l00181}{position()}}
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{classUndeformedWall_a4525dbe0b5d2108ee51f16bee9af88ef}\label{classUndeformedWall_a4525dbe0b5d2108ee51f16bee9af88ef}} 
+\Hypertarget{classUndeformedWall_a4525dbe0b5d2108ee51f16bee9af88ef}\label{classUndeformedWall_a4525dbe0b5d2108ee51f16bee9af88ef} 
 \index{UndeformedWall@{UndeformedWall}!H@{H}}
 \index{H@{H}!UndeformedWall@{UndeformedWall}}
 \doxysubsubsection{\texorpdfstring{H}{H}}
@@ -145,7 +145,7 @@ Definition at line \mbox{\hyperlink{fsi__chan__problem_8h_source_l00220}{220}} o
 
 Referenced by \mbox{\hyperlink{fsi__chan__problem_8h_source_l00195}{d2position()}}, \mbox{\hyperlink{fsi__chan__problem_8h_source_l00170}{position()}}, and \mbox{\hyperlink{fsi__chan__problem_8h_source_l00162}{Undeformed\+Wall()}}.
 
-\mbox{\Hypertarget{classUndeformedWall_a7ab875c46fef905df33eb47e0336581b}\label{classUndeformedWall_a7ab875c46fef905df33eb47e0336581b}} 
+\Hypertarget{classUndeformedWall_a7ab875c46fef905df33eb47e0336581b}\label{classUndeformedWall_a7ab875c46fef905df33eb47e0336581b} 
 \index{UndeformedWall@{UndeformedWall}!X0@{X0}}
 \index{X0@{X0}!UndeformedWall@{UndeformedWall}}
 \doxysubsubsection{\texorpdfstring{X0}{X0}}

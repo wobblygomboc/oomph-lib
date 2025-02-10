@@ -3,7 +3,7 @@
 // LIC// multi-physics finite-element library, available
 // LIC// at http://www.oomph-lib.org.
 // LIC//
-// LIC// Copyright (C) 2006-2022 Matthias Heil and Andrew Hazel
+// LIC// Copyright (C) 2006-2024 Matthias Heil and Andrew Hazel
 // LIC//
 // LIC// This library is free software; you can redistribute it and/or
 // LIC// modify it under the terms of the GNU Lesser General Public
@@ -86,6 +86,9 @@ namespace oomph
 
   // Forward definition for sum of matrices class
   class SumOfMatrices;
+
+  // Forward definition for inverted element errors
+  class InvertedElementError;
 
   /// //////////////////////////////////////////////////////////////////
   /// //////////////////////////////////////////////////////////////////
@@ -716,6 +719,23 @@ namespace oomph
     /// schemes. Lower scaling values will reject the time-step (and retry
     /// with a smaller dt).
     double DTSF_min_decrease;
+
+    /// Safety factor to ensure we are aiming for a target error, TARGET,
+    /// that is below our tolerance:
+    ///     TARGET = Target_error_safety_factor * TOL
+    /// For this to make sense Target_error_safety_factor should be <1.0. If
+    /// Keep_temporal_error_below_tolerance is set to true (default) then,
+    /// without this, timesteps suggested by the adaptive time-stepper can be
+    /// expected to lead to rejection (because the error exceeds TOL) about
+    /// half of the time.
+    /// Harier et al. (1993, ISBN:978-3-540-56670-0, p168) suggest a value
+    /// around 0.25-0.40 to be the most efficient, however this is highly
+    /// problem and timestepper dependent and sometimes as high as 0.95 may be
+    /// effective at improving the robustness of timestep prediction.
+    ///
+    /// Note: Despite this, we are setting this to default to 1.0 to prevent
+    /// introducing any change in the default behaviour of oomph-lib for now.
+    double Target_error_safety_factor;
 
     /// If  Minimum_dt_but_still_proceed positive, then dt will not be
     /// reduced below this value during adaptive timestepping and the
@@ -1590,6 +1610,12 @@ namespace oomph
       return Maximum_dt;
     }
 
+    /// Access function to the safety factor in adaptive timestepping
+    double& target_error_safety_factor()
+    {
+      return Target_error_safety_factor;
+    }
+
     /// Access function to max Newton iterations before giving up.
     unsigned& max_newton_iterations()
     {
@@ -1663,6 +1689,10 @@ namespace oomph
     {
       Global_data_pt.resize(0);
     }
+
+    /// Get new linear algebra distribution (you're in charge of deleting it!)
+    void create_new_linear_algebra_distribution(
+      LinearAlgebraDistribution*& dist_pt);
 
     /// Return the pointer to the dof distribution (read-only)
     LinearAlgebraDistribution* const& dof_distribution_pt() const
@@ -1910,40 +1940,115 @@ namespace oomph
       Vector<DoubleVectorWithHaloEntries>& product);
 
 
-    /// Get derivative of an element in the problem wrt a global
-    /// parameter, used in continuation problems
-    // void get_derivative_wrt_global_parameter(double* const &parameter_pt,
-    //                                         GeneralisedElement* const
-    //                                         &elem_pt, Vector<double>
-    //                                         &result);
-
-    /// Solve an eigenproblem as assembled by EigenElements
-    /// calculate n_eval eigenvalues and return the corresponding
-    /// eigenvectors. The boolean flag (default true) specifies whether
-    /// the steady jacobian should be assembled. If the flag is false
+    /// Solve an eigenproblem as assembled by the Problem's constituent
+    /// elements. Calculate (at least) n_eval eigenvalues and return the
+    /// corresponding eigenvectors. The boolean flag (default true) specifies
+    /// whether the steady jacobian should be assembled. If the flag is false
     /// then the weighted mass-matrix terms from the timestepper will
     /// be included in the jacobian --- this is almost certainly never
-    /// wanted.
+    /// wanted. The eigenvalues and eigenvectors are, in general, complex.
+    /// Eigenvalues may be infinite and are therefore returned as
+    /// \f$ \lambda_i = \alpha_i / \beta_i \f$ where \f$ \alpha_i \f$ is complex
+    /// while \f$ \beta_i \f$ is real. The actual eigenvalues may then be
+    /// computed by doing the division, checking for zero betas to avoid NaNs.
+    /// There's a convenience wrapper to this function that simply computes
+    /// these eigenvalues regardless. That version may die in NaN checking is
+    /// enabled (via the fenv.h header and the associated feenable function).
     void solve_eigenproblem(const unsigned& n_eval,
-                            Vector<std::complex<double>>& eigenvalue,
-                            Vector<DoubleVector>& eigenvector,
+                            Vector<std::complex<double>>& alpha,
+                            Vector<double>& beta,
+                            Vector<DoubleVector>& eigenvector_real,
+                            Vector<DoubleVector>& eigenvector_imag,
                             const bool& steady = true);
 
-    /// Solve an eigenproblem as assembled by EigenElements,
-    /// but only return the eigenvalues, not the eigenvectors.
-    /// The boolean flag (default true) is used to specify whether the
-    /// weighted mass-matrix terms from the timestepping scheme should
-    /// be included in the jacobian.
+    /// Solve an eigenproblem as assembled by the Problem's constituent
+    /// elements. Calculate (at least) n_eval eigenvalues and return the
+    /// corresponding eigenvectors. The boolean flag (default true) specifies
+    /// whether the steady jacobian should be assembled. If the flag is false
+    /// then the weighted mass-matrix terms from the timestepper will
+    /// be included in the jacobian --- this is almost certainly never
+    /// wanted. Note that the eigenvalues and eigenvectors are,
+    /// in general, complex and the eigenvalues may be infinite. In this
+    /// case it's safer to use the other version of this function which
+    /// returns the eigenvalues in terms of a fractional representation.
     void solve_eigenproblem(const unsigned& n_eval,
                             Vector<std::complex<double>>& eigenvalue,
+                            Vector<DoubleVector>& eigenvector_real,
+                            Vector<DoubleVector>& eigenvector_imag,
+                            const bool& steady = true);
+
+    /// Solve an eigenproblem as assembled by the Problem's constituent
+    /// elements but only return the eigenvalues, not the eigenvectors.
+    /// At least n_eval eigenvalues are computed.
+    /// The boolean flag (default true) is used to specify whether the
+    /// weighted mass-matrix terms from the timestepping scheme should
+    /// be included in the jacobian --- this is almost certainly never
+    /// wanted. Note that the eigenvalues may be infinite. In this
+    /// case it's safer to use the other version of this function which
+    /// returns the eigenvalues in terms of a fractional representation.
+    void solve_eigenproblem(const unsigned& n_eval,
+                            Vector<std::complex<double>>& eigenvalue,
+                            const bool& make_timesteppers_steady = true)
+    {
+      // Create temporary storage for the eigenvectors (potentially wasteful)
+      Vector<DoubleVector> eigenvector_real;
+      Vector<DoubleVector> eigenvector_imag;
+      solve_eigenproblem(n_eval,
+                         eigenvalue,
+                         eigenvector_real,
+                         eigenvector_imag,
+                         make_timesteppers_steady);
+    }
+
+    /// Solve an eigenproblem as assembled by the Problem's constituent
+    /// elements but only return the eigenvalues, not the eigenvectors.
+    /// At least n_eval eigenvalues are computed.
+    /// The boolean flag (default true) is used to specify whether the
+    /// weighted mass-matrix terms from the timestepping scheme should
+    /// be included in the jacobian --- this is almost certainly never
+    /// wanted. Note that the eigenvalues may be infinite
+    /// and are therefore returned as
+    /// \f$ \lambda_i = \alpha_i / \beta_i \f$ where \f$ \alpha_i \f$ is complex
+    /// while \f$ \beta_i \f$ is real. The actual eigenvalues may then be
+    /// computed by doing the division, checking for zero betas to avoid NaNs.
+    void solve_eigenproblem(const unsigned& n_eval,
+                            Vector<std::complex<double>>& alpha,
+                            Vector<double>& beta,
                             const bool& steady = true)
     {
       // Create temporary storage for the eigenvectors (potentially wasteful)
-      Vector<DoubleVector> eigenvector;
-      solve_eigenproblem(n_eval, eigenvalue, eigenvector, steady);
+      Vector<DoubleVector> eigenvector_real;
+      Vector<DoubleVector> eigenvector_imag;
+      solve_eigenproblem(
+        n_eval, alpha, beta, eigenvector_real, eigenvector_imag, steady);
     }
 
-    /// Get the matrices required by a eigensolver. If the
+    /// Solve an adjoint eigenvalue problem using the same procedure as
+    /// solve_eigenproblem. See the documentation on that function for more
+    /// details.
+    void solve_adjoint_eigenproblem(const unsigned& n_eval,
+                                    Vector<std::complex<double>>& eigenvalue,
+                                    Vector<DoubleVector>& eigenvector_real,
+                                    Vector<DoubleVector>& eigenvector_imag,
+                                    const bool& steady = true);
+
+    /// Solve an adjoint eigenvalue problem using the same procedure as
+    /// solve_eigenproblem but only return the eigenvalues, not the
+    /// eigenvectors. At least n_eval eigenvalues are computed. See the
+    /// documentation on that function for more details.
+    void solve_adjoint_eigenproblem(const unsigned& n_eval,
+                                    Vector<std::complex<double>>& eigenvalue,
+                                    const bool& steady = true)
+    {
+      // Create temporary storage for the eigenvectors (potentially wasteful)
+      Vector<DoubleVector> eigenvector_real;
+      Vector<DoubleVector> eigenvector_imag;
+      solve_adjoint_eigenproblem(
+        n_eval, eigenvalue, eigenvector_real, eigenvector_imag, steady);
+    }
+
+
+    /// \short Get the matrices required by a eigensolver. If the
     /// shift parameter is non-zero the second matrix will be shifted
     virtual void get_eigenproblem_matrices(CRDoubleMatrix& mass_matrix,
                                            CRDoubleMatrix& main_matrix,
@@ -2948,42 +3053,70 @@ namespace oomph
   //=======================================================================
   /// A class to handle errors in the Newton solver
   //=======================================================================
-  class NewtonSolverError
+  class NewtonSolverError : public OomphLibError
   {
-  public:
+  private:
     /// Error in the linear solver
-    bool linear_solver_error;
+    bool Linear_solver_error;
 
     /// Max. # of iterations performed when the Newton solver died
-    unsigned iterations;
+    unsigned Iterations;
 
     /// Max. residual when Newton solver died
-    double maxres;
+    double Maxres;
 
+  public:
     /// Default constructor, does nothing
-    NewtonSolverError() : linear_solver_error(false), iterations(0), maxres(0.0)
+    NewtonSolverError()
+      : OomphLibError("There was an error in the Newton Solver.",
+                      OOMPH_CURRENT_FUNCTION,
+                      OOMPH_EXCEPTION_LOCATION),
+        Linear_solver_error(false),
+        Iterations(0),
+        Maxres(0.0)
     {
     }
 
     /// Constructor that passes a failure of the linear solver
     NewtonSolverError(const bool& Passed_linear_failure)
-      : linear_solver_error(Passed_linear_failure), iterations(0), maxres(0.0)
+      : OomphLibError("There was an error in the Newton Solver.",
+                      OOMPH_CURRENT_FUNCTION,
+                      OOMPH_EXCEPTION_LOCATION),
+        Linear_solver_error(Passed_linear_failure),
+        Iterations(0),
+        Maxres(0.0)
     {
     }
 
     /// Constructor that passes number of iterations and residuals
     NewtonSolverError(unsigned Passed_iterations, double Passed_maxres)
-      : linear_solver_error(false),
-        iterations(Passed_iterations),
-        maxres(Passed_maxres)
+      : OomphLibError("There was an error in the Newton Solver.",
+                      OOMPH_CURRENT_FUNCTION,
+                      OOMPH_EXCEPTION_LOCATION),
+        Linear_solver_error(false),
+        Iterations(Passed_iterations),
+        Maxres(Passed_maxres)
     {
     }
 
-    /*  /// Broken copy constructor */
-    /*  NewtonSolverError(const NewtonSolverError& dummy) = delete;  */
+    /// Access function to the error in the linear solver
+    bool linear_solver_error()
+    {
+      return Linear_solver_error;
+    }
 
-    /*  /// Broken assignment operator */
-    /*  void operator=(const NewtonSolverError&) = delete; */
+    /// Access function to Max. # of iterations performed when the Newton solver
+    /// died
+    unsigned iterations()
+    {
+      return Iterations;
+    }
+
+    /// Access function to Max. residual when Newton solver died
+    double maxres()
+    {
+      return Maxres;
+    }
   };
 
 

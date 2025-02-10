@@ -1,5 +1,5 @@
-\hypertarget{classUnstructuredSolidProblem}{}\doxysection{Unstructured\+Solid\+Problem\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>} Class Template Reference}
-\label{classUnstructuredSolidProblem}\index{UnstructuredSolidProblem$<$ ELEMENT $>$@{UnstructuredSolidProblem$<$ ELEMENT $>$}}
+\doxysection{Unstructured\+Solid\+Problem\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classUnstructuredSolidProblem}{}\label{classUnstructuredSolidProblem}\index{UnstructuredSolidProblem$<$ ELEMENT $>$@{UnstructuredSolidProblem$<$ ELEMENT $>$}}
 
 
 Unstructured solid problem.  
@@ -11,35 +11,35 @@ Inheritance diagram for Unstructured\+Solid\+Problem\texorpdfstring{$<$}{<} ELEM
 \includegraphics[height=2.000000cm]{classUnstructuredSolidProblem}
 \end{center}
 \end{figure}
-\doxysubsection*{Public Member Functions}
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classUnstructuredSolidProblem_a18ce02b6e4bbc86403c9e1b32c095772}{Unstructured\+Solid\+Problem}} ()
 \begin{DoxyCompactList}\small\item\em Constructor\+: \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classUnstructuredSolidProblem_a25fe105d949498bf8f7c15aff96a7d00}{$\sim$\+Unstructured\+Solid\+Problem}} ()
+\mbox{\hyperlink{classUnstructuredSolidProblem_a25fe105d949498bf8f7c15aff96a7d00}{\texorpdfstring{$\sim$}{\string~}\+Unstructured\+Solid\+Problem}} ()
 \begin{DoxyCompactList}\small\item\em Destructor (empty) \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classUnstructuredSolidProblem_ab3d66fd61b69d12b4f159d763fc44f15}{doc\+\_\+solution}} (Doc\+Info \&doc\+\_\+info)
+\mbox{\hyperlink{classMySolidTetgenMesh}{void}} \mbox{\hyperlink{classUnstructuredSolidProblem_ab3d66fd61b69d12b4f159d763fc44f15}{doc\+\_\+solution}} (\mbox{\hyperlink{classMySolidTetgenMesh}{Doc\+Info}} \&\mbox{\hyperlink{classMySolidTetgenMesh}{doc\+\_\+info}})
 \begin{DoxyCompactList}\small\item\em Doc the solution. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Private Member Functions}
+\doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classUnstructuredSolidProblem_a9137960284200ed998989f785965f902}{create\+\_\+traction\+\_\+elements}} ()
+\mbox{\hyperlink{classMySolidTetgenMesh}{void}} \mbox{\hyperlink{classUnstructuredSolidProblem_a9137960284200ed998989f785965f902}{create\+\_\+traction\+\_\+elements}} ()
 \begin{DoxyCompactList}\small\item\em Create traction elements. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Private Attributes}
+\doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classMySolidTetgenMesh}{My\+Solid\+Tetgen\+Mesh}}$<$ ELEMENT $>$ $\ast$ \mbox{\hyperlink{classUnstructuredSolidProblem_ad6a8cbe2c2f3596385e1a2484bfb68f7}{Solid\+\_\+mesh\+\_\+pt}}
+\mbox{\hyperlink{classMySolidTetgenMesh}{My\+Solid\+Tetgen\+Mesh}}$<$ \mbox{\hyperlink{classMySolidTetgenMesh}{ELEMENT}} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classUnstructuredSolidProblem_ad6a8cbe2c2f3596385e1a2484bfb68f7}{Solid\+\_\+mesh\+\_\+pt}}
 \begin{DoxyCompactList}\small\item\em Bulk solid mesh. \end{DoxyCompactList}\item 
-Vector$<$ Solid\+Mesh $\ast$ $>$ \mbox{\hyperlink{classUnstructuredSolidProblem_a32e691a698667053003e21333fc65057}{Solid\+\_\+traction\+\_\+mesh\+\_\+pt}}
+\mbox{\hyperlink{classMySolidTetgenMesh}{Vector}}$<$ Solid\+Mesh \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classUnstructuredSolidProblem_a32e691a698667053003e21333fc65057}{Solid\+\_\+traction\+\_\+mesh\+\_\+pt}}
 \begin{DoxyCompactList}\small\item\em Meshes of traction elements. \end{DoxyCompactList}\item 
-Vector$<$ unsigned $>$ \mbox{\hyperlink{classUnstructuredSolidProblem_a62ea7d593eaac6a3a0f0455c4a3fd805}{Pinned\+\_\+solid\+\_\+boundary\+\_\+id}}
+\mbox{\hyperlink{classMySolidTetgenMesh}{Vector}}$<$ \mbox{\hyperlink{classMySolidTetgenMesh}{unsigned}} $>$ \mbox{\hyperlink{classUnstructuredSolidProblem_a62ea7d593eaac6a3a0f0455c4a3fd805}{Pinned\+\_\+solid\+\_\+boundary\+\_\+id}}
 \begin{DoxyCompactList}\small\item\em IDs of solid mesh boundaries where displacements are pinned. \end{DoxyCompactList}\item 
-Vector$<$ unsigned $>$ \mbox{\hyperlink{classUnstructuredSolidProblem_a4cf906bac719c9a942c04bda2798080f}{Solid\+\_\+traction\+\_\+boundary\+\_\+id}}
+\mbox{\hyperlink{classMySolidTetgenMesh}{Vector}}$<$ \mbox{\hyperlink{classMySolidTetgenMesh}{unsigned}} $>$ \mbox{\hyperlink{classUnstructuredSolidProblem_a4cf906bac719c9a942c04bda2798080f}{Solid\+\_\+traction\+\_\+boundary\+\_\+id}}
 \begin{DoxyCompactList}\small\item\em IDs of solid mesh boundaries which make up the traction interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-\subsubsection*{template$<$class ELEMENT$>$\newline
+\subsubsection*{template$<$\mbox{\hyperlink{classMySolidTetgenMesh}{class}} \mbox{\hyperlink{classMySolidTetgenMesh}{ELEMENT}}$>$\newline
 class Unstructured\+Solid\+Problem$<$ ELEMENT $>$}
 Unstructured solid problem. 
 
@@ -48,12 +48,12 @@ Definition at line \mbox{\hyperlink{unstructured__three__d__solid_8cc_source_l00
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classUnstructuredSolidProblem_a18ce02b6e4bbc86403c9e1b32c095772}\label{classUnstructuredSolidProblem_a18ce02b6e4bbc86403c9e1b32c095772}} 
+\Hypertarget{classUnstructuredSolidProblem_a18ce02b6e4bbc86403c9e1b32c095772}\label{classUnstructuredSolidProblem_a18ce02b6e4bbc86403c9e1b32c095772} 
 \index{UnstructuredSolidProblem$<$ ELEMENT $>$@{UnstructuredSolidProblem$<$ ELEMENT $>$}!UnstructuredSolidProblem@{UnstructuredSolidProblem}}
 \index{UnstructuredSolidProblem@{UnstructuredSolidProblem}!UnstructuredSolidProblem$<$ ELEMENT $>$@{UnstructuredSolidProblem$<$ ELEMENT $>$}}
 \doxysubsubsection{\texorpdfstring{UnstructuredSolidProblem()}{UnstructuredSolidProblem()}}
-{\footnotesize\ttfamily template$<$class ELEMENT $>$ \\
-\mbox{\hyperlink{classUnstructuredSolidProblem}{Unstructured\+Solid\+Problem}}$<$ ELEMENT $>$\+::\mbox{\hyperlink{classUnstructuredSolidProblem}{Unstructured\+Solid\+Problem}}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classMySolidTetgenMesh}{class}} \mbox{\hyperlink{classMySolidTetgenMesh}{ELEMENT}} $>$ \\
+\mbox{\hyperlink{classUnstructuredSolidProblem}{Unstructured\+Solid\+Problem}}$<$ \mbox{\hyperlink{classMySolidTetgenMesh}{ELEMENT}} $>$\mbox{\hyperlink{classUnstructuredSolidProblem}{\+::\+Unstructured\+Solid\+Problem}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -67,12 +67,12 @@ Definition at line \mbox{\hyperlink{unstructured__three__d__solid_8cc_source_l00
 
 References \mbox{\hyperlink{unstructured__three__d__solid_8cc_source_l00091}{Global\+\_\+\+Parameters\+::\+Constitutive\+\_\+law\+\_\+pt}}, and \mbox{\hyperlink{unstructured__three__d__solid_8cc_source_l00097}{Global\+\_\+\+Parameters\+::gravity()}}.
 
-\mbox{\Hypertarget{classUnstructuredSolidProblem_a25fe105d949498bf8f7c15aff96a7d00}\label{classUnstructuredSolidProblem_a25fe105d949498bf8f7c15aff96a7d00}} 
-\index{UnstructuredSolidProblem$<$ ELEMENT $>$@{UnstructuredSolidProblem$<$ ELEMENT $>$}!````~UnstructuredSolidProblem@{$\sim$UnstructuredSolidProblem}}
-\index{````~UnstructuredSolidProblem@{$\sim$UnstructuredSolidProblem}!UnstructuredSolidProblem$<$ ELEMENT $>$@{UnstructuredSolidProblem$<$ ELEMENT $>$}}
-\doxysubsubsection{\texorpdfstring{$\sim$UnstructuredSolidProblem()}{~UnstructuredSolidProblem()}}
-{\footnotesize\ttfamily template$<$class ELEMENT $>$ \\
-\mbox{\hyperlink{classUnstructuredSolidProblem}{Unstructured\+Solid\+Problem}}$<$ ELEMENT $>$\+::$\sim$\mbox{\hyperlink{classUnstructuredSolidProblem}{Unstructured\+Solid\+Problem}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\Hypertarget{classUnstructuredSolidProblem_a25fe105d949498bf8f7c15aff96a7d00}\label{classUnstructuredSolidProblem_a25fe105d949498bf8f7c15aff96a7d00} 
+\index{UnstructuredSolidProblem$<$ ELEMENT $>$@{UnstructuredSolidProblem$<$ ELEMENT $>$}!````~UnstructuredSolidProblem@{\texorpdfstring{$\sim$}{\string~}UnstructuredSolidProblem}}
+\index{````~UnstructuredSolidProblem@{\texorpdfstring{$\sim$}{\string~}UnstructuredSolidProblem}!UnstructuredSolidProblem$<$ ELEMENT $>$@{UnstructuredSolidProblem$<$ ELEMENT $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}UnstructuredSolidProblem()}{\string~UnstructuredSolidProblem()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classMySolidTetgenMesh}{class}} \mbox{\hyperlink{classMySolidTetgenMesh}{ELEMENT}} $>$ \\
+\mbox{\hyperlink{classUnstructuredSolidProblem}{Unstructured\+Solid\+Problem}}$<$ \mbox{\hyperlink{classMySolidTetgenMesh}{ELEMENT}} $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classUnstructuredSolidProblem}{Unstructured\+Solid\+Problem}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -85,12 +85,12 @@ Definition at line \mbox{\hyperlink{unstructured__three__d__solid_8cc_source_l00
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classUnstructuredSolidProblem_a9137960284200ed998989f785965f902}\label{classUnstructuredSolidProblem_a9137960284200ed998989f785965f902}} 
+\Hypertarget{classUnstructuredSolidProblem_a9137960284200ed998989f785965f902}\label{classUnstructuredSolidProblem_a9137960284200ed998989f785965f902} 
 \index{UnstructuredSolidProblem$<$ ELEMENT $>$@{UnstructuredSolidProblem$<$ ELEMENT $>$}!create\_traction\_elements@{create\_traction\_elements}}
 \index{create\_traction\_elements@{create\_traction\_elements}!UnstructuredSolidProblem$<$ ELEMENT $>$@{UnstructuredSolidProblem$<$ ELEMENT $>$}}
 \doxysubsubsection{\texorpdfstring{create\_traction\_elements()}{create\_traction\_elements()}}
-{\footnotesize\ttfamily template$<$class ELEMENT $>$ \\
-void \mbox{\hyperlink{classUnstructuredSolidProblem}{Unstructured\+Solid\+Problem}}$<$ ELEMENT $>$\+::create\+\_\+traction\+\_\+elements\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classMySolidTetgenMesh}{class}} \mbox{\hyperlink{classMySolidTetgenMesh}{ELEMENT}} $>$ \\
+\mbox{\hyperlink{classMySolidTetgenMesh}{void}} \mbox{\hyperlink{classUnstructuredSolidProblem}{Unstructured\+Solid\+Problem}}$<$ \mbox{\hyperlink{classMySolidTetgenMesh}{ELEMENT}} $>$\+::create\+\_\+traction\+\_\+elements (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -104,12 +104,12 @@ Definition at line \mbox{\hyperlink{unstructured__three__d__solid_8cc_source_l00
 
 References \mbox{\hyperlink{unstructured__three__d__solid_8cc_source_l00114}{Global\+\_\+\+Parameters\+::constant\+\_\+pressure()}}.
 
-\mbox{\Hypertarget{classUnstructuredSolidProblem_ab3d66fd61b69d12b4f159d763fc44f15}\label{classUnstructuredSolidProblem_ab3d66fd61b69d12b4f159d763fc44f15}} 
+\Hypertarget{classUnstructuredSolidProblem_ab3d66fd61b69d12b4f159d763fc44f15}\label{classUnstructuredSolidProblem_ab3d66fd61b69d12b4f159d763fc44f15} 
 \index{UnstructuredSolidProblem$<$ ELEMENT $>$@{UnstructuredSolidProblem$<$ ELEMENT $>$}!doc\_solution@{doc\_solution}}
 \index{doc\_solution@{doc\_solution}!UnstructuredSolidProblem$<$ ELEMENT $>$@{UnstructuredSolidProblem$<$ ELEMENT $>$}}
 \doxysubsubsection{\texorpdfstring{doc\_solution()}{doc\_solution()}}
-{\footnotesize\ttfamily template$<$class ELEMENT $>$ \\
-void \mbox{\hyperlink{classUnstructuredSolidProblem}{Unstructured\+Solid\+Problem}}$<$ ELEMENT $>$\+::doc\+\_\+solution (\begin{DoxyParamCaption}\item[{Doc\+Info \&}]{doc\+\_\+info }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classMySolidTetgenMesh}{class}} \mbox{\hyperlink{classMySolidTetgenMesh}{ELEMENT}} $>$ \\
+\mbox{\hyperlink{classMySolidTetgenMesh}{void}} \mbox{\hyperlink{classUnstructuredSolidProblem}{Unstructured\+Solid\+Problem}}$<$ \mbox{\hyperlink{classMySolidTetgenMesh}{ELEMENT}} $>$\+::doc\+\_\+solution (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMySolidTetgenMesh}{Doc\+Info}} \&}]{doc\+\_\+info }\end{DoxyParamCaption})}
 
 
 
@@ -121,17 +121,13 @@ Definition at line \mbox{\hyperlink{unstructured__three__d__solid_8cc_source_l00
 
 
 
-Referenced by \mbox{\hyperlink{unstructured__three__d__solid_8cc_source_l00380}{main()}}.
-
-
-
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{classUnstructuredSolidProblem_a62ea7d593eaac6a3a0f0455c4a3fd805}\label{classUnstructuredSolidProblem_a62ea7d593eaac6a3a0f0455c4a3fd805}} 
+\Hypertarget{classUnstructuredSolidProblem_a62ea7d593eaac6a3a0f0455c4a3fd805}\label{classUnstructuredSolidProblem_a62ea7d593eaac6a3a0f0455c4a3fd805} 
 \index{UnstructuredSolidProblem$<$ ELEMENT $>$@{UnstructuredSolidProblem$<$ ELEMENT $>$}!Pinned\_solid\_boundary\_id@{Pinned\_solid\_boundary\_id}}
 \index{Pinned\_solid\_boundary\_id@{Pinned\_solid\_boundary\_id}!UnstructuredSolidProblem$<$ ELEMENT $>$@{UnstructuredSolidProblem$<$ ELEMENT $>$}}
 \doxysubsubsection{\texorpdfstring{Pinned\_solid\_boundary\_id}{Pinned\_solid\_boundary\_id}}
-{\footnotesize\ttfamily template$<$class ELEMENT $>$ \\
-Vector$<$unsigned$>$ \mbox{\hyperlink{classUnstructuredSolidProblem}{Unstructured\+Solid\+Problem}}$<$ ELEMENT $>$\+::Pinned\+\_\+solid\+\_\+boundary\+\_\+id\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classMySolidTetgenMesh}{class}} \mbox{\hyperlink{classMySolidTetgenMesh}{ELEMENT}} $>$ \\
+\mbox{\hyperlink{classMySolidTetgenMesh}{Vector}}$<$\mbox{\hyperlink{classMySolidTetgenMesh}{unsigned}}$>$ \mbox{\hyperlink{classUnstructuredSolidProblem}{Unstructured\+Solid\+Problem}}$<$ \mbox{\hyperlink{classMySolidTetgenMesh}{ELEMENT}} $>$\+::\+Pinned\+\_\+solid\+\_\+boundary\+\_\+id\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -141,12 +137,12 @@ IDs of solid mesh boundaries where displacements are pinned.
 
 Definition at line \mbox{\hyperlink{unstructured__three__d__solid_8cc_source_l00162}{162}} of file \mbox{\hyperlink{unstructured__three__d__solid_8cc_source}{unstructured\+\_\+three\+\_\+d\+\_\+solid.\+cc}}.
 
-\mbox{\Hypertarget{classUnstructuredSolidProblem_ad6a8cbe2c2f3596385e1a2484bfb68f7}\label{classUnstructuredSolidProblem_ad6a8cbe2c2f3596385e1a2484bfb68f7}} 
+\Hypertarget{classUnstructuredSolidProblem_ad6a8cbe2c2f3596385e1a2484bfb68f7}\label{classUnstructuredSolidProblem_ad6a8cbe2c2f3596385e1a2484bfb68f7} 
 \index{UnstructuredSolidProblem$<$ ELEMENT $>$@{UnstructuredSolidProblem$<$ ELEMENT $>$}!Solid\_mesh\_pt@{Solid\_mesh\_pt}}
 \index{Solid\_mesh\_pt@{Solid\_mesh\_pt}!UnstructuredSolidProblem$<$ ELEMENT $>$@{UnstructuredSolidProblem$<$ ELEMENT $>$}}
 \doxysubsubsection{\texorpdfstring{Solid\_mesh\_pt}{Solid\_mesh\_pt}}
-{\footnotesize\ttfamily template$<$class ELEMENT $>$ \\
-\mbox{\hyperlink{classMySolidTetgenMesh}{My\+Solid\+Tetgen\+Mesh}}$<$ELEMENT$>$$\ast$ \mbox{\hyperlink{classUnstructuredSolidProblem}{Unstructured\+Solid\+Problem}}$<$ ELEMENT $>$\+::Solid\+\_\+mesh\+\_\+pt\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classMySolidTetgenMesh}{class}} \mbox{\hyperlink{classMySolidTetgenMesh}{ELEMENT}} $>$ \\
+\mbox{\hyperlink{classMySolidTetgenMesh}{My\+Solid\+Tetgen\+Mesh}}$<$\mbox{\hyperlink{classMySolidTetgenMesh}{ELEMENT}}$>$\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classUnstructuredSolidProblem}{Unstructured\+Solid\+Problem}}$<$ \mbox{\hyperlink{classMySolidTetgenMesh}{ELEMENT}} $>$\+::\+Solid\+\_\+mesh\+\_\+pt\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -156,12 +152,12 @@ Bulk solid mesh.
 
 Definition at line \mbox{\hyperlink{unstructured__three__d__solid_8cc_source_l00156}{156}} of file \mbox{\hyperlink{unstructured__three__d__solid_8cc_source}{unstructured\+\_\+three\+\_\+d\+\_\+solid.\+cc}}.
 
-\mbox{\Hypertarget{classUnstructuredSolidProblem_a4cf906bac719c9a942c04bda2798080f}\label{classUnstructuredSolidProblem_a4cf906bac719c9a942c04bda2798080f}} 
+\Hypertarget{classUnstructuredSolidProblem_a4cf906bac719c9a942c04bda2798080f}\label{classUnstructuredSolidProblem_a4cf906bac719c9a942c04bda2798080f} 
 \index{UnstructuredSolidProblem$<$ ELEMENT $>$@{UnstructuredSolidProblem$<$ ELEMENT $>$}!Solid\_traction\_boundary\_id@{Solid\_traction\_boundary\_id}}
 \index{Solid\_traction\_boundary\_id@{Solid\_traction\_boundary\_id}!UnstructuredSolidProblem$<$ ELEMENT $>$@{UnstructuredSolidProblem$<$ ELEMENT $>$}}
 \doxysubsubsection{\texorpdfstring{Solid\_traction\_boundary\_id}{Solid\_traction\_boundary\_id}}
-{\footnotesize\ttfamily template$<$class ELEMENT $>$ \\
-Vector$<$unsigned$>$ \mbox{\hyperlink{classUnstructuredSolidProblem}{Unstructured\+Solid\+Problem}}$<$ ELEMENT $>$\+::Solid\+\_\+traction\+\_\+boundary\+\_\+id\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classMySolidTetgenMesh}{class}} \mbox{\hyperlink{classMySolidTetgenMesh}{ELEMENT}} $>$ \\
+\mbox{\hyperlink{classMySolidTetgenMesh}{Vector}}$<$\mbox{\hyperlink{classMySolidTetgenMesh}{unsigned}}$>$ \mbox{\hyperlink{classUnstructuredSolidProblem}{Unstructured\+Solid\+Problem}}$<$ \mbox{\hyperlink{classMySolidTetgenMesh}{ELEMENT}} $>$\+::\+Solid\+\_\+traction\+\_\+boundary\+\_\+id\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -171,12 +167,12 @@ IDs of solid mesh boundaries which make up the traction interface.
 
 Definition at line \mbox{\hyperlink{unstructured__three__d__solid_8cc_source_l00165}{165}} of file \mbox{\hyperlink{unstructured__three__d__solid_8cc_source}{unstructured\+\_\+three\+\_\+d\+\_\+solid.\+cc}}.
 
-\mbox{\Hypertarget{classUnstructuredSolidProblem_a32e691a698667053003e21333fc65057}\label{classUnstructuredSolidProblem_a32e691a698667053003e21333fc65057}} 
+\Hypertarget{classUnstructuredSolidProblem_a32e691a698667053003e21333fc65057}\label{classUnstructuredSolidProblem_a32e691a698667053003e21333fc65057} 
 \index{UnstructuredSolidProblem$<$ ELEMENT $>$@{UnstructuredSolidProblem$<$ ELEMENT $>$}!Solid\_traction\_mesh\_pt@{Solid\_traction\_mesh\_pt}}
 \index{Solid\_traction\_mesh\_pt@{Solid\_traction\_mesh\_pt}!UnstructuredSolidProblem$<$ ELEMENT $>$@{UnstructuredSolidProblem$<$ ELEMENT $>$}}
 \doxysubsubsection{\texorpdfstring{Solid\_traction\_mesh\_pt}{Solid\_traction\_mesh\_pt}}
-{\footnotesize\ttfamily template$<$class ELEMENT $>$ \\
-Vector$<$Solid\+Mesh$\ast$$>$ \mbox{\hyperlink{classUnstructuredSolidProblem}{Unstructured\+Solid\+Problem}}$<$ ELEMENT $>$\+::Solid\+\_\+traction\+\_\+mesh\+\_\+pt\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classMySolidTetgenMesh}{class}} \mbox{\hyperlink{classMySolidTetgenMesh}{ELEMENT}} $>$ \\
+\mbox{\hyperlink{classMySolidTetgenMesh}{Vector}}$<$Solid\+Mesh\texorpdfstring{$\ast$}{*}$>$ \mbox{\hyperlink{classUnstructuredSolidProblem}{Unstructured\+Solid\+Problem}}$<$ \mbox{\hyperlink{classMySolidTetgenMesh}{ELEMENT}} $>$\+::\+Solid\+\_\+traction\+\_\+mesh\+\_\+pt\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

@@ -1,35 +1,35 @@
-\hypertarget{namespaceTanhSolnForPoisson}{}\doxysection{Tanh\+Soln\+For\+Poisson Namespace Reference}
-\label{namespaceTanhSolnForPoisson}\index{TanhSolnForPoisson@{TanhSolnForPoisson}}
+\doxysection{Tanh\+Soln\+For\+Poisson Namespace Reference}
+\hypertarget{namespaceTanhSolnForPoisson}{}\label{namespaceTanhSolnForPoisson}\index{TanhSolnForPoisson@{TanhSolnForPoisson}}
 
 
 Namespace for exact solution for Poisson equation with sharp step.  
 
 
-\doxysubsection*{Functions}
+\doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{namespaceTanhSolnForPoisson_af7896e9c18ce6438c73ae2a875e8b7de}{get\+\_\+exact\+\_\+u}} (const Vector$<$ double $>$ \&x, Vector$<$ double $>$ \&u)
+\mbox{\hyperlink{classoomph_1_1TetgenMesh}{void}} \mbox{\hyperlink{namespaceTanhSolnForPoisson_af7896e9c18ce6438c73ae2a875e8b7de}{get\+\_\+exact\+\_\+u}} (\mbox{\hyperlink{classoomph_1_1TetgenMesh}{const}} \mbox{\hyperlink{classoomph_1_1TetgenMesh}{Vector}}$<$ \mbox{\hyperlink{classoomph_1_1TetgenMesh}{double}} $>$ \&x, \mbox{\hyperlink{classoomph_1_1TetgenMesh}{Vector}}$<$ \mbox{\hyperlink{classoomph_1_1TetgenMesh}{double}} $>$ \&\mbox{\hyperlink{classoomph_1_1TetgenMesh}{u}})
 \item 
-void \mbox{\hyperlink{namespaceTanhSolnForPoisson_af197decab980d38d2037032780723984}{get\+\_\+exact\+\_\+u}} (const Vector$<$ double $>$ \&x, double \&u)
+\mbox{\hyperlink{classoomph_1_1TetgenMesh}{void}} \mbox{\hyperlink{namespaceTanhSolnForPoisson_af197decab980d38d2037032780723984}{get\+\_\+exact\+\_\+u}} (\mbox{\hyperlink{classoomph_1_1TetgenMesh}{const}} \mbox{\hyperlink{classoomph_1_1TetgenMesh}{Vector}}$<$ \mbox{\hyperlink{classoomph_1_1TetgenMesh}{double}} $>$ \&x, \mbox{\hyperlink{classoomph_1_1TetgenMesh}{double}} \&\mbox{\hyperlink{classoomph_1_1TetgenMesh}{u}})
 \begin{DoxyCompactList}\small\item\em Exact solution as a scalar. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{namespaceTanhSolnForPoisson_ae1b9d6789ff301e3d63a4e292213036c}{get\+\_\+source}} (const Vector$<$ double $>$ \&x, double \&source)
+\mbox{\hyperlink{classoomph_1_1TetgenMesh}{void}} \mbox{\hyperlink{namespaceTanhSolnForPoisson_ae1b9d6789ff301e3d63a4e292213036c}{get\+\_\+source}} (\mbox{\hyperlink{classoomph_1_1TetgenMesh}{const}} \mbox{\hyperlink{classoomph_1_1TetgenMesh}{Vector}}$<$ \mbox{\hyperlink{classoomph_1_1TetgenMesh}{double}} $>$ \&x, \mbox{\hyperlink{classoomph_1_1TetgenMesh}{double}} \&\mbox{\hyperlink{classoomph_1_1TetgenMesh}{source}})
 \begin{DoxyCompactList}\small\item\em Source function to make it an exact solution. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Variables}
+\doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-double \mbox{\hyperlink{namespaceTanhSolnForPoisson_ae676ccd186d5df119cce811596d949c1}{Alpha}} =3
+\mbox{\hyperlink{classoomph_1_1TetgenMesh}{double}} \mbox{\hyperlink{namespaceTanhSolnForPoisson_ae676ccd186d5df119cce811596d949c1}{Alpha}} =3
 \begin{DoxyCompactList}\small\item\em Parameter for steepness of step. \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{namespaceTanhSolnForPoisson_ac3d25f0791c1363f487600e02757bc97}{N\+\_\+x}} =-\/1.\+0
+\mbox{\hyperlink{classoomph_1_1TetgenMesh}{double}} \mbox{\hyperlink{namespaceTanhSolnForPoisson_ac3d25f0791c1363f487600e02757bc97}{N\+\_\+x}} =-\/1.\+0
 \begin{DoxyCompactList}\small\item\em Orientation (non-\/normalised x-\/component of unit vector in direction of step plane) \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{namespaceTanhSolnForPoisson_a482d668ef91071985d1f4ce7cf29a926}{N\+\_\+y}} =-\/1.\+0
+\mbox{\hyperlink{classoomph_1_1TetgenMesh}{double}} \mbox{\hyperlink{namespaceTanhSolnForPoisson_a482d668ef91071985d1f4ce7cf29a926}{N\+\_\+y}} =-\/1.\+0
 \begin{DoxyCompactList}\small\item\em Orientation (non-\/normalised y-\/component of unit vector in direction of step plane) \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{namespaceTanhSolnForPoisson_ae6b5b5d21747a45776004756dc97dc5c}{N\+\_\+z}} =1.\+0
+\mbox{\hyperlink{classoomph_1_1TetgenMesh}{double}} \mbox{\hyperlink{namespaceTanhSolnForPoisson_ae6b5b5d21747a45776004756dc97dc5c}{N\+\_\+z}} =1.\+0
 \begin{DoxyCompactList}\small\item\em Orientation (non-\/normalised z-\/component of unit vector in direction of step plane) \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{namespaceTanhSolnForPoisson_af55e0479c15ab58929eb96ee9d6cf07a}{X\+\_\+0}} =0.\+0
+\mbox{\hyperlink{classoomph_1_1TetgenMesh}{double}} \mbox{\hyperlink{namespaceTanhSolnForPoisson_af55e0479c15ab58929eb96ee9d6cf07a}{X\+\_\+0}} =0.\+0
 \begin{DoxyCompactList}\small\item\em Orientation (x-\/coordinate of step plane) \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{namespaceTanhSolnForPoisson_addc6dc6578b16a1d9aa774c25776b921}{Y\+\_\+0}} =0.\+0
+\mbox{\hyperlink{classoomph_1_1TetgenMesh}{double}} \mbox{\hyperlink{namespaceTanhSolnForPoisson_addc6dc6578b16a1d9aa774c25776b921}{Y\+\_\+0}} =0.\+0
 \begin{DoxyCompactList}\small\item\em Orientation (y-\/coordinate of step plane) \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{namespaceTanhSolnForPoisson_abf4856ed1855c34c2b2ea57fd6783644}{Z\+\_\+0}} =0.\+0
+\mbox{\hyperlink{classoomph_1_1TetgenMesh}{double}} \mbox{\hyperlink{namespaceTanhSolnForPoisson_abf4856ed1855c34c2b2ea57fd6783644}{Z\+\_\+0}} =0.\+0
 \begin{DoxyCompactList}\small\item\em Orientation (z-\/coordinate of step plane) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -37,11 +37,11 @@ double \mbox{\hyperlink{namespaceTanhSolnForPoisson_abf4856ed1855c34c2b2ea57fd67
 Namespace for exact solution for Poisson equation with sharp step. 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{namespaceTanhSolnForPoisson_af197decab980d38d2037032780723984}\label{namespaceTanhSolnForPoisson_af197decab980d38d2037032780723984}} 
+\Hypertarget{namespaceTanhSolnForPoisson_af197decab980d38d2037032780723984}\label{namespaceTanhSolnForPoisson_af197decab980d38d2037032780723984} 
 \index{TanhSolnForPoisson@{TanhSolnForPoisson}!get\_exact\_u@{get\_exact\_u}}
 \index{get\_exact\_u@{get\_exact\_u}!TanhSolnForPoisson@{TanhSolnForPoisson}}
 \doxysubsubsection{\texorpdfstring{get\_exact\_u()}{get\_exact\_u()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void Tanh\+Soln\+For\+Poisson\+::get\+\_\+exact\+\_\+u (\begin{DoxyParamCaption}\item[{const Vector$<$ double $>$ \&}]{x,  }\item[{double \&}]{u }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classoomph_1_1TetgenMesh}{void}} Tanh\+Soln\+For\+Poisson\+::get\+\_\+exact\+\_\+u (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classoomph_1_1TetgenMesh}{const}} \mbox{\hyperlink{classoomph_1_1TetgenMesh}{Vector}}$<$ \mbox{\hyperlink{classoomph_1_1TetgenMesh}{double}} $>$ \&}]{x,  }\item[{\mbox{\hyperlink{classoomph_1_1TetgenMesh}{double}} \&}]{u }\end{DoxyParamCaption})}
 
 
 
@@ -55,11 +55,11 @@ Definition at line \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l0008
 
 References \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00050}{Alpha}}, \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00054}{N\+\_\+x}}, \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00058}{N\+\_\+y}}, \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00062}{N\+\_\+z}}, \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00066}{X\+\_\+0}}, \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00069}{Y\+\_\+0}}, and \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00072}{Z\+\_\+0}}.
 
-\mbox{\Hypertarget{namespaceTanhSolnForPoisson_af7896e9c18ce6438c73ae2a875e8b7de}\label{namespaceTanhSolnForPoisson_af7896e9c18ce6438c73ae2a875e8b7de}} 
+\Hypertarget{namespaceTanhSolnForPoisson_af7896e9c18ce6438c73ae2a875e8b7de}\label{namespaceTanhSolnForPoisson_af7896e9c18ce6438c73ae2a875e8b7de} 
 \index{TanhSolnForPoisson@{TanhSolnForPoisson}!get\_exact\_u@{get\_exact\_u}}
 \index{get\_exact\_u@{get\_exact\_u}!TanhSolnForPoisson@{TanhSolnForPoisson}}
 \doxysubsubsection{\texorpdfstring{get\_exact\_u()}{get\_exact\_u()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Tanh\+Soln\+For\+Poisson\+::get\+\_\+exact\+\_\+u (\begin{DoxyParamCaption}\item[{const Vector$<$ double $>$ \&}]{x,  }\item[{Vector$<$ double $>$ \&}]{u }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classoomph_1_1TetgenMesh}{void}} Tanh\+Soln\+For\+Poisson\+::get\+\_\+exact\+\_\+u (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classoomph_1_1TetgenMesh}{const}} \mbox{\hyperlink{classoomph_1_1TetgenMesh}{Vector}}$<$ \mbox{\hyperlink{classoomph_1_1TetgenMesh}{double}} $>$ \&}]{x,  }\item[{\mbox{\hyperlink{classoomph_1_1TetgenMesh}{Vector}}$<$ \mbox{\hyperlink{classoomph_1_1TetgenMesh}{double}} $>$ \&}]{u }\end{DoxyParamCaption})}
 
 
 
@@ -73,11 +73,11 @@ References \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00050}{Alpha
 
 Referenced by \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00145}{Poisson\+Problem$<$ ELEMENT $>$\+::actions\+\_\+before\+\_\+newton\+\_\+solve()}}, and \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00252}{Poisson\+Problem$<$ ELEMENT $>$\+::doc\+\_\+solution()}}.
 
-\mbox{\Hypertarget{namespaceTanhSolnForPoisson_ae1b9d6789ff301e3d63a4e292213036c}\label{namespaceTanhSolnForPoisson_ae1b9d6789ff301e3d63a4e292213036c}} 
+\Hypertarget{namespaceTanhSolnForPoisson_ae1b9d6789ff301e3d63a4e292213036c}\label{namespaceTanhSolnForPoisson_ae1b9d6789ff301e3d63a4e292213036c} 
 \index{TanhSolnForPoisson@{TanhSolnForPoisson}!get\_source@{get\_source}}
 \index{get\_source@{get\_source}!TanhSolnForPoisson@{TanhSolnForPoisson}}
 \doxysubsubsection{\texorpdfstring{get\_source()}{get\_source()}}
-{\footnotesize\ttfamily void Tanh\+Soln\+For\+Poisson\+::get\+\_\+source (\begin{DoxyParamCaption}\item[{const Vector$<$ double $>$ \&}]{x,  }\item[{double \&}]{source }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classoomph_1_1TetgenMesh}{void}} Tanh\+Soln\+For\+Poisson\+::get\+\_\+source (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classoomph_1_1TetgenMesh}{const}} \mbox{\hyperlink{classoomph_1_1TetgenMesh}{Vector}}$<$ \mbox{\hyperlink{classoomph_1_1TetgenMesh}{double}} $>$ \&}]{x,  }\item[{\mbox{\hyperlink{classoomph_1_1TetgenMesh}{double}} \&}]{source }\end{DoxyParamCaption})}
 
 
 
@@ -98,11 +98,11 @@ Referenced by \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00324}{ma
 
 
 \doxysubsection{Variable Documentation}
-\mbox{\Hypertarget{namespaceTanhSolnForPoisson_ae676ccd186d5df119cce811596d949c1}\label{namespaceTanhSolnForPoisson_ae676ccd186d5df119cce811596d949c1}} 
+\Hypertarget{namespaceTanhSolnForPoisson_ae676ccd186d5df119cce811596d949c1}\label{namespaceTanhSolnForPoisson_ae676ccd186d5df119cce811596d949c1} 
 \index{TanhSolnForPoisson@{TanhSolnForPoisson}!Alpha@{Alpha}}
 \index{Alpha@{Alpha}!TanhSolnForPoisson@{TanhSolnForPoisson}}
 \doxysubsubsection{\texorpdfstring{Alpha}{Alpha}}
-{\footnotesize\ttfamily double Tanh\+Soln\+For\+Poisson\+::\+Alpha =3}
+{\footnotesize\ttfamily \mbox{\hyperlink{classoomph_1_1TetgenMesh}{double}} Tanh\+Soln\+For\+Poisson\+::\+Alpha =3}
 
 
 
@@ -114,13 +114,13 @@ Definition at line \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l0005
 
 
 
-Referenced by \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00076}{get\+\_\+exact\+\_\+u()}}, \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00093}{get\+\_\+source()}}, and \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00194}{Poisson\+Problem$<$ ELEMENT $>$\+::\+Poisson\+Problem()}}.
+Referenced by \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00084}{get\+\_\+exact\+\_\+u()}}, \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00076}{get\+\_\+exact\+\_\+u()}}, \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00093}{get\+\_\+source()}}, and \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00194}{Poisson\+Problem$<$ ELEMENT $>$\+::\+Poisson\+Problem()}}.
 
-\mbox{\Hypertarget{namespaceTanhSolnForPoisson_ac3d25f0791c1363f487600e02757bc97}\label{namespaceTanhSolnForPoisson_ac3d25f0791c1363f487600e02757bc97}} 
+\Hypertarget{namespaceTanhSolnForPoisson_ac3d25f0791c1363f487600e02757bc97}\label{namespaceTanhSolnForPoisson_ac3d25f0791c1363f487600e02757bc97} 
 \index{TanhSolnForPoisson@{TanhSolnForPoisson}!N\_x@{N\_x}}
 \index{N\_x@{N\_x}!TanhSolnForPoisson@{TanhSolnForPoisson}}
 \doxysubsubsection{\texorpdfstring{N\_x}{N\_x}}
-{\footnotesize\ttfamily double Tanh\+Soln\+For\+Poisson\+::\+N\+\_\+x =-\/1.\+0}
+{\footnotesize\ttfamily \mbox{\hyperlink{classoomph_1_1TetgenMesh}{double}} Tanh\+Soln\+For\+Poisson\+::\+N\+\_\+x =-\/1.\+0}
 
 
 
@@ -132,13 +132,13 @@ Definition at line \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l0005
 
 
 
-Referenced by \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00076}{get\+\_\+exact\+\_\+u()}}, and \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00093}{get\+\_\+source()}}.
+Referenced by \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00084}{get\+\_\+exact\+\_\+u()}}, \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00076}{get\+\_\+exact\+\_\+u()}}, and \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00093}{get\+\_\+source()}}.
 
-\mbox{\Hypertarget{namespaceTanhSolnForPoisson_a482d668ef91071985d1f4ce7cf29a926}\label{namespaceTanhSolnForPoisson_a482d668ef91071985d1f4ce7cf29a926}} 
+\Hypertarget{namespaceTanhSolnForPoisson_a482d668ef91071985d1f4ce7cf29a926}\label{namespaceTanhSolnForPoisson_a482d668ef91071985d1f4ce7cf29a926} 
 \index{TanhSolnForPoisson@{TanhSolnForPoisson}!N\_y@{N\_y}}
 \index{N\_y@{N\_y}!TanhSolnForPoisson@{TanhSolnForPoisson}}
 \doxysubsubsection{\texorpdfstring{N\_y}{N\_y}}
-{\footnotesize\ttfamily double Tanh\+Soln\+For\+Poisson\+::\+N\+\_\+y =-\/1.\+0}
+{\footnotesize\ttfamily \mbox{\hyperlink{classoomph_1_1TetgenMesh}{double}} Tanh\+Soln\+For\+Poisson\+::\+N\+\_\+y =-\/1.\+0}
 
 
 
@@ -150,13 +150,13 @@ Definition at line \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l0005
 
 
 
-Referenced by \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00076}{get\+\_\+exact\+\_\+u()}}, and \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00093}{get\+\_\+source()}}.
+Referenced by \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00084}{get\+\_\+exact\+\_\+u()}}, \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00076}{get\+\_\+exact\+\_\+u()}}, and \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00093}{get\+\_\+source()}}.
 
-\mbox{\Hypertarget{namespaceTanhSolnForPoisson_ae6b5b5d21747a45776004756dc97dc5c}\label{namespaceTanhSolnForPoisson_ae6b5b5d21747a45776004756dc97dc5c}} 
+\Hypertarget{namespaceTanhSolnForPoisson_ae6b5b5d21747a45776004756dc97dc5c}\label{namespaceTanhSolnForPoisson_ae6b5b5d21747a45776004756dc97dc5c} 
 \index{TanhSolnForPoisson@{TanhSolnForPoisson}!N\_z@{N\_z}}
 \index{N\_z@{N\_z}!TanhSolnForPoisson@{TanhSolnForPoisson}}
 \doxysubsubsection{\texorpdfstring{N\_z}{N\_z}}
-{\footnotesize\ttfamily double Tanh\+Soln\+For\+Poisson\+::\+N\+\_\+z =1.\+0}
+{\footnotesize\ttfamily \mbox{\hyperlink{classoomph_1_1TetgenMesh}{double}} Tanh\+Soln\+For\+Poisson\+::\+N\+\_\+z =1.\+0}
 
 
 
@@ -168,13 +168,13 @@ Definition at line \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l0006
 
 
 
-Referenced by \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00076}{get\+\_\+exact\+\_\+u()}}, and \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00093}{get\+\_\+source()}}.
+Referenced by \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00084}{get\+\_\+exact\+\_\+u()}}, \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00076}{get\+\_\+exact\+\_\+u()}}, and \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00093}{get\+\_\+source()}}.
 
-\mbox{\Hypertarget{namespaceTanhSolnForPoisson_af55e0479c15ab58929eb96ee9d6cf07a}\label{namespaceTanhSolnForPoisson_af55e0479c15ab58929eb96ee9d6cf07a}} 
+\Hypertarget{namespaceTanhSolnForPoisson_af55e0479c15ab58929eb96ee9d6cf07a}\label{namespaceTanhSolnForPoisson_af55e0479c15ab58929eb96ee9d6cf07a} 
 \index{TanhSolnForPoisson@{TanhSolnForPoisson}!X\_0@{X\_0}}
 \index{X\_0@{X\_0}!TanhSolnForPoisson@{TanhSolnForPoisson}}
 \doxysubsubsection{\texorpdfstring{X\_0}{X\_0}}
-{\footnotesize\ttfamily double Tanh\+Soln\+For\+Poisson\+::\+X\+\_\+0 =0.\+0}
+{\footnotesize\ttfamily \mbox{\hyperlink{classoomph_1_1TetgenMesh}{double}} Tanh\+Soln\+For\+Poisson\+::\+X\+\_\+0 =0.\+0}
 
 
 
@@ -186,13 +186,13 @@ Definition at line \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l0006
 
 
 
-Referenced by \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00076}{get\+\_\+exact\+\_\+u()}}, \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00093}{get\+\_\+source()}}, \mbox{\hyperlink{channel__with__leaflet__mesh_8template_8cc_source_l00455}{oomph\+::\+Algebraic\+Channel\+With\+Leaflet\+Mesh$<$ ELEMENT $>$\+::node\+\_\+update\+\_\+\+I()}}, \mbox{\hyperlink{channel__with__leaflet__mesh_8template_8cc_source_l00500}{oomph\+::\+Algebraic\+Channel\+With\+Leaflet\+Mesh$<$ ELEMENT $>$\+::node\+\_\+update\+\_\+\+II()}}, \mbox{\hyperlink{channel__with__leaflet__mesh_8template_8cc_source_l00564}{oomph\+::\+Algebraic\+Channel\+With\+Leaflet\+Mesh$<$ ELEMENT $>$\+::node\+\_\+update\+\_\+\+III()}}, \mbox{\hyperlink{channel__with__leaflet__mesh_8template_8cc_source_l00598}{oomph\+::\+Algebraic\+Channel\+With\+Leaflet\+Mesh$<$ ELEMENT $>$\+::node\+\_\+update\+\_\+\+IV()}}, \mbox{\hyperlink{channel__with__leaflet__mesh_8template_8cc_source_l00242}{oomph\+::\+Algebraic\+Channel\+With\+Leaflet\+Mesh$<$ ELEMENT $>$\+::setup\+\_\+algebraic\+\_\+node\+\_\+update()}}, and \mbox{\hyperlink{channel__with__leaflet__mesh_8template_8cc_source_l00542}{oomph\+::\+Algebraic\+Channel\+With\+Leaflet\+Mesh$<$ ELEMENT $>$\+::slanted\+\_\+bound\+\_\+up()}}.
+Referenced by \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00084}{get\+\_\+exact\+\_\+u()}}, \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00076}{get\+\_\+exact\+\_\+u()}}, and \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00093}{get\+\_\+source()}}.
 
-\mbox{\Hypertarget{namespaceTanhSolnForPoisson_addc6dc6578b16a1d9aa774c25776b921}\label{namespaceTanhSolnForPoisson_addc6dc6578b16a1d9aa774c25776b921}} 
+\Hypertarget{namespaceTanhSolnForPoisson_addc6dc6578b16a1d9aa774c25776b921}\label{namespaceTanhSolnForPoisson_addc6dc6578b16a1d9aa774c25776b921} 
 \index{TanhSolnForPoisson@{TanhSolnForPoisson}!Y\_0@{Y\_0}}
 \index{Y\_0@{Y\_0}!TanhSolnForPoisson@{TanhSolnForPoisson}}
 \doxysubsubsection{\texorpdfstring{Y\_0}{Y\_0}}
-{\footnotesize\ttfamily double Tanh\+Soln\+For\+Poisson\+::\+Y\+\_\+0 =0.\+0}
+{\footnotesize\ttfamily \mbox{\hyperlink{classoomph_1_1TetgenMesh}{double}} Tanh\+Soln\+For\+Poisson\+::\+Y\+\_\+0 =0.\+0}
 
 
 
@@ -204,13 +204,13 @@ Definition at line \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l0006
 
 
 
-Referenced by \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00076}{get\+\_\+exact\+\_\+u()}}, and \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00093}{get\+\_\+source()}}.
+Referenced by \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00084}{get\+\_\+exact\+\_\+u()}}, \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00076}{get\+\_\+exact\+\_\+u()}}, and \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00093}{get\+\_\+source()}}.
 
-\mbox{\Hypertarget{namespaceTanhSolnForPoisson_abf4856ed1855c34c2b2ea57fd6783644}\label{namespaceTanhSolnForPoisson_abf4856ed1855c34c2b2ea57fd6783644}} 
+\Hypertarget{namespaceTanhSolnForPoisson_abf4856ed1855c34c2b2ea57fd6783644}\label{namespaceTanhSolnForPoisson_abf4856ed1855c34c2b2ea57fd6783644} 
 \index{TanhSolnForPoisson@{TanhSolnForPoisson}!Z\_0@{Z\_0}}
 \index{Z\_0@{Z\_0}!TanhSolnForPoisson@{TanhSolnForPoisson}}
 \doxysubsubsection{\texorpdfstring{Z\_0}{Z\_0}}
-{\footnotesize\ttfamily double Tanh\+Soln\+For\+Poisson\+::\+Z\+\_\+0 =0.\+0}
+{\footnotesize\ttfamily \mbox{\hyperlink{classoomph_1_1TetgenMesh}{double}} Tanh\+Soln\+For\+Poisson\+::\+Z\+\_\+0 =0.\+0}
 
 
 
@@ -222,5 +222,5 @@ Definition at line \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l0007
 
 
 
-Referenced by \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00076}{get\+\_\+exact\+\_\+u()}}, and \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00093}{get\+\_\+source()}}.
+Referenced by \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00084}{get\+\_\+exact\+\_\+u()}}, \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00076}{get\+\_\+exact\+\_\+u()}}, and \mbox{\hyperlink{mesh__from__tetgen__poisson_8cc_source_l00093}{get\+\_\+source()}}.
 

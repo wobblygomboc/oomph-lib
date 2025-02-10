@@ -135,7 +135,6 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \item \contentsline{section}{oomph\+::Eigen\+Solver}{\pageref{classoomph_1_1EigenSolver}}{}
 \begin{DoxyCompactList}
 \item \contentsline{section}{oomph\+::ANASAZI}{\pageref{classoomph_1_1ANASAZI}}{}
-\item \contentsline{section}{oomph\+::ARPACK}{\pageref{classoomph_1_1ARPACK}}{}
 \item \contentsline{section}{oomph\+::LAPACK\+\_\+\+QZ}{\pageref{classoomph_1_1LAPACK__QZ}}{}
 \end{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Linear\+Solver}{\pageref{classoomph_1_1LinearSolver}}{}
@@ -206,6 +205,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \item \contentsline{section}{oomph\+::Space\+Time\+Navier\+Stokes\+Subsidiary\+Preconditioner}{\pageref{classoomph_1_1SpaceTimeNavierStokesSubsidiaryPreconditioner}}{}
 \item \contentsline{section}{oomph\+::Space\+Time\+Navier\+Stokes\+Subsidiary\+Preconditioner}{\pageref{classoomph_1_1SpaceTimeNavierStokesSubsidiaryPreconditioner}}{}
 \end{DoxyCompactList}
+\item \contentsline{section}{oomph\+::Matrix\+Based\+Lumped\+Preconditioner\texorpdfstring{$<$}{<} oomph\+::CRDouble\+Matrix \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1MatrixBasedLumpedPreconditioner}}{}
 \item \contentsline{section}{oomph\+::Block\+Preconditioner\texorpdfstring{$<$}{<} MATRIX \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1BlockPreconditioner}}{}
 \begin{DoxyCompactList}
 \item \contentsline{section}{oomph\+::General\+Purpose\+Block\+Preconditioner\texorpdfstring{$<$}{<} MATRIX \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1GeneralPurposeBlockPreconditioner}}{}
@@ -274,6 +274,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \end{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Double\+Multi\+Vector\+Operator}{\pageref{classoomph_1_1DoubleMultiVectorOperator}}{}
 \begin{DoxyCompactList}
+\item \contentsline{section}{oomph\+::Adjoint\+Problem\+Based\+Shift\+Invert\+Operator}{\pageref{classoomph_1_1AdjointProblemBasedShiftInvertOperator}}{}
 \item \contentsline{section}{oomph\+::Problem\+Based\+Shift\+Invert\+Operator}{\pageref{classoomph_1_1ProblemBasedShiftInvertOperator}}{}
 \end{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Double\+Vector\+Halo\+Scheme}{\pageref{classoomph_1_1DoubleVectorHaloScheme}}{}
@@ -298,23 +299,6 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \item \contentsline{section}{oomph\+::Element\+With\+Specific\+Moving\+Nodes\texorpdfstring{$<$}{<} ELEMENT, Spine\+Node \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1ElementWithSpecificMovingNodes}}{}
 \begin{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Spine\+Element\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1SpineElement}}{}
-\begin{DoxyCompactList}
-\item \contentsline{section}{oomph\+::Hijacked\texorpdfstring{$<$}{<} Spine\+Element\texorpdfstring{$<$}{<} Face\+Geometry\texorpdfstring{$<$}{<} Face\+Geometry\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Hijacked}}{}
-\begin{DoxyCompactList}
-\item \contentsline{section}{oomph\+::Spine\+Line\+Fluid\+Interface\+Bounding\+Element\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1SpineLineFluidInterfaceBoundingElement}}{}
-\begin{DoxyCompactList}
-\item \contentsline{section}{oomph\+::Bounding\+Element\+Type\texorpdfstring{$<$}{<} Spine\+Update\+Fluid\+Interface\+Element\texorpdfstring{$<$}{<} Fluid\+Interface\+Element, Surface\+Derivatives, ELEMENT \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1BoundingElementType_3_01SpineUpdateFluidInterfaceElement_3_01FluidInterfaceElement967a9cdd4c55a2ab80dbfbe6be84b5ab}}{}
-\item \contentsline{section}{oomph\+::Bounding\+Element\+Type\texorpdfstring{$<$}{<} Spine\+Update\+Fluid\+Interface\+Element\texorpdfstring{$<$}{<} Surfactant\+Transport\+Interface\+Element, Surface\+Derivatives, ELEMENT \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1BoundingElementType_3_01SpineUpdateFluidInterfaceElement_3_01SurfactantTransportIn0aa155ddfcfcc4520e061f144b3ee14d}}{}
-\end{DoxyCompactList}
-\item \contentsline{section}{oomph\+::Spine\+Point\+Fluid\+Interface\+Bounding\+Element\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1SpinePointFluidInterfaceBoundingElement}}{}
-\begin{DoxyCompactList}
-\item \contentsline{section}{oomph\+::Bounding\+Element\+Type\texorpdfstring{$<$}{<} Spine\+Update\+Fluid\+Interface\+Element\texorpdfstring{$<$}{<} Fluid\+Interface\+Element, Axisymmetric\+Derivatives, ELEMENT \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1BoundingElementType_3_01SpineUpdateFluidInterfaceElement_3_01FluidInterfaceElement7e4c3b8d4bf0b8ea24b4420ab41b2522}}{}
-\item \contentsline{section}{oomph\+::Bounding\+Element\+Type\texorpdfstring{$<$}{<} Spine\+Update\+Fluid\+Interface\+Element\texorpdfstring{$<$}{<} Fluid\+Interface\+Element, Line\+Derivatives, ELEMENT \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1BoundingElementType_3_01SpineUpdateFluidInterfaceElement_3_01FluidInterfaceElement0079ff469c68e949ddcf7a17f32ba6a9}}{}
-\item \contentsline{section}{oomph\+::Bounding\+Element\+Type\texorpdfstring{$<$}{<} Spine\+Update\+Fluid\+Interface\+Element\texorpdfstring{$<$}{<} Surfactant\+Transport\+Interface\+Element, Axisymmetric\+Derivatives, ELEMENT \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1BoundingElementType_3_01SpineUpdateFluidInterfaceElement_3_01SurfactantTransportIn96bc27501b38520de44b2adcd1d39239}}{}
-\item \contentsline{section}{oomph\+::Bounding\+Element\+Type\texorpdfstring{$<$}{<} Spine\+Update\+Fluid\+Interface\+Element\texorpdfstring{$<$}{<} Surfactant\+Transport\+Interface\+Element, Line\+Derivatives, ELEMENT \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1BoundingElementType_3_01SpineUpdateFluidInterfaceElement_3_01SurfactantTransportIn1a79ed5e636f8826f4a8a00ba9f037b4}}{}
-\end{DoxyCompactList}
-\end{DoxyCompactList}
-\end{DoxyCompactList}
 \end{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Element\+With\+Specific\+Moving\+Nodes\texorpdfstring{$<$}{<} ELEMENT, NODE\+\_\+\+TYPE \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1ElementWithSpecificMovingNodes}}{}
 \begin{DoxyCompactList}
@@ -346,6 +330,24 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \item \contentsline{section}{oomph\+::Spine\+Line\+Volume\+Constraint\+Bounding\+Element\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1SpineLineVolumeConstraintBoundingElement}}{}
 \item \contentsline{section}{oomph\+::Spine\+Surface\+Volume\+Constraint\+Bounding\+Element\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1SpineSurfaceVolumeConstraintBoundingElement}}{}
 \end{DoxyCompactList}
+\item \contentsline{section}{oomph\+::Spine\+Element\texorpdfstring{$<$}{<} Face\+Geometry\texorpdfstring{$<$}{<} Face\+Geometry\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1SpineElement}}{}
+\begin{DoxyCompactList}
+\item \contentsline{section}{oomph\+::Hijacked\texorpdfstring{$<$}{<} Spine\+Element\texorpdfstring{$<$}{<} Face\+Geometry\texorpdfstring{$<$}{<} Face\+Geometry\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Hijacked}}{}
+\begin{DoxyCompactList}
+\item \contentsline{section}{oomph\+::Spine\+Line\+Fluid\+Interface\+Bounding\+Element\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1SpineLineFluidInterfaceBoundingElement}}{}
+\begin{DoxyCompactList}
+\item \contentsline{section}{oomph\+::Bounding\+Element\+Type\texorpdfstring{$<$}{<} Spine\+Update\+Fluid\+Interface\+Element\texorpdfstring{$<$}{<} Fluid\+Interface\+Element, Surface\+Derivatives, ELEMENT \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1BoundingElementType_3_01SpineUpdateFluidInterfaceElement_3_01FluidInterfaceElement967a9cdd4c55a2ab80dbfbe6be84b5ab}}{}
+\item \contentsline{section}{oomph\+::Bounding\+Element\+Type\texorpdfstring{$<$}{<} Spine\+Update\+Fluid\+Interface\+Element\texorpdfstring{$<$}{<} Surfactant\+Transport\+Interface\+Element, Surface\+Derivatives, ELEMENT \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1BoundingElementType_3_01SpineUpdateFluidInterfaceElement_3_01SurfactantTransportIn0aa155ddfcfcc4520e061f144b3ee14d}}{}
+\end{DoxyCompactList}
+\item \contentsline{section}{oomph\+::Spine\+Point\+Fluid\+Interface\+Bounding\+Element\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1SpinePointFluidInterfaceBoundingElement}}{}
+\begin{DoxyCompactList}
+\item \contentsline{section}{oomph\+::Bounding\+Element\+Type\texorpdfstring{$<$}{<} Spine\+Update\+Fluid\+Interface\+Element\texorpdfstring{$<$}{<} Fluid\+Interface\+Element, Axisymmetric\+Derivatives, ELEMENT \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1BoundingElementType_3_01SpineUpdateFluidInterfaceElement_3_01FluidInterfaceElement7e4c3b8d4bf0b8ea24b4420ab41b2522}}{}
+\item \contentsline{section}{oomph\+::Bounding\+Element\+Type\texorpdfstring{$<$}{<} Spine\+Update\+Fluid\+Interface\+Element\texorpdfstring{$<$}{<} Fluid\+Interface\+Element, Line\+Derivatives, ELEMENT \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1BoundingElementType_3_01SpineUpdateFluidInterfaceElement_3_01FluidInterfaceElement0079ff469c68e949ddcf7a17f32ba6a9}}{}
+\item \contentsline{section}{oomph\+::Bounding\+Element\+Type\texorpdfstring{$<$}{<} Spine\+Update\+Fluid\+Interface\+Element\texorpdfstring{$<$}{<} Surfactant\+Transport\+Interface\+Element, Axisymmetric\+Derivatives, ELEMENT \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1BoundingElementType_3_01SpineUpdateFluidInterfaceElement_3_01SurfactantTransportIn96bc27501b38520de44b2adcd1d39239}}{}
+\item \contentsline{section}{oomph\+::Bounding\+Element\+Type\texorpdfstring{$<$}{<} Spine\+Update\+Fluid\+Interface\+Element\texorpdfstring{$<$}{<} Surfactant\+Transport\+Interface\+Element, Line\+Derivatives, ELEMENT \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1BoundingElementType_3_01SpineUpdateFluidInterfaceElement_3_01SurfactantTransportIn1a79ed5e636f8826f4a8a00ba9f037b4}}{}
+\end{DoxyCompactList}
+\end{DoxyCompactList}
+\end{DoxyCompactList}
 \end{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Hijacked\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Hijacked}}{}
 \item \contentsline{section}{oomph\+::Projectable\+Element\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1ProjectableElement}}{}
@@ -376,6 +378,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \begin{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Problem}{\pageref{classoomph_1_1Problem}}{}
 \begin{DoxyCompactList}
+\item \contentsline{section}{oomph\+::Womersley\+Problem\texorpdfstring{$<$}{<} WOMERSLEY\+\_\+\+ELEMENT, DIM \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1WomersleyProblem}}{}
 \item \contentsline{section}{oomph\+::Biharmonic\+Fluid\+Problem\texorpdfstring{$<$}{<} DIM \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1BiharmonicFluidProblem}}{}
 \item \contentsline{section}{oomph\+::Biharmonic\+Problem\texorpdfstring{$<$}{<} DIM \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1BiharmonicProblem}}{}
 \item \contentsline{section}{oomph\+::Fp\+Pressure\+Advection\+Diffusion\+Problem\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1FpPressureAdvectionDiffusionProblem}}{}
@@ -404,6 +407,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \begin{DoxyCompactList}
 \item \contentsline{section}{oomph\+::FSILinearised\+Axisym\+Poroelastic\+Traction\+Element\texorpdfstring{$<$}{<} POROELASTICITY\+\_\+\+BULK\+\_\+\+ELEMENT, NAVIER\+\_\+\+STOKES\+\_\+\+BULK\+\_\+\+ELEMENT \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1FSILinearisedAxisymPoroelasticTractionElement}}{}
 \end{DoxyCompactList}
+\item \contentsline{section}{oomph\+::Element\+With\+Specific\+Moving\+Nodes\texorpdfstring{$<$}{<} Face\+Geometry\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>}, Spine\+Node \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1ElementWithSpecificMovingNodes}}{}
 \item \contentsline{section}{oomph\+::Hijacked\texorpdfstring{$<$}{<} Face\+Geometry\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Hijacked}}{}
 \begin{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Elastic\+Update\+Fluid\+Interface\+Element\texorpdfstring{$<$}{<} Fluid\+Interface\+Element, Axisymmetric\+Derivatives, ELEMENT \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1ElasticUpdateFluidInterfaceElement}}{}
@@ -578,6 +582,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \end{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Face\+Geometry\texorpdfstring{$<$}{<} Face\+Geometry\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1FaceGeometry}}{}
 \begin{DoxyCompactList}
+\item \contentsline{section}{oomph\+::Element\+With\+Specific\+Moving\+Nodes\texorpdfstring{$<$}{<} Face\+Geometry\texorpdfstring{$<$}{<} Face\+Geometry\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}, Spine\+Node \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1ElementWithSpecificMovingNodes}}{}
 \item \contentsline{section}{oomph\+::Elastic\+Line\+Fluid\+Interface\+Bounding\+Element\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1ElasticLineFluidInterfaceBoundingElement}}{}
 \begin{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Bounding\+Element\+Type\texorpdfstring{$<$}{<} Elastic\+Update\+Fluid\+Interface\+Element\texorpdfstring{$<$}{<} Fluid\+Interface\+Element, Surface\+Derivatives, ELEMENT \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1BoundingElementType_3_01ElasticUpdateFluidInterfaceElement_3_01FluidInterfaceEleme0e022f57b173f7bea5703185db24e722}}{}
@@ -681,6 +686,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \begin{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Face\+Geometry\texorpdfstring{$<$}{<} Navier\+Stokes\+Boussinesq\+Element\texorpdfstring{$<$}{<} NST\+\_\+\+ELEMENT, AD\+\_\+\+ELEMENT \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1FaceGeometry_3_01NavierStokesBoussinesqElement_3_01NST__ELEMENT_00_01AD__ELEMENT_01_4_01_4}}{}
 \end{DoxyCompactList}
+\item \contentsline{section}{oomph\+::Face\+Geometry\texorpdfstring{$<$}{<} POROELASTICITY\+\_\+\+BULK\+\_\+\+ELEMENT \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1FaceGeometry}}{}
 \item \contentsline{section}{oomph\+::Face\+Geometry\texorpdfstring{$<$}{<} QCrouzeix\+Raviart\+Element\texorpdfstring{$<$}{<} DIM \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1FaceGeometry}}{}
 \begin{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Face\+Geometry\texorpdfstring{$<$}{<} Refineable\+QCrouzeix\+Raviart\+Element\texorpdfstring{$<$}{<} DIM \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1FaceGeometry_3_01RefineableQCrouzeixRaviartElement_3_01DIM_01_4_01_4}}{}
@@ -726,8 +732,15 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \begin{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Gauss\+\_\+\+Rescaled\texorpdfstring{$<$}{<} DIM, NPTS\+\_\+1D \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Gauss__Rescaled}}{}
 \end{DoxyCompactList}
+\item \contentsline{section}{oomph\+::Gauss\texorpdfstring{$<$}{<} 1, NNODE\+\_\+1D \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Gauss}}{}
+\item \contentsline{section}{oomph\+::Gauss\texorpdfstring{$<$}{<} 2, NNODE\+\_\+1D \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Gauss}}{}
+\item \contentsline{section}{oomph\+::Gauss\texorpdfstring{$<$}{<} 3, NNODE\+\_\+1D \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Gauss}}{}
+\item \contentsline{section}{oomph\+::Gauss\texorpdfstring{$<$}{<} DIM, 3 \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Gauss}}{}
 \item \contentsline{section}{oomph\+::Gauss\+Legendre\texorpdfstring{$<$}{<} DIM, NPTS\+\_\+1D \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1GaussLegendre}}{}
 \item \contentsline{section}{oomph\+::Gauss\+Lobatto\+Legendre\texorpdfstring{$<$}{<} DIM, NPTS\+\_\+1D \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1GaussLobattoLegendre}}{}
+\item \contentsline{section}{oomph\+::Gauss\+Lobatto\+Legendre\texorpdfstring{$<$}{<} 1, NNODE\+\_\+1D \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1GaussLobattoLegendre}}{}
+\item \contentsline{section}{oomph\+::Gauss\+Lobatto\+Legendre\texorpdfstring{$<$}{<} 2, NNODE\+\_\+1D \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1GaussLobattoLegendre}}{}
+\item \contentsline{section}{oomph\+::Gauss\+Lobatto\+Legendre\texorpdfstring{$<$}{<} 3, NNODE\+\_\+1D \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1GaussLobattoLegendre}}{}
 \item \contentsline{section}{oomph\+::Generalised\+Element}{\pageref{classoomph_1_1GeneralisedElement}}{}
 \begin{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Block\+Preconditionable\+Space\+Time\+Element\+Base}{\pageref{classoomph_1_1BlockPreconditionableSpaceTimeElementBase}}{}
@@ -947,7 +960,9 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \begin{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Element\+With\+Specific\+Moving\+Nodes\texorpdfstring{$<$}{<} ELEMENT, Algebraic\+Node \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1ElementWithSpecificMovingNodes}}{}
 \item \contentsline{section}{oomph\+::Element\+With\+Specific\+Moving\+Nodes\texorpdfstring{$<$}{<} ELEMENT, Macro\+Element\+Node\+Update\+Node \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1ElementWithSpecificMovingNodes}}{}
+\item \contentsline{section}{oomph\+::Element\+With\+Specific\+Moving\+Nodes\texorpdfstring{$<$}{<} Face\+Geometry\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>}, Spine\+Node \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1ElementWithSpecificMovingNodes}}{}
 \item \contentsline{section}{oomph\+::Element\+With\+Specific\+Moving\+Nodes\texorpdfstring{$<$}{<} ELEMENT, Spine\+Node \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1ElementWithSpecificMovingNodes}}{}
+\item \contentsline{section}{oomph\+::Element\+With\+Specific\+Moving\+Nodes\texorpdfstring{$<$}{<} Face\+Geometry\texorpdfstring{$<$}{<} Face\+Geometry\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}, Spine\+Node \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1ElementWithSpecificMovingNodes}}{}
 \item \contentsline{section}{oomph\+::Element\+With\+Specific\+Moving\+Nodes\texorpdfstring{$<$}{<} ELEMENT, NODE\+\_\+\+TYPE \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1ElementWithSpecificMovingNodes}}{}
 \end{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Element\+With\+Z2\+Error\+Estimator}{\pageref{classoomph_1_1ElementWithZ2ErrorEstimator}}{}
@@ -2110,6 +2125,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \item \contentsline{section}{oomph\+::Sisko\+Tan\+Mil\+Reg\+With\+Blending\+Constitutive\+Equation\texorpdfstring{$<$}{<} DIM \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1SiskoTanMilRegWithBlendingConstitutiveEquation}}{}
 \item \contentsline{section}{oomph\+::Tanh\+Profile\+Constitutive\+Equation\texorpdfstring{$<$}{<} DIM \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1TanhProfileConstitutiveEquation}}{}
 \end{DoxyCompactList}
+\item \contentsline{section}{oomph\+::Generalised\+Newtonian\+Constitutive\+Equation\texorpdfstring{$<$}{<} 3 \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1GeneralisedNewtonianConstitutiveEquation}}{}
 \item \contentsline{section}{oomph\+::Geom\+Object}{\pageref{classoomph_1_1GeomObject}}{}
 \begin{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Circle}{\pageref{classoomph_1_1Circle}}{}
@@ -2140,8 +2156,8 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \item \contentsline{section}{oomph\+::Hijacked\+Element\+Base}{\pageref{classoomph_1_1HijackedElementBase}}{}
 \begin{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Hijacked\texorpdfstring{$<$}{<} Face\+Geometry\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Hijacked}}{}
-\item \contentsline{section}{oomph\+::Hijacked\texorpdfstring{$<$}{<} Spine\+Element\texorpdfstring{$<$}{<} Face\+Geometry\texorpdfstring{$<$}{<} Face\+Geometry\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Hijacked}}{}
 \item \contentsline{section}{oomph\+::Hijacked\texorpdfstring{$<$}{<} Spine\+Element\texorpdfstring{$<$}{<} Face\+Geometry\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Hijacked}}{}
+\item \contentsline{section}{oomph\+::Hijacked\texorpdfstring{$<$}{<} Spine\+Element\texorpdfstring{$<$}{<} Face\+Geometry\texorpdfstring{$<$}{<} Face\+Geometry\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Hijacked}}{}
 \item \contentsline{section}{oomph\+::Hijacked\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Hijacked}}{}
 \end{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Hypre\+Interface}{\pageref{classoomph_1_1HypreInterface}}{}
@@ -2215,12 +2231,18 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \item \contentsline{section}{oomph\+::Macro\+Element\+Node\+Update\+Element\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1MacroElementNodeUpdateElement}}{}
 \end{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Map\+Matrix\+Mixed\texorpdfstring{$<$}{<} KEY\+\_\+\+TYPE\+\_\+\+ROW, KEY\+\_\+\+TYPE\+\_\+\+COL, VALUE\+\_\+\+TYPE \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1MapMatrixMixed}}{}
+\begin{DoxyCompactList}
+\item \contentsline{section}{oomph\+::Map\+Matrix\texorpdfstring{$<$}{<} unsigned, oomph\+::CRDouble\+Matrix \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1MapMatrix}}{}
+\end{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Map\+Matrix\+Mixed\texorpdfstring{$<$}{<} KEY\+\_\+\+TYPE, KEY\+\_\+\+TYPE, VALUE\+\_\+\+TYPE \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1MapMatrixMixed}}{}
 \begin{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Map\+Matrix\texorpdfstring{$<$}{<} KEY\+\_\+\+TYPE, VALUE\+\_\+\+TYPE \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1MapMatrix}}{}
 \end{DoxyCompactList}
+\item \contentsline{section}{oomph\+::Map\+Matrix\+Mixed\texorpdfstring{$<$}{<} unsigned, unsigned, oomph\+::CRDouble\+Matrix \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1MapMatrixMixed}}{}
 \item \contentsline{section}{oomph\+::Matrix\texorpdfstring{$<$}{<} T, MATRIX\+\_\+\+TYPE \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Matrix}}{}
 \begin{DoxyCompactList}
+\item \contentsline{section}{oomph\+::Dense\+Matrix\texorpdfstring{$<$}{<} int \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1DenseMatrix}}{}
+\item \contentsline{section}{oomph\+::Dense\+Matrix\texorpdfstring{$<$}{<} unsigned \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1DenseMatrix}}{}
 \item \contentsline{section}{oomph\+::Dense\+Matrix\texorpdfstring{$<$}{<} std\+::complex\texorpdfstring{$<$}{<} double \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1DenseMatrix}}{}
 \begin{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Dense\+Complex\+Matrix}{\pageref{classoomph_1_1DenseComplexMatrix}}{}
@@ -2229,14 +2251,23 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \begin{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Dense\+Double\+Matrix}{\pageref{classoomph_1_1DenseDoubleMatrix}}{}
 \end{DoxyCompactList}
+\item \contentsline{section}{oomph\+::Dense\+Matrix\texorpdfstring{$<$}{<} oomph\+::Matrix\+Vector\+Product \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1DenseMatrix}}{}
+\item \contentsline{section}{oomph\+::Dense\+Matrix\texorpdfstring{$<$}{<} bool \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1DenseMatrix}}{}
+\item \contentsline{section}{oomph\+::Dense\+Matrix\texorpdfstring{$<$}{<} int \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1DenseMatrix}}{}
+\item \contentsline{section}{oomph\+::Dense\+Matrix\texorpdfstring{$<$}{<} oomph\+::CRDouble\+Matrix \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1DenseMatrix}}{}
+\item \contentsline{section}{oomph\+::Dense\+Matrix\texorpdfstring{$<$}{<} double \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1DenseMatrix}}{}
+\item \contentsline{section}{oomph\+::Sparse\+Matrix\texorpdfstring{$<$}{<} std\+::complex\texorpdfstring{$<$}{<} double \texorpdfstring{$>$}{>}, CCMatrix\texorpdfstring{$<$}{<} std\+::complex\texorpdfstring{$<$}{<} double \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1SparseMatrix}}{}
+\item \contentsline{section}{oomph\+::Sparse\+Matrix\texorpdfstring{$<$}{<} double, CCMatrix\texorpdfstring{$<$}{<} double \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1SparseMatrix}}{}
 \item \contentsline{section}{oomph\+::Sparse\+Matrix\texorpdfstring{$<$}{<} T, CCMatrix\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1SparseMatrix}}{}
 \begin{DoxyCompactList}
 \item \contentsline{section}{oomph\+::CCMatrix\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1CCMatrix}}{}
 \end{DoxyCompactList}
+\item \contentsline{section}{oomph\+::Sparse\+Matrix\texorpdfstring{$<$}{<} std\+::complex\texorpdfstring{$<$}{<} double \texorpdfstring{$>$}{>}, CRMatrix\texorpdfstring{$<$}{<} std\+::complex\texorpdfstring{$<$}{<} double \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1SparseMatrix}}{}
 \item \contentsline{section}{oomph\+::Sparse\+Matrix\texorpdfstring{$<$}{<} T, CRMatrix\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1SparseMatrix}}{}
 \begin{DoxyCompactList}
 \item \contentsline{section}{oomph\+::CRMatrix\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1CRMatrix}}{}
 \end{DoxyCompactList}
+\item \contentsline{section}{oomph\+::Sparse\+Matrix\texorpdfstring{$<$}{<} double, CRMatrix\texorpdfstring{$<$}{<} double \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1SparseMatrix}}{}
 \item \contentsline{section}{oomph\+::Sparse\+Matrix\texorpdfstring{$<$}{<} T, MATRIX\+\_\+\+TYPE \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1SparseMatrix}}{}
 \begin{DoxyCompactList}
 \item \contentsline{section}{oomph\+::CCMatrix\texorpdfstring{$<$}{<} std\+::complex\texorpdfstring{$<$}{<} double \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1CCMatrix}}{}
@@ -2251,20 +2282,36 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \begin{DoxyCompactList}
 \item \contentsline{section}{oomph\+::CRComplex\+Matrix}{\pageref{classoomph_1_1CRComplexMatrix}}{}
 \end{DoxyCompactList}
+\item \contentsline{section}{oomph\+::CRMatrix\texorpdfstring{$<$}{<} double \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1CRMatrix}}{}
 \end{DoxyCompactList}
 \end{DoxyCompactList}
+\item \contentsline{section}{oomph\+::Matrix\texorpdfstring{$<$}{<} bool, Dense\+Matrix\texorpdfstring{$<$}{<} bool \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Matrix}}{}
+\item \contentsline{section}{oomph\+::Matrix\texorpdfstring{$<$}{<} double \texorpdfstring{$\ast$}{*}, Dense\+Matrix\texorpdfstring{$<$}{<} double \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Matrix}}{}
+\item \contentsline{section}{oomph\+::Matrix\texorpdfstring{$<$}{<} double, CCMatrix\texorpdfstring{$<$}{<} double \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Matrix}}{}
 \item \contentsline{section}{oomph\+::Matrix\texorpdfstring{$<$}{<} double, CRDouble\+Matrix \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Matrix}}{}
 \begin{DoxyCompactList}
 \item \contentsline{section}{oomph\+::CRDouble\+Matrix}{\pageref{classoomph_1_1CRDoubleMatrix}}{}
 \end{DoxyCompactList}
+\item \contentsline{section}{oomph\+::Matrix\texorpdfstring{$<$}{<} double, CRMatrix\texorpdfstring{$<$}{<} double \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Matrix}}{}
+\item \contentsline{section}{oomph\+::Matrix\texorpdfstring{$<$}{<} double, Dense\+Matrix\texorpdfstring{$<$}{<} double \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Matrix}}{}
 \item \contentsline{section}{oomph\+::Matrix\texorpdfstring{$<$}{<} double, Sum\+Of\+Matrices \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Matrix}}{}
 \begin{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Sum\+Of\+Matrices}{\pageref{classoomph_1_1SumOfMatrices}}{}
 \end{DoxyCompactList}
+\item \contentsline{section}{oomph\+::Matrix\texorpdfstring{$<$}{<} int \texorpdfstring{$\ast$}{*}, Dense\+Matrix\texorpdfstring{$<$}{<} int \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Matrix}}{}
+\item \contentsline{section}{oomph\+::Matrix\texorpdfstring{$<$}{<} int, Dense\+Matrix\texorpdfstring{$<$}{<} int \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Matrix}}{}
+\item \contentsline{section}{oomph\+::Matrix\texorpdfstring{$<$}{<} oomph\+::CRDouble\+Matrix \texorpdfstring{$\ast$}{*}, Dense\+Matrix\texorpdfstring{$<$}{<} oomph\+::CRDouble\+Matrix \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Matrix}}{}
+\item \contentsline{section}{oomph\+::Matrix\texorpdfstring{$<$}{<} oomph\+::Matrix\+Vector\+Product \texorpdfstring{$\ast$}{*}, Dense\+Matrix\texorpdfstring{$<$}{<} oomph\+::Matrix\+Vector\+Product \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Matrix}}{}
+\item \contentsline{section}{oomph\+::Matrix\texorpdfstring{$<$}{<} std\+::complex\texorpdfstring{$<$}{<} double \texorpdfstring{$>$}{>}, CCMatrix\texorpdfstring{$<$}{<} std\+::complex\texorpdfstring{$<$}{<} double \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Matrix}}{}
+\item \contentsline{section}{oomph\+::Matrix\texorpdfstring{$<$}{<} std\+::complex\texorpdfstring{$<$}{<} double \texorpdfstring{$>$}{>}, CRMatrix\texorpdfstring{$<$}{<} std\+::complex\texorpdfstring{$<$}{<} double \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Matrix}}{}
+\item \contentsline{section}{oomph\+::Matrix\texorpdfstring{$<$}{<} std\+::complex\texorpdfstring{$<$}{<} double \texorpdfstring{$>$}{>}, Dense\+Matrix\texorpdfstring{$<$}{<} std\+::complex\texorpdfstring{$<$}{<} double \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Matrix}}{}
+\item \contentsline{section}{oomph\+::Matrix\texorpdfstring{$<$}{<} T, CCMatrix\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Matrix}}{}
+\item \contentsline{section}{oomph\+::Matrix\texorpdfstring{$<$}{<} T, CRMatrix\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Matrix}}{}
 \item \contentsline{section}{oomph\+::Matrix\texorpdfstring{$<$}{<} T, Dense\+Matrix\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Matrix}}{}
 \begin{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Dense\+Matrix\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1DenseMatrix}}{}
 \end{DoxyCompactList}
+\item \contentsline{section}{oomph\+::Matrix\texorpdfstring{$<$}{<} unsigned, Dense\+Matrix\texorpdfstring{$<$}{<} unsigned \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Matrix}}{}
 \item \contentsline{section}{Memory\+Statistics\+Storage}{\pageref{structMemoryStatisticsStorage}}{}
 \item \contentsline{section}{oomph\+::Mesh}{\pageref{classoomph_1_1Mesh}}{}
 \begin{DoxyCompactList}
@@ -2376,16 +2423,21 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \item \contentsline{section}{oomph\+::Hermite\+Quad\+Mesh\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1HermiteQuadMesh}}{}
 \item \contentsline{section}{oomph\+::Line\+Mesh\+Base}{\pageref{classoomph_1_1LineMeshBase}}{}
 \begin{DoxyCompactList}
+\item \contentsline{section}{oomph\+::One\+DMesh\texorpdfstring{$<$}{<} oomph\+::Spectral\+Periodic\+Orbit\+Element\texorpdfstring{$<$}{<} NNODE\+\_\+1D \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1OneDMesh}}{}
+\item \contentsline{section}{oomph\+::Refineable\+Line\+Mesh\texorpdfstring{$<$}{<} oomph\+::Spectral\+Periodic\+Orbit\+Element\texorpdfstring{$<$}{<} NNODE\+\_\+1D \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1RefineableLineMesh}}{}
 \item \contentsline{section}{oomph\+::One\+DMesh\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1OneDMesh}}{}
 \begin{DoxyCompactList}
+\item \contentsline{section}{oomph\+::Refineable\+One\+DMesh\texorpdfstring{$<$}{<} oomph\+::Spectral\+Periodic\+Orbit\+Element\texorpdfstring{$<$}{<} NNODE\+\_\+1D \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1RefineableOneDMesh}}{}
 \item \contentsline{section}{oomph\+::One\+DLagrangian\+Mesh\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1OneDLagrangianMesh}}{}
 \item \contentsline{section}{oomph\+::Refineable\+One\+DMesh\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1RefineableOneDMesh}}{}
 \begin{DoxyCompactList}
+\item \contentsline{section}{oomph\+::Periodic\+Orbit\+Temporal\+Mesh\texorpdfstring{$<$}{<} oomph\+::Spectral\+Periodic\+Orbit\+Element\texorpdfstring{$<$}{<} NNODE\+\_\+1D \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1PeriodicOrbitTemporalMesh}}{}
 \item \contentsline{section}{oomph\+::Periodic\+Orbit\+Temporal\+Mesh\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1PeriodicOrbitTemporalMesh}}{}
 \end{DoxyCompactList}
 \end{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Refineable\+Line\+Mesh\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1RefineableLineMesh}}{}
 \begin{DoxyCompactList}
+\item \contentsline{section}{oomph\+::Refineable\+One\+DMesh\texorpdfstring{$<$}{<} oomph\+::Spectral\+Periodic\+Orbit\+Element\texorpdfstring{$<$}{<} NNODE\+\_\+1D \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1RefineableOneDMesh}}{}
 \item \contentsline{section}{oomph\+::Refineable\+One\+DMesh\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1RefineableOneDMesh}}{}
 \end{DoxyCompactList}
 \end{DoxyCompactList}
@@ -2534,8 +2586,10 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \end{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Tree\+Based\+Refineable\+Mesh\+Base}{\pageref{classoomph_1_1TreeBasedRefineableMeshBase}}{}
 \begin{DoxyCompactList}
+\item \contentsline{section}{oomph\+::Tree\+Based\+Refineable\+Mesh\texorpdfstring{$<$}{<} oomph\+::Spectral\+Periodic\+Orbit\+Element\texorpdfstring{$<$}{<} NNODE\+\_\+1D \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1TreeBasedRefineableMesh}}{}
 \item \contentsline{section}{oomph\+::Tree\+Based\+Refineable\+Mesh\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1TreeBasedRefineableMesh}}{}
 \begin{DoxyCompactList}
+\item \contentsline{section}{oomph\+::Refineable\+Line\+Mesh\texorpdfstring{$<$}{<} oomph\+::Spectral\+Periodic\+Orbit\+Element\texorpdfstring{$<$}{<} NNODE\+\_\+1D \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1RefineableLineMesh}}{}
 \item \contentsline{section}{oomph\+::Refineable\+Brick\+Mesh\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1RefineableBrickMesh}}{}
 \item \contentsline{section}{oomph\+::Refineable\+Line\+Mesh\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1RefineableLineMesh}}{}
 \item \contentsline{section}{oomph\+::Refineable\+Quad\+Mesh\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1RefineableQuadMesh}}{}
@@ -2621,7 +2675,6 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \begin{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Navier\+Stokes\+Impedance\+Traction\+Element\texorpdfstring{$<$}{<} BULK\+\_\+\+NAVIER\+\_\+\+STOKES\+\_\+\+ELEMENT, WOMERSLEY\+\_\+\+ELEMENT, DIM \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1NavierStokesImpedanceTractionElement}}{}
 \end{DoxyCompactList}
-\item \contentsline{section}{oomph\+::Newton\+Solver\+Error}{\pageref{classoomph_1_1NewtonSolverError}}{}
 \item NODE\+\_\+\+TYPE\begin{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Boundary\+Node\texorpdfstring{$<$}{<} NODE\+\_\+\+TYPE \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1BoundaryNode}}{}
 \end{DoxyCompactList}
@@ -2990,6 +3043,14 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \item \contentsline{section}{oomph\+::Oomph\+Lib\+Exception}{\pageref{classoomph_1_1OomphLibException}}{}
 \begin{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Oomph\+Lib\+Error}{\pageref{classoomph_1_1OomphLibError}}{}
+\begin{DoxyCompactList}
+\item \contentsline{section}{oomph\+::Inverted\+Element\+Error}{\pageref{classoomph_1_1InvertedElementError}}{}
+\item \contentsline{section}{oomph\+::Newton\+Solver\+Error}{\pageref{classoomph_1_1NewtonSolverError}}{}
+\item \contentsline{section}{oomph\+::Segregated\+Solver\+Error}{\pageref{classoomph_1_1SegregatedSolverError}}{}
+\begin{DoxyCompactList}
+\item \contentsline{section}{oomph\+::Ran\+Out\+Of\+Iterations\+In\+Segregated\+Solver\+Error}{\pageref{classoomph_1_1RanOutOfIterationsInSegregatedSolverError}}{}
+\end{DoxyCompactList}
+\end{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Oomph\+Lib\+Warning}{\pageref{classoomph_1_1OomphLibWarning}}{}
 \end{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Oomph\+Lib\+Quiet\+Exception}{\pageref{classoomph_1_1OomphLibQuietException}}{}
@@ -3013,7 +3074,6 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \end{DoxyCompactList}
 \item \contentsline{section}{oomph\+::CGALSample\+Point\+Container\+Parameters}{\pageref{classoomph_1_1CGALSamplePointContainerParameters}}{}
 \end{DoxyCompactList}
-\item \contentsline{section}{oomph\+::Segregated\+Solver\+Error}{\pageref{classoomph_1_1SegregatedSolverError}}{}
 \item \contentsline{section}{oomph\+::Shape}{\pageref{classoomph_1_1Shape}}{}
 \begin{DoxyCompactList}
 \item \contentsline{section}{oomph\+::One\+DLegendre\+DShape\+Param}{\pageref{classoomph_1_1OneDLegendreDShapeParam}}{}
@@ -3106,6 +3166,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \item \contentsline{section}{oomph\+::Spine\+Finite\+Element}{\pageref{classoomph_1_1SpineFiniteElement}}{}
 \begin{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Spine\+Element\texorpdfstring{$<$}{<} Face\+Geometry\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1SpineElement}}{}
+\item \contentsline{section}{oomph\+::Spine\+Element\texorpdfstring{$<$}{<} Face\+Geometry\texorpdfstring{$<$}{<} Face\+Geometry\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1SpineElement}}{}
 \item \contentsline{section}{oomph\+::Spine\+Element\texorpdfstring{$<$}{<} ELEMENT \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1SpineElement}}{}
 \end{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Strain\+Energy\+Function}{\pageref{classoomph_1_1StrainEnergyFunction}}{}
@@ -3148,6 +3209,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \end{DoxyCompactList}
 \end{DoxyCompactList}
 \item \contentsline{section}{oomph\+::TBubble\+Enriched\+Gauss\texorpdfstring{$<$}{<} DIM, NPTS\+\_\+1D \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1TBubbleEnrichedGauss}}{}
+\item \contentsline{section}{oomph\+::TBubble\+Enriched\+Gauss\texorpdfstring{$<$}{<} DIM, 3 \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1TBubbleEnrichedGauss}}{}
 \item \contentsline{section}{oomph\+::TElement\texorpdfstring{$<$}{<} DIM, NNODE\+\_\+1D \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1TElement}}{}
 \begin{DoxyCompactList}
 \item \contentsline{section}{oomph\+::TAdvection\+Diffusion\+Reaction\+Element\texorpdfstring{$<$}{<} NREAGENT, DIM, NNODE\+\_\+1D \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1TAdvectionDiffusionReactionElement}}{}
@@ -3233,6 +3295,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \end{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Template\+Free\+Womersley\+Impedance\+Tube\+Base}{\pageref{classoomph_1_1TemplateFreeWomersleyImpedanceTubeBase}}{}
 \begin{DoxyCompactList}
+\item \contentsline{section}{oomph\+::Womersley\+Impedance\+Tube\+Base\texorpdfstring{$<$}{<} WOMERSLEY\+\_\+\+ELEMENT, DIM \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1WomersleyImpedanceTubeBase}}{}
 \item \contentsline{section}{oomph\+::Womersley\+Impedance\+Tube\+Base\texorpdfstring{$<$}{<} ELEMENT, DIM \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1WomersleyImpedanceTubeBase}}{}
 \begin{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Womersley\+Outflow\+Impedance\+Tube\texorpdfstring{$<$}{<} ELEMENT, DIM \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1WomersleyOutflowImpedanceTube}}{}
@@ -3254,6 +3317,9 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \item \contentsline{section}{oomph\+::Tet\+Mesh\+Vertex}{\pageref{classoomph_1_1TetMeshVertex}}{}
 \item \contentsline{section}{oomph\+::TFace}{\pageref{classoomph_1_1TFace}}{}
 \item \contentsline{section}{oomph\+::TGauss\texorpdfstring{$<$}{<} DIM, NPTS\+\_\+1D \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1TGauss}}{}
+\item \contentsline{section}{oomph\+::TGauss\texorpdfstring{$<$}{<} 1, NNODE\+\_\+1D \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1TGauss}}{}
+\item \contentsline{section}{oomph\+::TGauss\texorpdfstring{$<$}{<} 2, NNODE\+\_\+1D \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1TGauss}}{}
+\item \contentsline{section}{oomph\+::TGauss\texorpdfstring{$<$}{<} 3, NNODE\+\_\+1D \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1TGauss}}{}
 \item \contentsline{section}{oomph\+::Time}{\pageref{classoomph_1_1Time}}{}
 \item TIME\+\_\+\+HARMONIC\+\_\+\+LINEAR\+\_\+\+ELAST\+\_\+\+ELEMENT\begin{DoxyCompactList}
 \item \contentsline{section}{oomph\+::Projectable\+Element\texorpdfstring{$<$}{<} TIME\+\_\+\+HARMONIC\+\_\+\+LINEAR\+\_\+\+ELAST\+\_\+\+ELEMENT \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1ProjectableElement}}{}
@@ -3265,6 +3331,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \item \contentsline{section}{oomph\+::Timer}{\pageref{classoomph_1_1Timer}}{}
 \item \contentsline{section}{oomph\+::Time\+Stepper}{\pageref{classoomph_1_1TimeStepper}}{}
 \begin{DoxyCompactList}
+\item \contentsline{section}{oomph\+::Steady\texorpdfstring{$<$}{<} 0 \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Steady}}{}
 \item \contentsline{section}{oomph\+::BDF\texorpdfstring{$<$}{<} NSTEPS \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1BDF}}{}
 \item \contentsline{section}{oomph\+::Generalised\+Time\+Stepper}{\pageref{classoomph_1_1GeneralisedTimeStepper}}{}
 \begin{DoxyCompactList}
@@ -3332,7 +3399,74 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \item \contentsline{section}{oomph\+::Projectable\+Element\texorpdfstring{$<$}{<} UNSTEADY\+\_\+\+HEAT\+\_\+\+ELEMENT \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1ProjectableElement}}{}
 \end{DoxyCompactList}
 \item std\+::vector\begin{DoxyCompactList}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Linear\+Algebra\+Distribution \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Vector\texorpdfstring{$<$}{<} unsigned \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} unsigned \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} const oomph\+::Mesh \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} int \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
 \item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} double \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Geom\+Object \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} int \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} std\+::string \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Finite\+Element \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Data \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::CRDouble\+Matrix \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Face\+Element \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Vector\texorpdfstring{$<$}{<} double \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} long \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Vector\texorpdfstring{$<$}{<} double \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Macro\+Element \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Double\+Vector \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Extruded\+Domain \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} std\+::complex\texorpdfstring{$<$}{<} unsigned \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Preconditioner \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} std\+::pair\texorpdfstring{$<$}{<} const oomph\+::Mesh \texorpdfstring{$\ast$}{*}, bool \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Tet\+Mesh\+Faceted\+Surface \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Helmholtz\+MGProblem \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::CRDouble\+Matrix \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Double\+Vector \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Helmholtz\+Smoother \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Compressed\+Matrix\+Coefficient \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Mesh \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} std\+::pair\texorpdfstring{$<$}{<} oomph\+::Finite\+Element \texorpdfstring{$\ast$}{*}, oomph\+::Vector\texorpdfstring{$<$}{<} double \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::MGProblem \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Smoother \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Node \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Finite\+Element \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Vector\texorpdfstring{$<$}{<} int \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Node \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Generalised\+Element \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Fp\+Pressure\+Adv\+Diff\+Robin\+BCElement\+Base \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Time\+Stepper \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Problem \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} double \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Dense\+Matrix\texorpdfstring{$<$}{<} double \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Pseudo\+Elastic\+Preconditioner\+Subsidiary\+Preconditioner\+Old \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} std\+::pair\texorpdfstring{$<$}{<} double, double \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} std\+::vector\texorpdfstring{$<$}{<} bool \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Data \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Fp\+Pressure\+Adv\+Diff\+Robin\+BCSpace\+Time\+Element\+Base \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Fp\+Pressure\+Adv\+Diff\+Robin\+BCMixed\+Order\+Space\+Time\+Element\+Base \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Spine \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Shape \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::DShape \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Double\+Matrix\+Base \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} const oomph\+::Added\+Main\+Numbering\+Lookup \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} std\+::map\texorpdfstring{$<$}{<} unsigned, oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Finite\+Element \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} std\+::map\texorpdfstring{$<$}{<} unsigned, oomph\+::Vector\texorpdfstring{$<$}{<} int \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Tet\+Mesh\+Vertex \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} std\+::pair\texorpdfstring{$<$}{<} oomph\+::Vector\texorpdfstring{$<$}{<} double \texorpdfstring{$>$}{>}, int \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Tet\+Mesh\+Facet \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} clock\+\_\+t \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Tree \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Tree\+Root \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Vector\texorpdfstring{$<$}{<} unsigned \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Triangle\+Mesh\+Poly\+Line \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Triangle\+Mesh\+Curve\+Section \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Triangle\+Mesh\+Closed\+Curve \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Triangle\+Mesh\+Open\+Curve \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Triangle\+Mesh\+Polygon \texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
+\item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} oomph\+::Vector\texorpdfstring{$<$}{<} VALUE\+\_\+\+TYPE \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
 \item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} \+\_\+\+Tp \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector}}{}
 \item \contentsline{section}{oomph\+::Vector\texorpdfstring{$<$}{<} bool \texorpdfstring{$>$}{>}}{\pageref{classoomph_1_1Vector_3_01bool_01_4}}{}
 \end{DoxyCompactList}

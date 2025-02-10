@@ -1,5 +1,5 @@
-\hypertarget{classMyEllipse}{}\doxysection{My\+Ellipse Class Reference}
-\label{classMyEllipse}\index{MyEllipse@{MyEllipse}}
+\doxysection{My\+Ellipse Class Reference}
+\hypertarget{classMyEllipse}{}\label{classMyEllipse}\index{MyEllipse@{MyEllipse}}
 
 
 Oscillating ellipse.  
@@ -11,18 +11,18 @@ Inheritance diagram for My\+Ellipse\+:\begin{figure}[H]
 \includegraphics[height=2.000000cm]{classMyEllipse}
 \end{center}
 \end{figure}
-\doxysubsection*{Public Member Functions}
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classMyEllipse_aaa00984813af171e611e420eb3433653}{My\+Ellipse}} (const double \&a, const double \&b, const double \&a\+\_\+hat, const double \&b\+\_\+hat, const double \&period, Time $\ast$time\+\_\+pt)
+\mbox{\hyperlink{classMyEllipse_aaa00984813af171e611e420eb3433653}{My\+Ellipse}} (const double \&a, const double \&b, const double \&a\+\_\+hat, const double \&b\+\_\+hat, const double \&period, Time \texorpdfstring{$\ast$}{*}time\+\_\+pt)
 \begin{DoxyCompactList}\small\item\em Constructor\+: Pass half axes, amplitudes of their variation, period of oscillation and pointer to time object. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classMyEllipse_ac2f2d3fb269c57fb26b4db6d9a0c7c05}{$\sim$\+My\+Ellipse}} ()
+virtual \mbox{\hyperlink{classMyEllipse_ac2f2d3fb269c57fb26b4db6d9a0c7c05}{\texorpdfstring{$\sim$}{\string~}\+My\+Ellipse}} ()
 \begin{DoxyCompactList}\small\item\em Destructor\+: Empty. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classMyEllipse_a7b139a2f4564005773c83325f2414e3e}{position}} (const Vector$<$ double $>$ \&xi, Vector$<$ double $>$ \&r) const
 \begin{DoxyCompactList}\small\item\em Current position vector to material point at Lagrangian coordinate xi. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classMyEllipse_a93f75bf33969037e35d779738a8493f5}{position}} (const unsigned \&t, const Vector$<$ double $>$ \&xi, Vector$<$ double $>$ \&r) const
 \begin{DoxyCompactList}\small\item\em Parametrised position on object\+: r(xi). Evaluated at previous time level. t=0\+: current time; t\texorpdfstring{$>$}{>}0\+: previous time level. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Protected Attributes}
+\doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 double \mbox{\hyperlink{classMyEllipse_aa2a0efd0a39f9d4fc307a6ff011682ed}{A}}
@@ -35,25 +35,25 @@ double \mbox{\hyperlink{classMyEllipse_a39d06488447d80f16b80ed8915edf3e3}{B\+\_\
 \begin{DoxyCompactList}\small\item\em Amplitude of variation in y-\/half axis. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classMyEllipse_ab098069ab23bbbd8f30b0da3523dc87f}{T}}
 \begin{DoxyCompactList}\small\item\em Period of oscillation. \end{DoxyCompactList}\item 
-Time $\ast$ \mbox{\hyperlink{classMyEllipse_abc1c4c863a599ce87bdff1abb9971953}{Time\+\_\+pt}}
+Time \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classMyEllipse_abc1c4c863a599ce87bdff1abb9971953}{Time\+\_\+pt}}
 \begin{DoxyCompactList}\small\item\em Pointer to time object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Oscillating ellipse. 
 
-\[ x = (a + \widehat{a} \sin(2\Pi t/T)) \cos(\xi) \] \[ y = (b + \widehat{b} \sin(2\Pi t/T)) \sin(\xi) \] 
+\[ x = (a + \widehat{a} \sin(2\Pi t/T)) \cos(\xi)  \] \[ y = (b + \widehat{b} \sin(2\Pi t/T)) \sin(\xi)  \] 
 
 Definition at line \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source_l00049}{49}} of file \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source}{two\+\_\+d\+\_\+unsteady\+\_\+heat\+\_\+\+ALE.\+cc}}.
 
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classMyEllipse_aaa00984813af171e611e420eb3433653}\label{classMyEllipse_aaa00984813af171e611e420eb3433653}} 
+\Hypertarget{classMyEllipse_aaa00984813af171e611e420eb3433653}\label{classMyEllipse_aaa00984813af171e611e420eb3433653} 
 \index{MyEllipse@{MyEllipse}!MyEllipse@{MyEllipse}}
 \index{MyEllipse@{MyEllipse}!MyEllipse@{MyEllipse}}
 \doxysubsubsection{\texorpdfstring{MyEllipse()}{MyEllipse()}}
-{\footnotesize\ttfamily My\+Ellipse\+::\+My\+Ellipse (\begin{DoxyParamCaption}\item[{const double \&}]{a,  }\item[{const double \&}]{b,  }\item[{const double \&}]{a\+\_\+hat,  }\item[{const double \&}]{b\+\_\+hat,  }\item[{const double \&}]{period,  }\item[{Time $\ast$}]{time\+\_\+pt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily My\+Ellipse\+::\+My\+Ellipse (\begin{DoxyParamCaption}\item[{const double \&}]{a,  }\item[{const double \&}]{b,  }\item[{const double \&}]{a\+\_\+hat,  }\item[{const double \&}]{b\+\_\+hat,  }\item[{const double \&}]{period,  }\item[{Time \texorpdfstring{$\ast$}{*}}]{time\+\_\+pt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -63,11 +63,11 @@ Constructor\+: Pass half axes, amplitudes of their variation, period of oscillat
 
 Definition at line \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source_l00056}{56}} of file \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source}{two\+\_\+d\+\_\+unsteady\+\_\+heat\+\_\+\+ALE.\+cc}}.
 
-\mbox{\Hypertarget{classMyEllipse_ac2f2d3fb269c57fb26b4db6d9a0c7c05}\label{classMyEllipse_ac2f2d3fb269c57fb26b4db6d9a0c7c05}} 
-\index{MyEllipse@{MyEllipse}!````~MyEllipse@{$\sim$MyEllipse}}
-\index{````~MyEllipse@{$\sim$MyEllipse}!MyEllipse@{MyEllipse}}
-\doxysubsubsection{\texorpdfstring{$\sim$MyEllipse()}{~MyEllipse()}}
-{\footnotesize\ttfamily virtual My\+Ellipse\+::$\sim$\+My\+Ellipse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+\Hypertarget{classMyEllipse_ac2f2d3fb269c57fb26b4db6d9a0c7c05}\label{classMyEllipse_ac2f2d3fb269c57fb26b4db6d9a0c7c05} 
+\index{MyEllipse@{MyEllipse}!````~MyEllipse@{\texorpdfstring{$\sim$}{\string~}MyEllipse}}
+\index{````~MyEllipse@{\texorpdfstring{$\sim$}{\string~}MyEllipse}!MyEllipse@{MyEllipse}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}MyEllipse()}{\string~MyEllipse()}}
+{\footnotesize\ttfamily virtual My\+Ellipse\+::\texorpdfstring{$\sim$}{\string~}\+My\+Ellipse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
 
@@ -80,7 +80,7 @@ Definition at line \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source_l0006
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classMyEllipse_a93f75bf33969037e35d779738a8493f5}\label{classMyEllipse_a93f75bf33969037e35d779738a8493f5}} 
+\Hypertarget{classMyEllipse_a93f75bf33969037e35d779738a8493f5}\label{classMyEllipse_a93f75bf33969037e35d779738a8493f5} 
 \index{MyEllipse@{MyEllipse}!position@{position}}
 \index{position@{position}!MyEllipse@{MyEllipse}}
 \doxysubsubsection{\texorpdfstring{position()}{position()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
@@ -98,7 +98,7 @@ Definition at line \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source_l0008
 
 References \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source_l00099}{A}}, \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source_l00105}{A\+\_\+hat}}, \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source_l00102}{B}}, \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source_l00108}{B\+\_\+hat}}, \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source_l00111}{T}}, and \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source_l00114}{Time\+\_\+pt}}.
 
-\mbox{\Hypertarget{classMyEllipse_a7b139a2f4564005773c83325f2414e3e}\label{classMyEllipse_a7b139a2f4564005773c83325f2414e3e}} 
+\Hypertarget{classMyEllipse_a7b139a2f4564005773c83325f2414e3e}\label{classMyEllipse_a7b139a2f4564005773c83325f2414e3e} 
 \index{MyEllipse@{MyEllipse}!position@{position}}
 \index{position@{position}!MyEllipse@{MyEllipse}}
 \doxysubsubsection{\texorpdfstring{position()}{position()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
@@ -119,7 +119,7 @@ References \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source_l00099}{A}}, 
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{classMyEllipse_aa2a0efd0a39f9d4fc307a6ff011682ed}\label{classMyEllipse_aa2a0efd0a39f9d4fc307a6ff011682ed}} 
+\Hypertarget{classMyEllipse_aa2a0efd0a39f9d4fc307a6ff011682ed}\label{classMyEllipse_aa2a0efd0a39f9d4fc307a6ff011682ed} 
 \index{MyEllipse@{MyEllipse}!A@{A}}
 \index{A@{A}!MyEllipse@{MyEllipse}}
 \doxysubsubsection{\texorpdfstring{A}{A}}
@@ -135,9 +135,9 @@ Definition at line \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source_l0009
 
 
 
-Referenced by \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source_l00067}{position()}}.
+Referenced by \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source_l00083}{position()}}, and \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source_l00067}{position()}}.
 
-\mbox{\Hypertarget{classMyEllipse_a653e71cf296cdc86cc595d16f18004dd}\label{classMyEllipse_a653e71cf296cdc86cc595d16f18004dd}} 
+\Hypertarget{classMyEllipse_a653e71cf296cdc86cc595d16f18004dd}\label{classMyEllipse_a653e71cf296cdc86cc595d16f18004dd} 
 \index{MyEllipse@{MyEllipse}!A\_hat@{A\_hat}}
 \index{A\_hat@{A\_hat}!MyEllipse@{MyEllipse}}
 \doxysubsubsection{\texorpdfstring{A\_hat}{A\_hat}}
@@ -153,9 +153,9 @@ Definition at line \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source_l0010
 
 
 
-Referenced by \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source_l00067}{position()}}.
+Referenced by \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source_l00083}{position()}}, and \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source_l00067}{position()}}.
 
-\mbox{\Hypertarget{classMyEllipse_a8f991996b9040fe94b942eab7e51f0af}\label{classMyEllipse_a8f991996b9040fe94b942eab7e51f0af}} 
+\Hypertarget{classMyEllipse_a8f991996b9040fe94b942eab7e51f0af}\label{classMyEllipse_a8f991996b9040fe94b942eab7e51f0af} 
 \index{MyEllipse@{MyEllipse}!B@{B}}
 \index{B@{B}!MyEllipse@{MyEllipse}}
 \doxysubsubsection{\texorpdfstring{B}{B}}
@@ -171,9 +171,9 @@ Definition at line \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source_l0010
 
 
 
-Referenced by \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source_l00067}{position()}}.
+Referenced by \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source_l00083}{position()}}, and \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source_l00067}{position()}}.
 
-\mbox{\Hypertarget{classMyEllipse_a39d06488447d80f16b80ed8915edf3e3}\label{classMyEllipse_a39d06488447d80f16b80ed8915edf3e3}} 
+\Hypertarget{classMyEllipse_a39d06488447d80f16b80ed8915edf3e3}\label{classMyEllipse_a39d06488447d80f16b80ed8915edf3e3} 
 \index{MyEllipse@{MyEllipse}!B\_hat@{B\_hat}}
 \index{B\_hat@{B\_hat}!MyEllipse@{MyEllipse}}
 \doxysubsubsection{\texorpdfstring{B\_hat}{B\_hat}}
@@ -189,9 +189,9 @@ Definition at line \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source_l0010
 
 
 
-Referenced by \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source_l00067}{position()}}.
+Referenced by \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source_l00083}{position()}}, and \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source_l00067}{position()}}.
 
-\mbox{\Hypertarget{classMyEllipse_ab098069ab23bbbd8f30b0da3523dc87f}\label{classMyEllipse_ab098069ab23bbbd8f30b0da3523dc87f}} 
+\Hypertarget{classMyEllipse_ab098069ab23bbbd8f30b0da3523dc87f}\label{classMyEllipse_ab098069ab23bbbd8f30b0da3523dc87f} 
 \index{MyEllipse@{MyEllipse}!T@{T}}
 \index{T@{T}!MyEllipse@{MyEllipse}}
 \doxysubsubsection{\texorpdfstring{T}{T}}
@@ -207,13 +207,13 @@ Definition at line \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source_l0011
 
 
 
-Referenced by \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source_l00067}{position()}}.
+Referenced by \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source_l00083}{position()}}, and \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source_l00067}{position()}}.
 
-\mbox{\Hypertarget{classMyEllipse_abc1c4c863a599ce87bdff1abb9971953}\label{classMyEllipse_abc1c4c863a599ce87bdff1abb9971953}} 
+\Hypertarget{classMyEllipse_abc1c4c863a599ce87bdff1abb9971953}\label{classMyEllipse_abc1c4c863a599ce87bdff1abb9971953} 
 \index{MyEllipse@{MyEllipse}!Time\_pt@{Time\_pt}}
 \index{Time\_pt@{Time\_pt}!MyEllipse@{MyEllipse}}
 \doxysubsubsection{\texorpdfstring{Time\_pt}{Time\_pt}}
-{\footnotesize\ttfamily Time$\ast$ My\+Ellipse\+::\+Time\+\_\+pt\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily Time\texorpdfstring{$\ast$}{*} My\+Ellipse\+::\+Time\+\_\+pt\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
@@ -225,7 +225,7 @@ Definition at line \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source_l0011
 
 
 
-Referenced by \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source_l00067}{position()}}.
+Referenced by \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source_l00083}{position()}}, and \mbox{\hyperlink{two__d__unsteady__heat__ALE_8cc_source_l00067}{position()}}.
 
 
 

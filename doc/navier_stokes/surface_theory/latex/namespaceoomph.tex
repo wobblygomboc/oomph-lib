@@ -1,6 +1,6 @@
-\hypertarget{namespaceoomph}{}\doxysection{oomph Namespace Reference}
-\label{namespaceoomph}\index{oomph@{oomph}}
-\doxysubsection*{Classes}
+\doxysection{oomph Namespace Reference}
+\hypertarget{namespaceoomph}{}\label{namespaceoomph}\index{oomph@{oomph}}
+\doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classoomph_1_1AxisymmetricDerivatives}{Axisymmetric\+Derivatives}}
@@ -36,13 +36,13 @@ class \mbox{\hyperlink{classoomph_1_1ElasticAxisymmetricSurfactantTransportInter
 class \mbox{\hyperlink{classoomph_1_1ElasticAxisymmetricVolumeConstraintBoundingElement}{Elastic\+Axisymmetric\+Volume\+Constraint\+Bounding\+Element}}
 \begin{DoxyCompactList}\small\item\em /////////////////////////////////////////////////////////////////// /////////////////////////////////////////////////////////////////// \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classoomph_1_1ElasticLineFluidInterfaceBoundingElement}{Elastic\+Line\+Fluid\+Interface\+Bounding\+Element}}
-\begin{DoxyCompactList}\small\item\em Pseudo-\/elasticity version of the \mbox{\hyperlink{classoomph_1_1LineFluidInterfaceBoundingElement}{Line\+Fluid\+Interface\+Bounding\+Element}}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Pseudo-\/elasticity version of the \doxylink{classoomph_1_1LineFluidInterfaceBoundingElement}{Line\+Fluid\+Interface\+Bounding\+Element}. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classoomph_1_1ElasticLineFluidInterfaceElement}{Elastic\+Line\+Fluid\+Interface\+Element}}
 \begin{DoxyCompactList}\small\item\em Specialise the elastic update template class to concrete 1D case. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classoomph_1_1ElasticLineVolumeConstraintBoundingElement}{Elastic\+Line\+Volume\+Constraint\+Bounding\+Element}}
 \begin{DoxyCompactList}\small\item\em /////////////////////////////////////////////////////////////////// /////////////////////////////////////////////////////////////////// \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classoomph_1_1ElasticPointFluidInterfaceBoundingElement}{Elastic\+Point\+Fluid\+Interface\+Bounding\+Element}}
-\begin{DoxyCompactList}\small\item\em Pseudo-\/elasticity version of the \mbox{\hyperlink{classoomph_1_1PointFluidInterfaceBoundingElement}{Point\+Fluid\+Interface\+Bounding\+Element}}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Pseudo-\/elasticity version of the \doxylink{classoomph_1_1PointFluidInterfaceBoundingElement}{Point\+Fluid\+Interface\+Bounding\+Element}. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classoomph_1_1ElasticSurfaceFluidInterfaceElement}{Elastic\+Surface\+Fluid\+Interface\+Element}}
 \begin{DoxyCompactList}\small\item\em Specialise Elastic update case to the concrete 2D case. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classoomph_1_1ElasticSurfaceVolumeConstraintBoundingElement}{Elastic\+Surface\+Volume\+Constraint\+Bounding\+Element}}
@@ -50,7 +50,7 @@ class \mbox{\hyperlink{classoomph_1_1ElasticSurfaceVolumeConstraintBoundingEleme
 class \mbox{\hyperlink{classoomph_1_1ElasticUpdateFluidInterfaceElement}{Elastic\+Update\+Fluid\+Interface\+Element}}
 \begin{DoxyCompactList}\small\item\em //////////////////////////////////////////////////////////////////// //////////////////////////////////////////////////////////////////// \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classoomph_1_1FluidInterfaceAdditionalValues}{Fluid\+Interface\+Additional\+Values}}
-\begin{DoxyCompactList}\small\item\em This policy class is used to allow additional values to be added to the nodes from new surface equations, for examples of usage see the Surfactant\+Transport\+Fluid\+Interface\+Elements. The use of this class avoids issues with calling virtual functions in constructors and avoids having a global look-\/up able, although it functions in much the same way. Typically, this will only be filled in by \char`\"{}expert users\char`\"{} and is only required if you want to write generic surface-\/element classes. Specific classes can always be overloaded on a case-\/by-\/case basis. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em This policy class is used to allow additional values to be added to the nodes from new surface equations, for examples of usage see the Surfactant\+Transport\+Fluid\+Interface\+Elements. The use of this class avoids issues with calling virtual functions in constructors and avoids having a global look-\/up able, although it functions in much the same way. Typically, this will only be filled in by "{}expert users"{} and is only required if you want to write generic surface-\/element classes. Specific classes can always be overloaded on a case-\/by-\/case basis. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classoomph_1_1FluidInterfaceAdditionalValues_3_01FluidInterfaceElement_01_4}{Fluid\+Interface\+Additional\+Values$<$ Fluid\+Interface\+Element $>$}}
 \begin{DoxyCompactList}\small\item\em Specific policy class for the Fluid\+Interface\+Elemetnts, which do not require any additional values at the nodes. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classoomph_1_1FluidInterfaceAdditionalValues_3_01SurfactantTransportInterfaceElement_01_4}{Fluid\+Interface\+Additional\+Values$<$ Surfactant\+Transport\+Interface\+Element $>$}}
@@ -72,17 +72,17 @@ class \mbox{\hyperlink{classoomph_1_1SpineAxisymmetricFluidInterfaceElement}{Spi
 class \mbox{\hyperlink{classoomph_1_1SpineAxisymmetricSurfactantTransportInterfaceElement}{Spine\+Axisymmetric\+Surfactant\+Transport\+Interface\+Element}}
 \begin{DoxyCompactList}\small\item\em Specialise to the Axisymmetric geometry. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classoomph_1_1SpineAxisymmetricVolumeConstraintBoundingElement}{Spine\+Axisymmetric\+Volume\+Constraint\+Bounding\+Element}}
-\begin{DoxyCompactList}\small\item\em The axisymmetric (one-\/dimensional) interface elements that allow imposition of a volume constraint specialised for the case when the nodal positions of the bulk elements are adjusted using Spines. To enforce that a fluid volume has a certain volume, attach these elements to all faces of the (2D axisymmetric) bulk fluid elements (of type ELEMENT) that bound that region and then specify the \char`\"{}pressure\char`\"{} value that is traded for the constraint. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The axisymmetric (one-\/dimensional) interface elements that allow imposition of a volume constraint specialised for the case when the nodal positions of the bulk elements are adjusted using Spines. To enforce that a fluid volume has a certain volume, attach these elements to all faces of the (2D axisymmetric) bulk fluid elements (of type ELEMENT) that bound that region and then specify the "{}pressure"{} value that is traded for the constraint. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classoomph_1_1SpineLineFluidInterfaceBoundingElement}{Spine\+Line\+Fluid\+Interface\+Bounding\+Element}}
-\begin{DoxyCompactList}\small\item\em Spine version of the \mbox{\hyperlink{classoomph_1_1LineFluidInterfaceBoundingElement}{Line\+Fluid\+Interface\+Bounding\+Element}}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Spine version of the \doxylink{classoomph_1_1LineFluidInterfaceBoundingElement}{Line\+Fluid\+Interface\+Bounding\+Element}. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classoomph_1_1SpineLineFluidInterfaceElement}{Spine\+Line\+Fluid\+Interface\+Element}}
 \item 
 class \mbox{\hyperlink{classoomph_1_1SpineLineSurfactantTransportInterfaceElement}{Spine\+Line\+Surfactant\+Transport\+Interface\+Element}}
 \begin{DoxyCompactList}\small\item\em Specialise to the Line geometry. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classoomph_1_1SpineLineVolumeConstraintBoundingElement}{Spine\+Line\+Volume\+Constraint\+Bounding\+Element}}
-\begin{DoxyCompactList}\small\item\em The one-\/dimensional interface elements that allow imposition of a volume constraint specialised for the case when the nodal positions of the bulk elements are adjusted using Spines. To enforce that a fluid volume has a certain volume, attach these elements to all faces of the (2D cartesian) bulk fluid elements (of type ELEMENT) that bound that region and then specify the \char`\"{}pressure\char`\"{} value that is traded for the constraint. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The one-\/dimensional interface elements that allow imposition of a volume constraint specialised for the case when the nodal positions of the bulk elements are adjusted using Spines. To enforce that a fluid volume has a certain volume, attach these elements to all faces of the (2D cartesian) bulk fluid elements (of type ELEMENT) that bound that region and then specify the "{}pressure"{} value that is traded for the constraint. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classoomph_1_1SpinePointFluidInterfaceBoundingElement}{Spine\+Point\+Fluid\+Interface\+Bounding\+Element}}
-\begin{DoxyCompactList}\small\item\em Spine version of the \mbox{\hyperlink{classoomph_1_1PointFluidInterfaceBoundingElement}{Point\+Fluid\+Interface\+Bounding\+Element}}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Spine version of the \doxylink{classoomph_1_1PointFluidInterfaceBoundingElement}{Point\+Fluid\+Interface\+Bounding\+Element}. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classoomph_1_1SpineSurfaceFluidInterfaceElement}{Spine\+Surface\+Fluid\+Interface\+Element}}
 \item 
 class \mbox{\hyperlink{classoomph_1_1SpineSurfaceSurfactantTransportInterfaceElement}{Spine\+Surface\+Surfactant\+Transport\+Interface\+Element}}
