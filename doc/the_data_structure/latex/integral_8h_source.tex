@@ -1707,53 +1707,8 @@
 \DoxyCodeLine{\Hypertarget{integral_8h_source_l01703}01703\ \ \ \}}
 \DoxyCodeLine{\Hypertarget{integral_8h_source_l01704}01704\ }
 \DoxyCodeLine{\Hypertarget{integral_8h_source_l01705}01705\ }
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01706}01706\ \textcolor{preprocessor}{\#ifdef\ OOMPH\_3\_5\_BRICK\_FOR\_MESHING\_ONLY\_NO\_INTEGRATION}}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01707}01707\ \ \ \textcolor{comment}{//=========================================================}\textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01708}01708\ \textcolor{comment}{\ \ ///\ 3D\ Dummy\ Gaussian\ integration\ class,}}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01709}01709\ \textcolor{comment}{\ \ ///\ so\ that\ we\ can\ make\ a\ <3,5>\ brick\ for\ meshing}}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01710}01710\ \textcolor{comment}{}\ \ \textcolor{comment}{//=========================================================}}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01711}01711\ \ \ \textcolor{keyword}{template}<>}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01712}\mbox{\hyperlink{classoomph_1_1Gauss_3_013_00_015_01_4}{01712}}\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classoomph_1_1Gauss}{Gauss}}<3,\ 5>\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classoomph_1_1Integral}{Integral}}}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01713}01713\ \ \ \{}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01714}01714\ \ \ \textcolor{keyword}{private}:\textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01715}01715\ \textcolor{comment}{\ \ \ \ ///\ Number\ of\ integration\ points\ in\ the\ scheme}}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01716}\mbox{\hyperlink{classoomph_1_1Gauss_3_013_00_015_01_4_aafb5547544192846fb1922e757b0bf5b}{01716}}\ \textcolor{comment}{}\ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ Npts\ =\ 125;}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01717}01717\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01718}01718\ \textcolor{comment}{\ \ \ \ ///\ Array\ to\ hold\ the\ weights\ and\ knots\ (defined\ in\ cc\ file)}}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01719}\mbox{\hyperlink{classoomph_1_1Gauss_3_013_00_015_01_4_a3567f9191a2bcebee9f8d9bdc23c192b}{01719}}\ \textcolor{comment}{}\ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ Knot[125][3],\ Weight[125];}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01720}01720\ }
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01721}01721\ \ \ \textcolor{keyword}{public}:\textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01722}01722\ \textcolor{comment}{\ \ \ \ ///\ Default\ constructor\ (empty)}}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01723}\mbox{\hyperlink{classoomph_1_1Gauss_3_013_00_015_01_4_a2f02b4525a4dcd25c5d6fd0262807a99}{01723}}\ \textcolor{comment}{}\ \ \ \ \mbox{\hyperlink{classoomph_1_1Gauss_3_013_00_015_01_4_a2f02b4525a4dcd25c5d6fd0262807a99}{Gauss}}()\{\};}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01724}01724\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01725}01725\ \textcolor{comment}{\ \ \ \ ///\ Broken\ copy\ constructor}}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01726}\mbox{\hyperlink{classoomph_1_1Gauss_3_013_00_015_01_4_ab558fc551bcf3d815bc3f610e539dcc9}{01726}}\ \textcolor{comment}{}\ \ \ \ \mbox{\hyperlink{classoomph_1_1Gauss_3_013_00_015_01_4_ab558fc551bcf3d815bc3f610e539dcc9}{Gauss}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classoomph_1_1Gauss}{Gauss}}\&\ \mbox{\hyperlink{classoomph_1_1TAdvectionDiffusionReactionElement}{dummy}})\ =\ \textcolor{keyword}{delete};}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01727}01727\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01728}01728\ \textcolor{comment}{\ \ \ \ ///\ Broken\ assignment\ operator}}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01729}\mbox{\hyperlink{classoomph_1_1Gauss_3_013_00_015_01_4_aa4e87e4367f007ca9e822bb43b245953}{01729}}\ \textcolor{comment}{}\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classoomph_1_1Gauss_3_013_00_015_01_4_aa4e87e4367f007ca9e822bb43b245953}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classoomph_1_1Gauss}{Gauss}}\&)\ =\ \textcolor{keyword}{delete};}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01730}01730\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01731}01731\ \textcolor{comment}{\ \ \ \ ///\ Number\ of\ integration\ points\ of\ the\ scheme}}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01732}\mbox{\hyperlink{classoomph_1_1Gauss_3_013_00_015_01_4_aa1bd793aabff5a2dcbacfec49da5b897}{01732}}\ \textcolor{comment}{}\ \ \ \ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{classoomph_1_1Gauss_3_013_00_015_01_4_aa1bd793aabff5a2dcbacfec49da5b897}{nweight}}()\textcolor{keyword}{\ const}}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01733}01733\ \textcolor{keyword}{\ \ \ \ \ \ }\{}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01734}01734\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Npts;}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01735}01735\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01736}01736\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01737}01737\ \textcolor{comment}{\ \ \ \ ///\ Return\ coordinate\ s[j]\ of\ integration\ point\ i}}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01738}\mbox{\hyperlink{classoomph_1_1Gauss_3_013_00_015_01_4_ae01add1cf837043cfd66eb83caf55ec0}{01738}}\ \textcolor{comment}{}\ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classoomph_1_1Gauss_3_013_00_015_01_4_ae01add1cf837043cfd66eb83caf55ec0}{knot}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\&\ \mbox{\hyperlink{cfortran_8h_adb50e893b86b3e55e751a42eab3cba82}{i}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\&\ \mbox{\hyperlink{classoomph_1_1TAdvectionDiffusionReactionElement}{j}})\textcolor{keyword}{\ const}}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01739}01739\ \textcolor{keyword}{\ \ \ \ \ \ }\{}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01740}01740\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Knot[\mbox{\hyperlink{cfortran_8h_adb50e893b86b3e55e751a42eab3cba82}{i}}][\mbox{\hyperlink{classoomph_1_1TAdvectionDiffusionReactionElement}{j}}];}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01741}01741\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01742}01742\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01743}01743\ \textcolor{comment}{\ \ \ \ ///\ Return\ weight\ of\ integration\ point\ i}}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01744}\mbox{\hyperlink{classoomph_1_1Gauss_3_013_00_015_01_4_a2c37cdae8ddf0f4cf8c1369973a644c9}{01744}}\ \textcolor{comment}{}\ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classoomph_1_1Gauss_3_013_00_015_01_4_a2c37cdae8ddf0f4cf8c1369973a644c9}{weight}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\&\ \mbox{\hyperlink{cfortran_8h_adb50e893b86b3e55e751a42eab3cba82}{i}})\textcolor{keyword}{\ const}}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01745}01745\ \textcolor{keyword}{\ \ \ \ \ \ }\{}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01746}01746\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Weight[\mbox{\hyperlink{cfortran_8h_adb50e893b86b3e55e751a42eab3cba82}{i}}];}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01747}01747\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01748}01748\ \ \ \};}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01749}01749\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01750}01750\ }
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01751}01751\ \}\ \textcolor{comment}{//\ namespace\ oomph}}
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01752}01752\ }
-\DoxyCodeLine{\Hypertarget{integral_8h_source_l01753}01753\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{integral_8h_source_l01706}01706\ \}\ \textcolor{comment}{//\ namespace\ oomph}}
+\DoxyCodeLine{\Hypertarget{integral_8h_source_l01707}01707\ }
+\DoxyCodeLine{\Hypertarget{integral_8h_source_l01708}01708\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

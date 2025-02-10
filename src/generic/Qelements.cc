@@ -833,7 +833,4 @@ namespace oomph
   template class QElement<3, 3>;
   template class QElement<3, 4>;
 
-#ifdef OOMPH_3_5_BRICK_FOR_MESHING_ONLY_NO_INTEGRATION
-  template class QElement<3, 5>;
-#endif
 } // namespace oomph
