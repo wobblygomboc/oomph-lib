@@ -1078,10 +1078,6 @@ namespace oomph
         project_problem_pt->project(this);
         delete project_problem_pt;
 
-	// Re-setup terminate helper (which was reset by the
-	// deconstructor of project_problem_pt)
-	TerminateHelper::setup();
-
         //##################################################################
         oomph_info
           << "adapt: Time for project soln onto new mesh                : "
